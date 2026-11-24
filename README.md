@@ -16,7 +16,7 @@ Watch the character beside the lake and the action log on the right. The display
 
 ## Get the code, recordings and model archives
 
-The original training receipts are available to invited readers. The remaining private volumes are being uploaded and will open for download after checksum verification.
+The [original training receipts](https://github.com/brainintelli/organoid-replay-survival/releases/tag/study-evidence-v1) are available to invited readers. The full 63.77 GB model archive is deferred. The public game, paper, paired outcomes and raw H5 entry are available now. The private volume link below requires a published release and archive access.
 
 | Material | Access |
 |---|---|

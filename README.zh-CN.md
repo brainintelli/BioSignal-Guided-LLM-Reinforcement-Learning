@@ -16,7 +16,7 @@ https://github.com/user-attachments/assets/6b501274-535f-4aa3-bf73-9e032d7c6809
 
 ## 下载代码、记录和模型
 
-训练与评估回执已可供获邀者下载。其余私有分卷正在上传和校验，整包 SHA-256 核对完成后开放下载。
+[原始训练与评估回执](https://github.com/brainintelli/organoid-replay-survival/releases/tag/study-evidence-v1)已可供获邀者下载。63.77 GB 的模型与历史归档暂缓全量分发。论文、游戏、逐局数据和原始 H5 入口现已公开。下方私有分卷链接需要归档 Release 已发布且账号已获邀。
 
 | 材料 | 获取方式 |
 |---|---|
