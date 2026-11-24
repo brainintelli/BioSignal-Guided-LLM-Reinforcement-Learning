@@ -19,7 +19,7 @@ def checked(condition: bool, message: str) -> None:
 
 
 def audit(release: Release, data_dir: Path, archive: Path, dest: Path) -> dict[str, Any]:
-    verify_archive(release, archive)
+    archive_info = verify_archive(release, archive)
     features = raw_windows(release, data_dir)
     feature_file = dest / "features.csv"
     feature_file.write_bytes(csv_bytes(features.pop("features")))
@@ -145,7 +145,7 @@ def audit(release: Release, data_dir: Path, archive: Path, dest: Path) -> dict[s
     return {
         "scope": "archived evaluation receipts and their inputs; no policy training or game engine run",
         "windows": features,
-        "archive_sha256": release.spec["archived_model_code"]["sha256"],
+        "archive_sha256": archive_info["sha256"],
         "episodes": len(seen),
         "recorded_decisions": action_count,
         "stress_csv_sha256": sha256(result_file),

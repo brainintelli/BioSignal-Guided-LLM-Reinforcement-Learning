@@ -43,13 +43,14 @@ For the other endpoints, the [data dictionary](../data/data_dictionary.csv) list
 
 ## Training evidence and parameters
 
-Download the [original training and evaluation receipts ZIP](https://github.com/brainintelli/organoid-replay-survival/releases/download/study-evidence-v1/training-evaluation-receipts.zip) while signed into a GitHub account with repository access. This private release asset contains 20,497 files (157,790,368 compressed bytes). Its SHA-256 is `248907bc759199690d475dd8c6ccbac2920f30df21316cb944a6ad7a1fa523f2`. The archive preserves historical machine paths.
+The [public release](https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning/releases/tag/research-artifacts-v1) contains 20,497 files in the training and evaluation collection. The 18,720 game receipts, 384 per-batch training trajectories and 96 model update logs match the original files byte for byte. Site-specific text fields in supporting files were mapped for public distribution. Both the original archive digest and the distributed digest are in the [manifest](archives/manifest.json).
 
-With the ZIP in the repository root and the recordings in the directory indicated below:
+From the repository root, restore the receipts and point the analysis at the downloaded recordings.
 
 ```sh
-python -m src.reproduce archived-code --archive training-evaluation-receipts.zip
-python -m src.reproduce audit-chain --data-dir "./原始H5" --archive training-evaluation-receipts.zip
+python docs/archives/restore.py receipts --download --output .
+python -m src.reproduce archived-code --archive receipts.zip
+python -m src.reproduce audit-chain --data-dir "./原始H5" --archive receipts.zip
 ```
 
 The second command reconstructs 18,432 adverse-start games from the recorded decisions. The resulting `stress.csv` matched the bundled endpoint table byte for byte (SHA-256 `3960b473a5bbd43ed97476a0e7b81a5cfe94572d6f595f343f2b819bb9232e00`). Fresh policy inference requires the model assets separately.

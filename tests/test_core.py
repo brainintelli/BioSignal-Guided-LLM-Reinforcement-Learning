@@ -1,3 +1,4 @@
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -133,9 +134,19 @@ class InputIntegrityTests(unittest.TestCase):
             destination = root / "output"
             destination.mkdir()
 
-            with self.assertRaisesRegex(ValueError, "exact locally authorized"):
+            with self.assertRaisesRegex(ValueError, "size and SHA-256"):
                 archive_code(release, supplied, destination)
             self.assertEqual(list(destination.iterdir()), [])
+
+            public_body = b"value = 2\n"
+            release.spec["public_receipt_archive"] = {
+                "bytes": supplied.stat().st_size,
+                "sha256": sha256(supplied),
+                "members": {member: hashlib.sha256(public_body).hexdigest()},
+            }
+            report = archive_code(release, supplied, destination)
+            self.assertEqual(report["archive_sha256"], sha256(supplied))
+            self.assertEqual((destination / "archived-code" / member).read_bytes(), public_body)
 
 
 if __name__ == "__main__":

@@ -28,4 +28,4 @@ Use the software to reproduce paired outcomes, evaluate sensitivity to the resam
 
 ## Data access
 
-For the recording export, follow the [author-supplied download](../docs/data-access.md) and [local verification procedure](README.md). The [private historical releases](https://github.com/brainintelli/organoid-replay-survival/releases) require separate repository access. The public study tables have the permission recorded in the data terms. [Data terms](../LICENSE-DATA)
+For the recording export, use the [H5 download and verification procedure](../docs/data-access.md). Training trajectories, evaluation receipts and saved model states can be downloaded through the [public archive guide](../docs/archive-downloads.md). The [data terms](../LICENSE-DATA) cover the study tables and the [training artifact terms](../LICENSE-TRAINING) cover project-owned training and evaluation records.

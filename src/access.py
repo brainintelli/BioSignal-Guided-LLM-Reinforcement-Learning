@@ -49,21 +49,24 @@ def request(release: Release) -> dict[str, Any]:
     }
 
 
-def verify_archive(release: Release, archive: Path) -> None:
-    info = release.spec["archived_model_code"]
-    if (
-        not archive.is_file()
-        or archive.stat().st_size != info["bytes"]
-        or sha256(archive) != info["sha256"]
-    ):
-        raise ValueError(
-            "Provide the exact locally authorized training/evaluation ZIP specified in configs/study.yaml."
-        )
+def verify_archive(release: Release, archive: Path) -> dict[str, Any]:
+    accepted = [release.spec["archived_model_code"]]
+    if "public_receipt_archive" in release.spec:
+        accepted.append(release.spec["public_receipt_archive"])
+    if archive.is_file():
+        candidates = [info for info in accepted if info["bytes"] == archive.stat().st_size]
+        if candidates:
+            digest = sha256(archive)
+            for info in candidates:
+                if info["sha256"] == digest:
+                    return info
+    raise ValueError(
+        "Use a training/evaluation ZIP whose size and SHA-256 match configs/study.yaml."
+    )
 
 
 def archive_code(release: Release, archive: Path, destination: Path) -> dict[str, Any]:
-    verify_archive(release, archive)
-    info = release.spec["archived_model_code"]
+    info = verify_archive(release, archive)
     dest = destination / "archived-code"
     dest.mkdir()
     with ZipFile(archive) as z:

@@ -4,4 +4,4 @@ Brainintelli Research Lab authorizes public access to the study-owned paired-gam
 
 The raw microelectrode-array H5 files and their extraction code have a public download entry in docs/data-access.md. Authorization to make that entry public covers access to the recordings; other reuse or redistribution rights for raw recordings have not been specified. Contact research@brainintelli.com for uses beyond the documented permissions.
 
-The MIT software license is in LICENSE. Historical model parameters, optimizer states, release archives and third-party components are subject to their respective access and licensing terms. A repository link or archive checksum identifies an artifact without granting additional rights.
+The project software is licensed under MIT in LICENSE. For the project’s trained adapters, optimizer states, training logs and evaluation receipts, see LICENSE-TRAINING. Third-party software and upstream base weights retain their own terms.

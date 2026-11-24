@@ -1,6 +1,6 @@
 <h1 align="center">生物信号引导的 LLM 强化学习</h1>
 <p align="center">把类器官电活动离线回放给生存游戏里的语言模型，它下一步会去哪里？项目中的“引导”指策略和价值网络接收这些生物信号读数。</p>
-<p align="center"><a href="paper.pdf">署名论文（PDF）</a> · <a href="#游戏实录">播放游戏实录</a> · <a href="original/">游戏和训练源码</a> · <a href="docs/data-access.md">原始数据</a> · <a href="https://github.com/brainintelli/organoid-replay-survival/releases/tag/model-training-archives-v1">模型与历史归档（私有）</a> · <a href="README.md">English</a></p>
+<p align="center"><a href="paper.pdf">署名论文（PDF）</a> · <a href="#游戏实录">播放游戏实录</a> · <a href="original/">游戏和训练源码</a> · <a href="docs/data-access.md">原始数据</a> · <a href="https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning/releases/tag/research-artifacts-v1">模型、训练与评估记录</a> · <a href="README.md">English</a></p>
 
 **论文**　*Language Model Exploration and Survival Behavior Under Offline Replay of Organoid Neural Signals*
 
@@ -16,14 +16,14 @@ https://github.com/user-attachments/assets/6b501274-535f-4aa3-bf73-9e032d7c6809
 
 ## 下载代码、记录和模型
 
-获邀者现在可以完整下载确认性实验 96 个模型的 checkpoint（含优化器状态），也可以单独下载经过筛查的历史项目源码。模型与历史归档共 63.77 GB，其余包正陆续上传。下载分卷前，请在[私有可下载清单](https://github.com/brainintelli/organoid-replay-survival/blob/main/docs/archive-downloads/available-manifest.json)中确认目标包已传齐。论文、游戏、逐局数据和原始电生理记录索引均已公开。
+想核对模型的一次行动，可以查看逐批训练轨迹、策略更新记录和逐局评估回执。同一公开版本还包含确认性实验 96 个模型的 checkpoint 及优化器状态，以及已留存的历史参数、源码和日志。按[归档下载指南](docs/archive-downloads.md)可选择所需材料并核对 SHA-256。
 
 | 材料 | 获取方式 |
 |---|---|
 | 论文、原始工程、逐局数据和分析 | [论文 PDF](paper.pdf) · [源码导览](docs/original-source.md) · [逐局表](data/exploration.csv) · [复现命令](docs/reproduction-guide.md)。无需登录 GitHub。 |
 | 182 份原始 H5 电生理记录 | [打开夸克分享](https://pan.quark.cn/s/3f2e5122ab68)，输入提取码 **`mFFv`**。下载后按[文件清单和 SHA-256](docs/data-access.md)核验。 |
-| 模型 checkpoint、优化器状态与历史大包 | [下载已校验的私有分卷](https://github.com/brainintelli/organoid-replay-survival/releases/tag/model-training-archives-v1) · [选包、重组与 SHA-256 校验说明](docs/archive-downloads.md)。请使用获邀的 GitHub 账号登录。 |
-| 原始训练和逐局评估回执 | [下载已校验的回执 ZIP（私有）](https://github.com/brainintelli/organoid-replay-survival/releases/tag/study-evidence-v1)。该包用于从电极读数和已记录的决策重建恶劣开局试验结果。 |
+| 模型 checkpoint、优化器状态与历史归档 | [公开下载页](https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning/releases/tag/research-artifacts-v1) · [按包选择、重组与校验](docs/archive-downloads.md)。 |
+| 原始训练和逐局评估回执 | [训练与评估记录说明](docs/data-access.md#training-evidence-and-parameters) · [下载回执分卷](https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning/releases/download/research-artifacts-v1/receipts.zip.part001)。内含逐批训练轨迹、更新日志和逐局决策。 |
 
 ## 一段电极记录怎样进入一次游戏决策？
 
@@ -76,4 +76,4 @@ python -m src.reproduce exploration
 | 哪些结果可以重算，哪些需要额外材料 | [逐项复现矩阵](docs/reproduction_matrix.csv) · [运行环境](docs/environment.md) · [项目内容与剩余依赖](docs/project-contents.md) |
 | 图、绘图代码和可编辑论文 | [图与绘图代码](figures/) · [论文源文件](manuscript/) · [Word 版](manuscript/paper.docx) |
 
-[代码许可](LICENSE) · [数据许可](LICENSE-DATA) · [引用信息](CITATION.cff)
+[代码许可](LICENSE) · [数据许可](LICENSE-DATA) · [训练材料许可](LICENSE-TRAINING) · [引用信息](CITATION.cff)

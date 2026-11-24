@@ -217,9 +217,7 @@ def run(args: argparse.Namespace) -> tuple[Path, Any]:
                 if use_all or row["stress_record"] == "True"
             ]
         if args.command in {"archived-code", "audit-chain"}:
-            external["program_and_receipt_archive_sha256"] = release.spec["archived_model_code"][
-                "sha256"
-            ]
+            external["program_and_receipt_archive_sha256"] = result["archive_sha256"]
         manifest = {
             "started_utc": started.isoformat(),
             "finished_utc": datetime.now(timezone.utc).isoformat(),
@@ -253,7 +251,9 @@ def main() -> int:
     )
     parser.add_argument("--data-dir", type=Path, help="Authorized local H5 directory")
     parser.add_argument(
-        "--archive", type=Path, help="Authorized historical training/evaluation ZIP"
+        "--archive",
+        type=Path,
+        help="Public receipts.zip or the matching original training/evaluation ZIP",
     )
     parser.add_argument(
         "--stress-only",
@@ -264,7 +264,7 @@ def main() -> int:
     if args.command in {"raw-windows", "verify-h5", "audit-chain"} and not args.data_dir:
         parser.error("This command requires --data-dir with locally authorized recordings.")
     if args.command in {"archived-code", "audit-chain"} and not args.archive:
-        parser.error("Supply --archive with the authorized original training/evaluation ZIP.")
+        parser.error("Supply --archive with receipts.zip or the original training/evaluation ZIP.")
     if args.stress_only and args.command != "verify-h5":
         parser.error("--stress-only applies to verify-h5.")
     # Restrict CPU matrix products to one thread before importing NumPy for the analysis.

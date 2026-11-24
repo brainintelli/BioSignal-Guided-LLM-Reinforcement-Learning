@@ -1,6 +1,6 @@
 <h1 align="center">Biosignal-Guided Reinforcement Learning for LLM Agents</h1>
 <p align="center">Where does an LLM explorer go next when its policy and value network receive offline replay of organoid neural activity?</p>
-<p align="center"><a href="paper.pdf">Read the preprint</a> · <a href="#gameplay">Watch gameplay</a> · <a href="original/">Game and training code</a> · <a href="docs/data-access.md">Raw data</a> · <a href="https://github.com/brainintelli/organoid-replay-survival/releases/tag/model-training-archives-v1">Model archives (private)</a> · <a href="README.zh-CN.md">中文</a></p>
+<p align="center"><a href="paper.pdf">Read the preprint</a> · <a href="#gameplay">Watch gameplay</a> · <a href="original/">Game and training code</a> · <a href="docs/data-access.md">Raw data</a> · <a href="https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning/releases/tag/research-artifacts-v1">Checkpoints &amp; evaluation logs</a> · <a href="README.zh-CN.md">中文</a></p>
 
 **Paper**　*Language Model Exploration and Survival Behavior Under Offline Replay of Organoid Neural Signals*
 
@@ -16,14 +16,14 @@ Watch the character beside the lake and the action log on the right. The display
 
 ## Get the code, recordings and model archives
 
-Invited readers can now restore the checkpoints for all 96 models in the confirmatory study, including optimizer states, and the screened historical project source. Other historical packages are being added to the 63.77 GB collection. Check the [private availability manifest](https://github.com/brainintelli/organoid-replay-survival/blob/main/docs/archive-downloads/available-manifest.json) before downloading split files. The paper, game, paired outcomes and raw recording index are public.
+To inspect the evidence behind a recorded decision, download the training trajectories, policy-update records and per-game evaluation receipts. The same release includes the 96 confirmatory checkpoints with optimizer states, the available historical weights, code and logs. The [archive guide](docs/archive-downloads.md) lists the files for each task and the steps for verifying them.
 
 | Material | Access |
 |---|---|
 | Paper, game, training source and paired outcomes | [Preprint PDF](paper.pdf) · [Source guide](docs/original-source.md) · [Per-game table](data/exploration.csv) · [Reproduction commands](docs/reproduction-guide.md). No GitHub sign-in required. |
 | 182 raw H5 electrophysiology files | [Open the Quark Drive share](https://pan.quark.cn/s/3f2e5122ab68) and enter **`mFFv`**. Verify your download against the [file list and SHA-256 digests](docs/data-access.md). |
-| Model checkpoints, optimizer states and historical archives | [Download verified private release volumes](https://github.com/brainintelli/organoid-replay-survival/releases/tag/model-training-archives-v1) · [Select, reassemble and verify a complete archive](docs/archive-downloads.md). Sign in with a GitHub account invited to the archive repository. |
-| Original training and per-game evaluation receipts | [Download the verified receipts ZIP (private)](https://github.com/brainintelli/organoid-replay-survival/releases/tag/study-evidence-v1). Use these receipts to rebuild the adverse-start results from the recordings and archived decisions. |
+| Model checkpoints, optimizer states and historical archives | [Public release](https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning/releases/tag/research-artifacts-v1) · [Choose a collection and verify its SHA-256](docs/archive-downloads.md). |
+| Original training and per-game evaluation receipts | [Training and evaluation records](docs/data-access.md#training-evidence-and-parameters) · [Download the receipts volume](https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning/releases/download/research-artifacts-v1/receipts.zip.part001). It includes the training batches, updates and game-level decisions. |
 
 ## From an electrode recording to a game action
 
@@ -76,4 +76,4 @@ Both commands run offline on the included paired outcomes. Each writes a fresh r
 | Which results can be regenerated, and what requires additional assets | [Result-by-result matrix](docs/reproduction_matrix.csv) · [Environment](docs/environment.md) · [Project contents and remaining dependencies](docs/project-contents.md) |
 | Figures, figure sources and editable manuscript | [Figures and plotting code](figures/) · [Manuscript source](manuscript/) · [Word edition](manuscript/paper.docx) |
 
-[Code terms](LICENSE) · [Data terms](LICENSE-DATA) · [Citation](CITATION.cff)
+[Code terms](LICENSE) · [Data terms](LICENSE-DATA) · [Training artifact terms](LICENSE-TRAINING) · [Citation](CITATION.cff)

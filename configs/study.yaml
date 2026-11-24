@@ -48,6 +48,18 @@
     "stress": "data/stress.csv",
     "windows": "data/windows.csv"
   },
+  "public_receipt_archive": {
+    "bytes": 157781100,
+    "members": {
+      "play60.py": "c88b435ef8ede167aa8ba877950ac36e6d0f935dff99b97f522ad3fc610e50b0",
+      "resources.py": "558cbc05d8611b8a31269fbb2f3bb7ef29e6c08f51fa4925c72b9ed309fb486f",
+      "stress/analyze.py": "4022b79169199d0c8efb8f81e5533604a5c42c9c3aa6957051907afdd8d72ec6",
+      "stress/evaluate.py": "0d8583fe1bda9c1378e11a2c80481ff2eddfc0dac874294e09ea49cc1b490748",
+      "stress/setup_scenes.py": "da2263c07d30fd433cc0ef7ceeff3db81e324033901d6dff0e4d10b2581cc2cb",
+      "train.py": "035afbc9224ec0dc15114faf9181a61716cf3222a0d5bc34aaadc2c8858bec02"
+    },
+    "sha256": "fa05249ce569e597cef82aeb7ca90bca72f2187914d99870ebb82b9973c06d4b"
+  },
   "raw_h5": {
     "normalization": {
       "baseline_windows": 24,
