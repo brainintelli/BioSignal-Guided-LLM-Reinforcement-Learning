@@ -11,6 +11,8 @@ The paper, game source, paired outcomes and raw MEA download instructions are [a
 | Original training and per-game receipts / 原始训练和逐局评估回执 | [Private receipts release / 私有回执下载页](https://github.com/brainintelli/organoid-replay-survival/releases/tag/study-evidence-v1) |
 | Original H5 recordings / 原始 H5 | [Public data access and SHA-256 instructions / 获取方式及校验说明](data-access.md) |
 
+The [whole-archive SHA-256 table](archive-checksums.csv) identifies all 11 packages: 244 volumes totaling 63,774,304,201 bytes. The checkpoint and historical parameter archives are byte-identical to the originals. Across the other nine packages, 1,010 member replacements and 165 omissions are recorded. The separate receipts ZIP is excluded from these totals.
+
 Download every part of the desired package from the same release. Use the supplied manifest to check each part, assemble in its numbered order and verify the whole-file SHA-256 before extraction. The archive manifest distinguishes intact upstream bytes from packages rebuilt to exclude restricted members. The receipts ZIP has SHA-256 `248907bc759199690d475dd8c6ccbac2920f30df21316cb944a6ad7a1fa523f2`.
 
 从同一版本下载目标归档的所有分卷，按照清单逐卷核对 SHA-256，按编号顺序重组，整包校验通过后再解压。请留意清单中哪些包保留了原始字节，哪些包因排除受限内容而重新打包。未获邀或尚未登录时，私有下载链接会返回 404。
