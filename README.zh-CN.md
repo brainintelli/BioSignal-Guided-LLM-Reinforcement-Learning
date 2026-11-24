@@ -1,5 +1,5 @@
-<h1 align="center">Organoid Replay Arena · 类器官信号回放生存实验场</h1>
-<p align="center">给生存游戏里的语言模型加入一秒钟的神经活动读数，它下一步会去哪里？</p>
+<h1 align="center">生物信号引导的 LLM 强化学习</h1>
+<p align="center">把类器官电活动离线回放给生存游戏里的语言模型，它下一步会去哪里？项目中的“引导”指策略和价值网络接收这些生物信号读数。</p>
 <p align="center"><a href="paper.pdf">署名论文（PDF）</a> · <a href="#游戏实录">播放游戏实录</a> · <a href="original/">游戏和训练源码</a> · <a href="docs/data-access.md">原始数据</a> · <a href="https://github.com/brainintelli/organoid-replay-survival/releases/tag/model-training-archives-v1">模型与历史归档（私有）</a> · <a href="README.md">English</a></p>
 
 **论文**　*Language Model Exploration and Survival Behavior Under Offline Replay of Organoid Neural Signals*

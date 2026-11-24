@@ -1,5 +1,5 @@
-<h1 align="center">Organoid Replay Arena</h1>
-<p align="center">Give a language-model explorer one second of recorded neural activity. Where does it go next?</p>
+<h1 align="center">Biosignal-Guided Reinforcement Learning for LLM Agents</h1>
+<p align="center">Where does an LLM explorer go next when its policy and value network receive offline replay of organoid neural activity?</p>
 <p align="center"><a href="paper.pdf">Read the preprint</a> · <a href="#gameplay">Watch gameplay</a> · <a href="original/">Game and training code</a> · <a href="docs/data-access.md">Raw data</a> · <a href="https://github.com/brainintelli/organoid-replay-survival/releases/tag/model-training-archives-v1">Model archives (private)</a> · <a href="README.zh-CN.md">中文</a></p>
 
 **Paper**　*Language Model Exploration and Survival Behavior Under Offline Replay of Organoid Neural Signals*

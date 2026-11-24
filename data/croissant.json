@@ -49,7 +49,7 @@
   "name": "Organoid recording replay in a survival game",
   "description": "Paired game outcomes, feature-level acquisition references and reproduction metadata for the offline replay study.",
   "conformsTo": "http://mlcommons.org/croissant/1.0",
-  "license": "https://github.com/brainintelli/Organoid-Replay-Arena/blob/main/LICENSE-DATA",
+  "license": "https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning/blob/main/LICENSE-DATA",
   "creator": [
     {
       "@type": "sc:Organization",
@@ -57,7 +57,7 @@
       "email": "research@brainintelli.com"
     }
   ],
-  "citeAs": "Brainintelli Research Lab. Language Model Exploration and Survival Behavior Under Offline Replay of Organoid Neural Signals. Organoid Replay Arena research data.",
+  "citeAs": "Brainintelli Research Lab. Language Model Exploration and Survival Behavior Under Offline Replay of Organoid Neural Signals. Biosignal-Guided Reinforcement Learning for LLM Agents research data.",
   "version": "1.0.0",
   "distribution": [
     {

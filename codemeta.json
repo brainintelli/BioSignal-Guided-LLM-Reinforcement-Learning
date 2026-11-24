@@ -10,10 +10,10 @@
     }
   ],
   "@type": "SoftwareSourceCode",
-  "name": "Organoid Replay Arena",
+  "name": "Biosignal-Guided Reinforcement Learning for LLM Agents",
   "description": "Godot survival game, training source and paired evaluation software for offline replay of organoid microelectrode-array recordings.",
-  "url": "https://github.com/brainintelli/Organoid-Replay-Arena",
-  "codeRepository": "https://github.com/brainintelli/Organoid-Replay-Arena",
+  "url": "https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning",
+  "codeRepository": "https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning",
   "author": [
     {
       "@type": "Organization",

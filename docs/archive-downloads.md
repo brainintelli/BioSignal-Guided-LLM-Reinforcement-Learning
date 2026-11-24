@@ -1,6 +1,6 @@
 # Checkpoint and archive downloads · 模型与归档下载
 
-The paper, game source, paired outcomes and raw MEA download instructions are [available here without signing in](https://github.com/brainintelli/Organoid-Replay-Arena). The trained checkpoints, optimizer states, original training receipts and historical packages are distributed from a separate **private** GitHub repository. Sign into the GitHub account invited to that repository. Access requests can be sent to [Brainintelli Research Lab](mailto:research@brainintelli.com).
+The paper, game source, paired outcomes and raw MEA download instructions are [available here without signing in](https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning). The trained checkpoints, optimizer states, original training receipts and historical packages are distributed from a separate **private** GitHub repository. Sign into the GitHub account invited to that repository. Access requests can be sent to [Brainintelli Research Lab](mailto:research@brainintelli.com).
 
 论文、游戏源码、逐局派生数据和原始 MEA 下载说明可以直接从公开仓库获取。模型 checkpoint、优化器状态、原始训练回执和历史大包存放在另一个**私有**仓库。请使用获邀的 GitHub 账号登录。需要访问归档时可联系 [Brainintelli Research Lab](mailto:research@brainintelli.com)。
 

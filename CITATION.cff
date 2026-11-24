@@ -1,11 +1,11 @@
 cff-version: 1.2.0
 type: software
-title: "Organoid Replay Arena"
+title: "Biosignal-Guided Reinforcement Learning for LLM Agents"
 message: "Please cite the accompanying preprint when using this research software."
 authors:
   - name: "Brainintelli Research Lab"
     email: research@brainintelli.com
-repository-code: "https://github.com/brainintelli/Organoid-Replay-Arena"
+repository-code: "https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning"
 license: MIT
 preferred-citation:
   type: report
@@ -18,4 +18,4 @@ preferred-citation:
     city: "Shanghai"
     country: CN
   year: 2026
-  url: "https://github.com/brainintelli/Organoid-Replay-Arena/blob/main/paper.pdf"
+  url: "https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning/blob/main/paper.pdf"
