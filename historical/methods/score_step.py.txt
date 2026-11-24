@@ -1,0 +1,17 @@
+def score_step(tr,obs,tracker,env,horizon):
+    old=tracker.previous
+    actual=tracker.score(tr,obs)['reward']
+    trace=[v for v in tr['trace'] if v['tick']<=horizon]
+    assert trace and [v['tick'] for v in trace]==list(range(tr['before']['tick']+1,tr['before']['tick']+len(trace)+1))
+    if len(trace)==len(tr['trace']):
+        boundary=obs
+    else:
+        boundary=env.call('landmark')['landmark']
+    end=trace[-1]; dt=len(trace)
+    assert end['tick']==boundary['world_tick'] and end['visited_count']==boundary['visited_count']
+    # Godot exposes player reserves rounded to 0.1 in observation; trace retains full precision.
+    assert all(abs(end[k]-boundary['player'][k])<=0.050001 for k in ('health','hunger','thirst')), (end,boundary['player'])
+    living=sum(GAMMA**i*.01*(not v['dead']) for i,v in enumerate(trace))
+    reward=living+GAMMA**dt*potential(boundary,'bottleneck',end['dead'])-old
+    if len(trace)==len(tr['trace']):assert math.isclose(actual,reward,abs_tol=1e-11)
+    return reward,living,end,len(trace)<len(tr['trace'])

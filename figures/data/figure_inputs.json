@@ -1,0 +1,1241 @@
+{
+  "figures": {
+    "1": {
+      "active": "S1.figure.1.active_channels",
+      "allzero_mean": "S1.d6.control_mean",
+      "budget": "A-eval_horizon",
+      "events": "S1.figure.1.events",
+      "features": [
+        "INPUT-baseline-0",
+        "INPUT-baseline-1",
+        "INPUT-baseline-2",
+        "INPUT-baseline-3"
+      ],
+      "matrix": [
+        [
+          0.00505,
+          11
+        ],
+        [
+          0.02545,
+          137
+        ],
+        [
+          0.02545,
+          254
+        ],
+        [
+          0.02555,
+          241
+        ],
+        [
+          0.28685,
+          252
+        ],
+        [
+          0.3064,
+          158
+        ],
+        [
+          0.33315,
+          158
+        ],
+        [
+          0.34655,
+          158
+        ],
+        [
+          0.3572,
+          158
+        ],
+        [
+          0.39185,
+          132
+        ],
+        [
+          0.4403,
+          316
+        ],
+        [
+          0.4598,
+          132
+        ],
+        [
+          0.48715,
+          288
+        ],
+        [
+          0.5367,
+          115
+        ],
+        [
+          0.57385,
+          217
+        ],
+        [
+          0.57385,
+          227
+        ],
+        [
+          0.5739,
+          320
+        ],
+        [
+          0.60965,
+          300
+        ],
+        [
+          0.6097,
+          90
+        ],
+        [
+          0.6311,
+          288
+        ],
+        [
+          0.63115,
+          253
+        ],
+        [
+          0.63115,
+          318
+        ],
+        [
+          0.64115,
+          76
+        ],
+        [
+          0.65055,
+          170
+        ],
+        [
+          0.6506,
+          24
+        ],
+        [
+          0.6506,
+          203
+        ],
+        [
+          0.65125,
+          320
+        ],
+        [
+          0.657,
+          127
+        ],
+        [
+          0.657,
+          218
+        ],
+        [
+          0.65705,
+          211
+        ],
+        [
+          0.65705,
+          232
+        ],
+        [
+          0.66605,
+          132
+        ],
+        [
+          0.6736,
+          300
+        ],
+        [
+          0.67365,
+          90
+        ],
+        [
+          0.6851,
+          40
+        ],
+        [
+          0.70725,
+          289
+        ],
+        [
+          0.73845,
+          22
+        ],
+        [
+          0.77455,
+          90
+        ],
+        [
+          0.7847,
+          252
+        ],
+        [
+          0.8645,
+          139
+        ],
+        [
+          0.96875,
+          239
+        ],
+        [
+          0.98605,
+          265
+        ],
+        [
+          0.98605,
+          295
+        ],
+        [
+          0.98605,
+          316
+        ]
+      ],
+      "raw_window": {
+        "event_digest": "9e5ad1b525d814cbbcff75bb8f8dc50105c78d6827606fca9ec0de0cb9dc9f21",
+        "h5_sha256": "e9403d682eb45b566fe49c8ea8470b772486a528c924d7c24722e995e28ff731",
+        "normalization": {
+          "baseline_windows": 24,
+          "centers": [
+            0.2923714442220039,
+            0.20341614906832298,
+            0.33482134882262166,
+            0.6865727570549716
+          ],
+          "clip": 3.0,
+          "decimals": 3,
+          "floors": [
+            0.1,
+            0.05,
+            0.05,
+            0.05
+          ],
+          "names": [
+            "log_rate",
+            "active_fraction",
+            "temporal_concentration",
+            "spatial_entropy"
+          ],
+          "scales": [
+            0.3733610336472334,
+            0.26475,
+            0.1414319477584663,
+            0.26372773039625164
+          ],
+          "schema": "mea.features.state2.v2"
+        },
+        "roi_channels": [
+          4,
+          6,
+          8,
+          12,
+          20,
+          26,
+          28,
+          36,
+          38,
+          40,
+          44,
+          48,
+          52,
+          56,
+          60,
+          68,
+          72,
+          76,
+          80,
+          84,
+          88,
+          92,
+          96,
+          100,
+          104,
+          112,
+          116,
+          120,
+          124,
+          136,
+          140,
+          144,
+          152,
+          160,
+          164,
+          176,
+          180,
+          192,
+          196,
+          200,
+          204,
+          224,
+          228,
+          232,
+          236,
+          240,
+          244,
+          252,
+          384,
+          388,
+          392,
+          396,
+          404,
+          408,
+          412,
+          416,
+          424,
+          428,
+          436,
+          440,
+          448,
+          512,
+          516,
+          520,
+          524,
+          528,
+          532,
+          536,
+          540,
+          544,
+          548,
+          552,
+          556,
+          560,
+          564,
+          568,
+          572,
+          576,
+          580,
+          584,
+          588,
+          592,
+          596,
+          600,
+          604,
+          612,
+          616,
+          620,
+          624,
+          625,
+          628,
+          629,
+          632,
+          636,
+          637,
+          640,
+          641,
+          644,
+          645,
+          648,
+          649,
+          652,
+          653,
+          656,
+          657,
+          660,
+          661,
+          664,
+          665,
+          668,
+          669,
+          672,
+          673,
+          677,
+          680,
+          681,
+          682,
+          684,
+          685,
+          686,
+          688,
+          692,
+          693,
+          696,
+          697,
+          700,
+          704,
+          705,
+          708,
+          709,
+          712,
+          713,
+          716,
+          720,
+          721,
+          724,
+          725,
+          728,
+          729,
+          732,
+          736,
+          737,
+          738,
+          740,
+          741,
+          744,
+          745,
+          748,
+          749,
+          752,
+          753,
+          756,
+          760,
+          761,
+          764,
+          768,
+          769,
+          770,
+          772,
+          773,
+          776,
+          777,
+          780,
+          781,
+          784,
+          785,
+          788,
+          789,
+          792,
+          793,
+          794,
+          796,
+          797,
+          798,
+          800,
+          801,
+          802,
+          803,
+          805,
+          808,
+          809,
+          810,
+          812,
+          813,
+          816,
+          820,
+          824,
+          825,
+          826,
+          828,
+          829,
+          832,
+          833,
+          834,
+          836,
+          837,
+          838,
+          840,
+          841,
+          842,
+          844,
+          845,
+          846,
+          848,
+          849,
+          850,
+          852,
+          853,
+          854,
+          856,
+          857,
+          860,
+          861,
+          864,
+          865,
+          866,
+          868,
+          869,
+          870,
+          872,
+          873,
+          876,
+          877,
+          880,
+          881,
+          882,
+          884,
+          885,
+          886,
+          888,
+          889,
+          892,
+          893,
+          896,
+          897,
+          899,
+          900,
+          901,
+          904,
+          905,
+          906,
+          908,
+          909,
+          910,
+          912,
+          913,
+          916,
+          917,
+          919,
+          920,
+          921,
+          924,
+          925,
+          927,
+          928,
+          929,
+          931,
+          932,
+          933,
+          934,
+          935,
+          936,
+          937,
+          940,
+          941,
+          944,
+          945,
+          948,
+          949,
+          950,
+          952,
+          953,
+          954,
+          955,
+          956,
+          957,
+          958,
+          959,
+          960,
+          961,
+          963,
+          964,
+          965,
+          968,
+          969,
+          972,
+          973,
+          974,
+          976,
+          977,
+          978,
+          980,
+          981,
+          982,
+          984,
+          985,
+          986,
+          988,
+          990,
+          991,
+          992,
+          993,
+          994,
+          996,
+          997,
+          1000,
+          1001,
+          1003,
+          1004,
+          1005,
+          1008,
+          1009,
+          1010,
+          1012,
+          1013,
+          1016,
+          1017,
+          1018,
+          1019,
+          1020,
+          1021,
+          1022
+        ]
+      },
+      "results": [
+        {
+          "arm": "baseline",
+          "chip": "V0-P025-02",
+          "confidence": "DES-q95",
+          "control": "masked",
+          "hi": "E-22021-baseline-masked-exploration-ci_high",
+          "lo": "E-22021-baseline-masked-exploration-ci_low",
+          "maps": "A-heldout_worlds_per_group",
+          "mean": "E-22021-baseline-masked-exploration-mean_difference",
+          "positive": "E-22021-baseline-masked-exploration-positive_seeds",
+          "recording": "first",
+          "seeds": "A-train_seeds_per_group"
+        },
+        {
+          "arm": "sham",
+          "chip": "V0-P025-02",
+          "confidence": "DES-q95",
+          "control": "masked",
+          "hi": "E-22021-sham-masked-exploration-ci_high",
+          "lo": "E-22021-sham-masked-exploration-ci_low",
+          "maps": "A-heldout_worlds_per_group",
+          "mean": "E-22021-sham-masked-exploration-mean_difference",
+          "positive": "E-22021-sham-masked-exploration-positive_seeds",
+          "recording": "first",
+          "seeds": "A-train_seeds_per_group"
+        }
+      ],
+      "roi": "V0-P077-06",
+      "window": [
+        "RASTER-frame_start",
+        "RASTER-frame_end"
+      ]
+    },
+    "2": {
+      "beta": "DES-beta",
+      "decision_log": {
+        "action": "move",
+        "feature_fields": [
+          "prepared.wetware_features",
+          "prepared.critic_input[-4:]",
+          "snapshot.normalized"
+        ],
+        "line": 1,
+        "sha256": "a21d4f874d7369668f76112cec90bfb5ce34a4e69f5880a968eee29ba55eecfa"
+      },
+      "duration_game_ticks": "LOG-duration",
+      "features": [
+        "S1.figure.2.input.0",
+        "S1.figure.2.input.1",
+        "S1.figure.2.input.2",
+        "S1.figure.2.input.3"
+      ],
+      "map_seed": "LOG-seed",
+      "native_R1": "LOG-reward",
+      "return_target": "LOG-return",
+      "training_seed": "V0-P047-01",
+      "value": "LOG-value",
+      "whole_batch_advantage": "LOG-advantage"
+    },
+    "3": {
+      "arm_count": "DES-arms",
+      "arms": {
+        "baseline": {
+          "actions": [
+            "move",
+            "navigate",
+            "wait",
+            "gather",
+            "navigate",
+            "move"
+          ],
+          "end_ticks": [
+            1,
+            5,
+            6,
+            8,
+            11,
+            12
+          ],
+          "line": 5,
+          "log_sha256": "b2cbe10a830ded9b1d25f849a8eec1c0c1a872ea616c6b06dfc16871ef12adbf"
+        },
+        "masked": {
+          "actions": [
+            "move",
+            "navigate",
+            "wait",
+            "gather",
+            "move",
+            "move"
+          ],
+          "end_ticks": [
+            1,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "line": 5,
+          "log_sha256": "a17c0b4a030f54db2e02351340ad6c01db7a3f19c22c98e639310bdb816294d2"
+        }
+      },
+      "block": "AR05.R2.stress.block_seconds",
+      "budget": "A-eval_horizon",
+      "chip": "V0-P077-01",
+      "day": "V0-P077-03",
+      "decisions_per_batch": "DES-batch",
+      "episodes": "DES-episodes",
+      "five": "AR05.S1.day18.five.arms",
+      "frozen_models": "QC-integrity-summary-training_models",
+      "horizon_ticks": "DES-horizon",
+      "scene_count": "DES-scenes",
+      "seed": "V0-P051-02",
+      "training_batches": "DES-batches",
+      "training_seeds": "DES-training_seeds",
+      "world": "V0-P051-03",
+      "worlds_per_scene": "DES-holdout_worlds_per_seed_and_scene"
+    },
+    "4": {
+      "checkpoint_manifest": {
+        "member": "models/351855818/ordered/checkpoint/manifest.json",
+        "sha256": "59ee9cf6a371947cab9f3ceb859390f39fead2496707528a7ff82a24aaf35872"
+      },
+      "endpoint_mismatch": "QC-native-replay-primary_and_wait_mismatches",
+      "reload_actions": "QC-policy-reload-decisions",
+      "reload_games": "QC-policy-reload-episodes",
+      "reload_mismatch": "QC-policy-reload-action_mismatches",
+      "reloaded_models": "QC-policy-reload-models",
+      "replayed_actions": "QC-native-replay-decisions",
+      "replayed_games": "QC-native-replay-episodes",
+      "score_exceptions": "QC-native-replay-r1_differences_over_1e_10",
+      "training_batches": "DES-batches"
+    },
+    "5": {
+      "budget": "A-eval_horizon",
+      "frequency": {
+        "baseline": [
+          "A-baseline-six-losses",
+          "A-baseline-six-ties",
+          "A-baseline-six-wins"
+        ],
+        "sham": [
+          "A-sham-six-losses",
+          "A-sham-six-ties",
+          "A-sham-six-wins"
+        ]
+      },
+      "horizon": "DES-horizon",
+      "pairs": "A-N",
+      "results": [
+        {
+          "arm": "baseline",
+          "chip": "V0-P025-02",
+          "confidence": "DES-q95",
+          "control": "masked",
+          "hi": "E-22021-baseline-masked-exploration-ci_high",
+          "lo": "E-22021-baseline-masked-exploration-ci_low",
+          "maps": "A-heldout_worlds_per_group",
+          "mean": "E-22021-baseline-masked-exploration-mean_difference",
+          "positive": "E-22021-baseline-masked-exploration-positive_seeds",
+          "recording": "first",
+          "seeds": "A-train_seeds_per_group"
+        },
+        {
+          "arm": "sham",
+          "chip": "V0-P025-02",
+          "confidence": "DES-q95",
+          "control": "masked",
+          "hi": "E-22021-sham-masked-exploration-ci_high",
+          "lo": "E-22021-sham-masked-exploration-ci_low",
+          "maps": "A-heldout_worlds_per_group",
+          "mean": "E-22021-sham-masked-exploration-mean_difference",
+          "positive": "E-22021-sham-masked-exploration-positive_seeds",
+          "recording": "first",
+          "seeds": "A-train_seeds_per_group"
+        },
+        {
+          "arm": "ordered",
+          "chip": "V0-P078-06",
+          "confidence": "DES-q95",
+          "control": "pure",
+          "hi": "E-22554-ordered-pure-exploration-ci_high",
+          "lo": "E-22554-ordered-pure-exploration-ci_low",
+          "maps": "A-heldout_worlds_per_group",
+          "mean": "E-22554-ordered-pure-exploration-mean_difference",
+          "positive": "E-22554-ordered-pure-exploration-positive_seeds",
+          "recording": "first",
+          "seeds": "A-train_seeds_per_group"
+        },
+        {
+          "arm": "ordered",
+          "chip": "V0-P025-02",
+          "confidence": "B-low_health-masked-cells-interval_level",
+          "control": "masked",
+          "hi": "B-low_health-masked-cells-hi",
+          "lo": "B-low_health-masked-cells-lo",
+          "maps": "DES-holdout_worlds_per_seed_and_scene",
+          "mean": "B-low_health-masked-cells-delta",
+          "positive": "B-low_health-masked-cells-wins",
+          "recording": "second",
+          "seeds": "DES-training_seeds"
+        },
+        {
+          "arm": "ordered",
+          "chip": "V0-P025-02",
+          "confidence": "B-low_health-shuffled-cells-interval_level",
+          "control": "shuffled",
+          "hi": "B-low_health-shuffled-cells-hi",
+          "lo": "B-low_health-shuffled-cells-lo",
+          "maps": "DES-holdout_worlds_per_seed_and_scene",
+          "mean": "B-low_health-shuffled-cells-delta",
+          "positive": "B-low_health-shuffled-cells-wins",
+          "recording": "second",
+          "seeds": "DES-training_seeds"
+        }
+      ]
+    },
+    "6": {
+      "budget": "A-eval_horizon",
+      "intervals": {
+        "baseline": {
+          "residual": [
+            "S1.score.baseline.residual_975_lo",
+            "S1.score.baseline.residual_975_hi"
+          ],
+          "total": [
+            "F18-baseline-masked-r1_sum-lo",
+            "F18-baseline-masked-r1_sum-hi"
+          ]
+        },
+        "sham": {
+          "residual": [
+            "S1.score.sham.residual_975_lo",
+            "S1.score.sham.residual_975_hi"
+          ],
+          "total": [
+            "F18-sham-masked-r1_sum-lo",
+            "F18-sham-masked-r1_sum-hi"
+          ]
+        }
+      },
+      "log_sources": {
+        "baseline": {
+          "102083199": "b2cbe10a830ded9b1d25f849a8eec1c0c1a872ea616c6b06dfc16871ef12adbf",
+          "102122616": "d1538d9f622769eb6c08541ee2f36c6725a5eb8c610a13ab82feba8afac96e5c",
+          "102385481": "ebf7ed167a9d6d69f76105407c233f5f91cc3e2d35225f87f538bd92d1584c48",
+          "102411608": "09272d0c0a868aec44c8d674cd77afa57f4071c9d99c90035615b4bf05fe30f5",
+          "102452542": "365b935335120fe9b0e95e629189d716ff34572b90bc19e3a487b02facb12c52",
+          "102473463": "98efad144e06f38f79657b62ed837e303195179bc64d18a66e58c4ed42a9780d",
+          "102476656": "ae43e2b9bdee5c0aecfb071846d2a0abefc1f3dc28d3be1fd9b586a128fad6f6",
+          "102481912": "1998f9bf8991d51460430274ba85cfada07a92160c67a00070f46733189dc051"
+        },
+        "masked": {
+          "102083199": "a17c0b4a030f54db2e02351340ad6c01db7a3f19c22c98e639310bdb816294d2",
+          "102122616": "4d3f6030f6c5113e4b2de5618e4745a698abed6397a455fce9b04e32ed07c42f",
+          "102385481": "61c65be77f62f64e1fae1aa9f63112192241d0733b0fc0b057e33a434c5680d5",
+          "102411608": "9492e6b71ca442f4c915c6f5553ceee32aacc85276b1d26543adde94f740a732",
+          "102452542": "ef2ceee5bedfe23e11f6d0f58f203e449bf775451941e840069ad7942e0b237c",
+          "102473463": "62cd8849e49d71f959d76f966415625d33f872cb8984513b57c8fbb52f01f4af",
+          "102476656": "bbb9f9fe111296ca0afcfdd1377518777610d3d2b75e5a329dd9b08b0ce4e984",
+          "102481912": "40c9b46ec664838ca93af1cd1cf1bf6bef938b963f519b1906e637a36a965d8c"
+        },
+        "sham": {
+          "102083199": "87f3bbf7853d61d82e95f904b038d15b46951394d8e4e8c656b4c4ef21c0539f",
+          "102122616": "b003d20f96f1c48015c6e2ff825bf6dd2c54600f4c634829b4f06cb4837b243f",
+          "102385481": "8ec9b542dd42b252f9437ead38634dc6c19e622da02b648674d8b7c354b11595",
+          "102411608": "a87113bbc6a99bcf905e772b01ff61b45ff9f9a29fb904352df8fc01eb1ae722",
+          "102452542": "34336645528f4fa016fd8f454d3cbe077b3bac4750650e01b5507debeb593ce3",
+          "102473463": "d71b38b5c4b6203e0387e45ab6375b4c3d0fca281c800e6f036109757b21c9d2",
+          "102476656": "e936d56fee65d2865c96b37b8d8f518e4dd7454983d49a494185564b0071ed6f",
+          "102481912": "918b2db40663e276a2b38350610b0d4d7f17d76951cb14d9266559bdfd010d66"
+        }
+      },
+      "maps": "DES-48maps",
+      "means": {
+        "baseline": {
+          "clock": "R1-baseline-clock",
+          "residual": "R1-baseline-residual",
+          "share": "R1-baseline-share",
+          "total": "R1-baseline-total"
+        },
+        "sham": {
+          "clock": "R1-sham-clock",
+          "residual": "R1-sham-residual",
+          "share": "R1-sham-share",
+          "total": "R1-sham-total"
+        }
+      },
+      "pairs": "AR05.S1.day18.five.pairs",
+      "positive_total": {
+        "baseline": "F18-baseline-masked-r1_sum-wins",
+        "sham": "F18-sham-masked-r1_sum-wins"
+      },
+      "raw_seed_differences": {
+        "baseline": [
+          [
+            0.0028520036550481096,
+            -0.0029159167229152604,
+            -6.391306786715078e-05
+          ],
+          [
+            0.009528975662590552,
+            -0.006873468843747187,
+            0.0026555068188433657
+          ],
+          [
+            0.005884560334224518,
+            -0.0056237813203103915,
+            0.000260779013914127
+          ],
+          [
+            0.0058843465519177705,
+            -0.005623562617183281,
+            0.0002607839347344893
+          ],
+          [
+            0.001850353507045759,
+            -0.0014579896067701298,
+            0.00039236390027562923
+          ],
+          [
+            0.002469462281780694,
+            -0.00166641666197987,
+            0.0008030456198008237
+          ],
+          [
+            0.0022196684271509892,
+            -0.0018745312874985933,
+            0.00034513713965239596
+          ],
+          [
+            0.001443153481003405,
+            -0.0010414166901027593,
+            0.0004017367909006457
+          ]
+        ],
+        "sham": [
+          [
+            0.0024448647044290044,
+            -0.0024994062874992965,
+            -5.454158307029196e-05
+          ],
+          [
+            0.0075225914450486224,
+            -0.0077065522005173165,
+            -0.0001839607554686942
+          ],
+          [
+            0.007513329923589029,
+            -0.007290041769788152,
+            0.00022328815380087672
+          ],
+          [
+            0.00327538564994275,
+            -0.0029158230010381497,
+            0.0003595626489045998
+          ],
+          [
+            0.0020539077134994993,
+            -0.0016662292041652602,
+            0.00038767850933423925
+          ],
+          [
+            0.00429518767376314,
+            -0.003957364653643724,
+            0.00033782302011941607
+          ],
+          [
+            0.004237577789037376,
+            -0.004373843848433985,
+            -0.00013626605939660877
+          ],
+          [
+            0.0012395992745496648,
+            -0.0008331770927076291,
+            0.00040642218184203566
+          ]
+        ]
+      },
+      "residual_level": {
+        "baseline": "R18-\u523a\u6fc0\u524d\u81ea\u53d1 \u2212 \u5c4f\u853d-\u5176\u4f59\u5f97\u5206\u5dee-level",
+        "sham": "R18-\u5f53\u8f6e\u96f6\u8f93\u51fa \u2212 \u5c4f\u853d-\u5176\u4f59\u5f97\u5206\u5dee-level"
+      },
+      "seed_order": {
+        "baseline": [
+          "102083199",
+          "102122616",
+          "102385481",
+          "102411608",
+          "102452542",
+          "102473463",
+          "102476656",
+          "102481912"
+        ],
+        "sham": [
+          "102083199",
+          "102122616",
+          "102385481",
+          "102411608",
+          "102452542",
+          "102473463",
+          "102476656",
+          "102481912"
+        ]
+      },
+      "seeds": "DES-8seeds",
+      "timing_award": "V0-P098-01",
+      "timing_discount": "PARAM-gamma_tick",
+      "total_level": {
+        "baseline": "F18-baseline-masked-r1_sum-level",
+        "sham": "F18-sham-masked-r1_sum-level"
+      }
+    },
+    "7": {
+      "actions": {
+        "baseline": {
+          "gather": [
+            "ACT-baseline-gather-n",
+            "ACT-baseline-gather-pct"
+          ],
+          "move": [
+            "ACT-baseline-move-n",
+            "ACT-baseline-move-pct"
+          ],
+          "navigate": [
+            "ACT-baseline-navigate-n",
+            "ACT-baseline-navigate-pct"
+          ],
+          "wait": [
+            "ACT-baseline-wait-n",
+            "ACT-baseline-wait-pct"
+          ]
+        },
+        "masked": {
+          "gather": [
+            "ACT-masked-gather-n",
+            "ACT-masked-gather-pct"
+          ],
+          "move": [
+            "ACT-masked-move-n",
+            "ACT-masked-move-pct"
+          ],
+          "navigate": [
+            "ACT-masked-navigate-n",
+            "ACT-masked-navigate-pct"
+          ],
+          "wait": [
+            "ACT-masked-wait-n",
+            "ACT-masked-wait-pct"
+          ]
+        },
+        "sham": {
+          "gather": [
+            "ACT-sham-gather-n",
+            "ACT-sham-gather-pct"
+          ],
+          "move": [
+            "ACT-sham-move-n",
+            "ACT-sham-move-pct"
+          ],
+          "navigate": [
+            "ACT-sham-navigate-n",
+            "ACT-sham-navigate-pct"
+          ],
+          "wait": [
+            "ACT-sham-wait-n",
+            "ACT-sham-wait-pct"
+          ]
+        }
+      },
+      "decisions": "A-eval_horizon",
+      "denominator": "A-DEC",
+      "log_sources": {
+        "baseline": [
+          "b2cbe10a830ded9b1d25f849a8eec1c0c1a872ea616c6b06dfc16871ef12adbf",
+          "d1538d9f622769eb6c08541ee2f36c6725a5eb8c610a13ab82feba8afac96e5c",
+          "ebf7ed167a9d6d69f76105407c233f5f91cc3e2d35225f87f538bd92d1584c48",
+          "09272d0c0a868aec44c8d674cd77afa57f4071c9d99c90035615b4bf05fe30f5",
+          "365b935335120fe9b0e95e629189d716ff34572b90bc19e3a487b02facb12c52",
+          "98efad144e06f38f79657b62ed837e303195179bc64d18a66e58c4ed42a9780d",
+          "ae43e2b9bdee5c0aecfb071846d2a0abefc1f3dc28d3be1fd9b586a128fad6f6",
+          "1998f9bf8991d51460430274ba85cfada07a92160c67a00070f46733189dc051",
+          "a2211878607dbea00e43e9dc1741009b9edcc265855fe2158ba637b0cd31b652",
+          "7463fa90cd77b19c6eeeeb9d8a551f13afa632690dde7d2f856a488363a9dd18",
+          "3a48c90524959e05e1f03753cd512ad9af98b8e1a15b86a73f93e126a12beff9",
+          "bc03a9638bc44742efee04be4b5c334024cbeef03cc443dfe9cf38c659cd051f",
+          "a76660095ea1252eb7a7d31f1d6beae649dcdb5ef4834050a4c6702ac62b66f4",
+          "8a55cb7d7f7603216167551e8940fa02d88e030c6681168c91644488bf95d7c3",
+          "51324f5def3bb5cb72f3764081f9d0251504b7b006147135a882b8a0aadf0bef",
+          "b99dfaa4c23c0ee75037b191e990e845a6b1ff7a24aede4924de9a2afc68cab6"
+        ],
+        "masked": [
+          "a17c0b4a030f54db2e02351340ad6c01db7a3f19c22c98e639310bdb816294d2",
+          "4d3f6030f6c5113e4b2de5618e4745a698abed6397a455fce9b04e32ed07c42f",
+          "61c65be77f62f64e1fae1aa9f63112192241d0733b0fc0b057e33a434c5680d5",
+          "9492e6b71ca442f4c915c6f5553ceee32aacc85276b1d26543adde94f740a732",
+          "ef2ceee5bedfe23e11f6d0f58f203e449bf775451941e840069ad7942e0b237c",
+          "62cd8849e49d71f959d76f966415625d33f872cb8984513b57c8fbb52f01f4af",
+          "bbb9f9fe111296ca0afcfdd1377518777610d3d2b75e5a329dd9b08b0ce4e984",
+          "40c9b46ec664838ca93af1cd1cf1bf6bef938b963f519b1906e637a36a965d8c",
+          "6863b3873227c17d42698b06d59494e48cbb6c01fb1e7560a62f2d15449f2ab0",
+          "28a870d5affac8b8b8faf53c39ac8d548970f7fc731c600c63553903e639fc52",
+          "2f1df5b33568cadbc535d493593bfc1060165d5eb65a19d438651d20c19e5863",
+          "40de5a3298b9a2f7168c226b18888fc6d71f417218213ff0d7d7a9a2c8082e79",
+          "3d86d8dafc41d65db42bdf1debc6424e41c2992eb520f475b3b176d6e4135380",
+          "f27c1ffe2c23c2bab3a3a53aa920a49c612603882eef7f016df7ddd803e336ee",
+          "b9428f1d1f8e86f819ed65e205a020fd105f8d26629a302d8c3078a5c2dcd8cc",
+          "923efa7b8ad3b87c1df044dcd49b9a1fd7306774660ce101536e979773ea1c4c"
+        ],
+        "sham": [
+          "87f3bbf7853d61d82e95f904b038d15b46951394d8e4e8c656b4c4ef21c0539f",
+          "b003d20f96f1c48015c6e2ff825bf6dd2c54600f4c634829b4f06cb4837b243f",
+          "8ec9b542dd42b252f9437ead38634dc6c19e622da02b648674d8b7c354b11595",
+          "a87113bbc6a99bcf905e772b01ff61b45ff9f9a29fb904352df8fc01eb1ae722",
+          "34336645528f4fa016fd8f454d3cbe077b3bac4750650e01b5507debeb593ce3",
+          "d71b38b5c4b6203e0387e45ab6375b4c3d0fca281c800e6f036109757b21c9d2",
+          "e936d56fee65d2865c96b37b8d8f518e4dd7454983d49a494185564b0071ed6f",
+          "918b2db40663e276a2b38350610b0d4d7f17d76951cb14d9266559bdfd010d66",
+          "a5c716b611159243689e13661b75282117556fee7c0feeb1bb081d503adc8d85",
+          "615cca74707a027a0bc746b2f727d0b0924a67b5bdb44717ac0df328c9ba399e",
+          "f0137e781bbb8a9851bc6600e7ad97837647b0230f74e7af2eaf5135ca08b7f7",
+          "be979b9202923fa45a4841b3ffbf709f611bf6850ed8fde357413fdd2c87cd41",
+          "acc86d3f90f8aee69df7f9875e7bb62c0ea1b091e5dadb5f3546f042ea7dfb47",
+          "f0d7638df85d1a87dc9a097512fd47f570e7c4eb1da2fe6a87f4b439fb7ff3d2",
+          "44a70ead05fe3488ab6f70f23d237f620f74a4972792b98c6fdc10dde9eb89ca",
+          "3454078f833a5723215b6702487cf9ac0a06c0102311366e3783667b95c4d08f"
+        ]
+      },
+      "maps": "A-heldout_worlds_per_group",
+      "seeds": "A-train_seeds_per_group"
+    }
+  },
+  "values": {
+    "A-DEC": "4608",
+    "A-N": "768",
+    "A-baseline-six-losses": "52",
+    "A-baseline-six-ties": "615",
+    "A-baseline-six-wins": "101",
+    "A-eval_horizon": "6",
+    "A-heldout_worlds_per_group": "48",
+    "A-sham-six-losses": "57",
+    "A-sham-six-ties": "602",
+    "A-sham-six-wins": "109",
+    "A-train_seeds_per_group": "16",
+    "ACT-baseline-gather-n": "548",
+    "ACT-baseline-gather-pct": "11.89236111111111",
+    "ACT-baseline-move-n": "2095",
+    "ACT-baseline-move-pct": "45.46440972222222",
+    "ACT-baseline-navigate-n": "501",
+    "ACT-baseline-navigate-pct": "10.872395833333332",
+    "ACT-baseline-wait-n": "743",
+    "ACT-baseline-wait-pct": "16.124131944444446",
+    "ACT-masked-gather-n": "499",
+    "ACT-masked-gather-pct": "10.828993055555555",
+    "ACT-masked-move-n": "2207",
+    "ACT-masked-move-pct": "47.89496527777778",
+    "ACT-masked-navigate-n": "394",
+    "ACT-masked-navigate-pct": "8.550347222222223",
+    "ACT-masked-wait-n": "794",
+    "ACT-masked-wait-pct": "17.23090277777778",
+    "ACT-sham-gather-n": "555",
+    "ACT-sham-gather-pct": "12.044270833333332",
+    "ACT-sham-move-n": "2083",
+    "ACT-sham-move-pct": "45.20399305555556",
+    "ACT-sham-navigate-n": "499",
+    "ACT-sham-navigate-pct": "10.828993055555555",
+    "ACT-sham-wait-n": "755",
+    "ACT-sham-wait-pct": "16.38454861111111",
+    "AR05.R2.five.measured_vs_masked": "2",
+    "AR05.R2.record.second": "2",
+    "AR05.R2.short.features": "4",
+    "AR05.R2.stress.block_seconds": "2",
+    "AR05.R3.method.figure3.common_prefix": "4",
+    "AR05.R3.method.figure3.first_divergent": "5",
+    "AR05.R3.method.training_log.first_decision": "1",
+    "AR05.S1.day18.five.arms": "5",
+    "AR05.S1.day18.five.pairs": "384",
+    "AR05.current.d18.day": "18",
+    "AR05.current.d18.month": "11",
+    "B-low_health-masked-cells-delta": "5.591796875",
+    "B-low_health-masked-cells-hi": "11.255706787109379",
+    "B-low_health-masked-cells-interval_level": "99.16666666666667",
+    "B-low_health-masked-cells-lo": "-0.18896484375",
+    "B-low_health-masked-cells-wins": "25",
+    "B-low_health-shuffled-cells-delta": "2.27880859375",
+    "B-low_health-shuffled-cells-hi": "7.1284423828125085",
+    "B-low_health-shuffled-cells-interval_level": "99.16666666666667",
+    "B-low_health-shuffled-cells-lo": "-1.9179931640625",
+    "B-low_health-shuffled-cells-wins": "21",
+    "DES-48maps": "48",
+    "DES-8seeds": "8",
+    "DES-arms": "3",
+    "DES-batch": "12",
+    "DES-batches": "4",
+    "DES-beta": "0",
+    "DES-episodes": "18432",
+    "DES-holdout_worlds_per_seed_and_scene": "64",
+    "DES-horizon": "60",
+    "DES-primary-level": "99.16666666666667",
+    "DES-q95": "95",
+    "DES-scenes": "3",
+    "DES-training_seeds": "32",
+    "E-22021-baseline-masked-exploration-ci_high": "2.7305013020833346",
+    "E-22021-baseline-masked-exploration-ci_low": "1.180989583333333",
+    "E-22021-baseline-masked-exploration-mean_difference": "1.9869791666666674",
+    "E-22021-baseline-masked-exploration-positive_seeds": "14.0",
+    "E-22021-sham-masked-exploration-ci_high": "2.752636718750001",
+    "E-22021-sham-masked-exploration-ci_low": "1.583300781250001",
+    "E-22021-sham-masked-exploration-mean_difference": "2.1575520833333344",
+    "E-22021-sham-masked-exploration-positive_seeds": "15.0",
+    "E-22554-ordered-pure-exploration-ci_high": "0.979231770833334",
+    "E-22554-ordered-pure-exploration-ci_low": "-1.7851562499999987",
+    "E-22554-ordered-pure-exploration-mean_difference": "-0.40364583333333215",
+    "E-22554-ordered-pure-exploration-positive_seeds": "5.0",
+    "F18-baseline-masked-r1_sum-hi": "0.008036602487505302",
+    "F18-baseline-masked-r1_sum-level": "97.5",
+    "F18-baseline-masked-r1_sum-lo": "0.0012918201097809215",
+    "F18-baseline-masked-r1_sum-wins": "8.0",
+    "F18-sham-masked-r1_sum-hi": "0.008419551972021577",
+    "F18-sham-masked-r1_sum-level": "99.16666666666667",
+    "F18-sham-masked-r1_sum-lo": "0.0008661081306735608",
+    "F18-sham-masked-r1_sum-wins": "8.0",
+    "INPUT-baseline-0": "-0.147",
+    "INPUT-baseline-1": "-0.131",
+    "INPUT-baseline-2": "-0.315",
+    "INPUT-baseline-3": "-0.134",
+    "LOG-advantage": "0.06858282692809405",
+    "LOG-duration": "1",
+    "LOG-return": "37.60325461037536",
+    "LOG-reward": "0.00977500000000008",
+    "LOG-seed": "353949302",
+    "LOG-value": "37.534671783447266",
+    "PARAM-gamma_tick": "0.99985",
+    "QC-integrity-summary-training_models": "96",
+    "QC-native-replay-decisions": "669715",
+    "QC-native-replay-episodes": "18432",
+    "QC-native-replay-primary_and_wait_mismatches": "0",
+    "QC-native-replay-r1_differences_over_1e_10": "64",
+    "QC-policy-reload-action_mismatches": "0",
+    "QC-policy-reload-decisions": "9351",
+    "QC-policy-reload-episodes": "288",
+    "QC-policy-reload-models": "96",
+    "R1-baseline-clock": "0.0033846354688134342",
+    "R1-baseline-residual": "0.000631930018781791",
+    "R1-baseline-share": "84.26690612331741",
+    "R1-baseline-total": "0.004016565487595225",
+    "R1-sham-clock": "0.0039053047572241892",
+    "R1-sham-residual": "0.000167500764508196",
+    "R1-sham-share": "95.88733703059437",
+    "R1-sham-total": "0.004072805521732385",
+    "R18-\u523a\u6fc0\u524d\u81ea\u53d1 \u2212 \u5c4f\u853d-\u5176\u4f59\u5f97\u5206\u5dee-level": "97.5",
+    "R18-\u5f53\u8f6e\u96f6\u8f93\u51fa \u2212 \u5c4f\u853d-\u5176\u4f59\u5f97\u5206\u5dee-level": "97.5",
+    "RASTER-frame_end": "59.0",
+    "RASTER-frame_start": "58.0",
+    "S1.d6.control_mean": "40.38671875",
+    "S1.figure.1.active_channels": "32",
+    "S1.figure.1.events": "44",
+    "S1.figure.2.input.0": "0.722",
+    "S1.figure.2.input.1": "0.933",
+    "S1.figure.2.input.2": "0.251",
+    "S1.figure.2.input.3": "0.283",
+    "S1.figure.3.baseline.last_world_tick": "12",
+    "S1.figure.3.masked.last_world_tick": "10",
+    "S1.score.baseline.residual_975_hi": "0.002742457237630534",
+    "S1.score.baseline.residual_975_lo": "-0.00021658792327585789",
+    "S1.score.sham.residual_975_hi": "0.0011235816157456214",
+    "S1.score.sham.residual_975_lo": "-0.0003824060472016026",
+    "S2.game.figure1.raster_event_unit": "1",
+    "S2.remaining25.figure3.distinct_assays": "2",
+    "S4.figure3A.baseline.fifth.after_tick": "11",
+    "S4.figure3A.masked.fifth.after_tick": "9",
+    "S4.source.figure3a.displayed_trajectories": "2",
+    "V0-P025-02": "22021",
+    "V0-P047-01": "351855818",
+    "V0-P051-02": "102083199",
+    "V0-P051-03": "172012841",
+    "V0-P063-01": "4",
+    "V0-P063-02": "-1",
+    "V0-P063-03": "-4",
+    "V0-P063-04": "0",
+    "V0-P063-05": "3",
+    "V0-P077-01": "22021",
+    "V0-P077-02": "11",
+    "V0-P077-03": "18",
+    "V0-P077-06": "322",
+    "V0-P078-06": "22554",
+    "V0-P098-01": "0.01",
+    "V0-P106-02": "22021"
+  }
+}

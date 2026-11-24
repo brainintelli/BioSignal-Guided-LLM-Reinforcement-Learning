@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="396pt" height="163pt" viewBox="0 0 396 163" role="img" aria-labelledby="chart-title chart-desc">
+  <title id="chart-title">Frequencies of four observed actions</title>
+  <desc id="chart-desc">Frequencies use all recorded decisions in each arm. Four selected action categories are shown descriptively without group tests or interval estimates.</desc>
+  <rect x="0" y="0" width="396.0" height="163" fill="#FFFFFF" stroke="none" stroke-width="0.65" />
+  <text x="5" y="13" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="10.6" fill="#172B3C" text-anchor="start">Selected actions on held-out maps</text>
+  <line x1="5" x2="391" y1="19" y2="19" stroke="#C3CBD0" stroke-width="0.7" />
+  <text x="6" y="32" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;A-DEC&quot;,&quot;display&quot;:&quot;4,608&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;A-train_seeds_per_group&quot;,&quot;display&quot;:&quot;16&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;A-heldout_worlds_per_group&quot;,&quot;display&quot;:&quot;48&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;A-eval_horizon&quot;,&quot;display&quot;:&quot;6&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">Share of all 4,608 executed choices in each group (16 seeds × 48 maps × 6 decisions).</text>
+  <line x1="79.0" x2="79.0" y1="54" y2="139" stroke="#C3CBD0" stroke-width="0.44" />
+  <line x1="79.0" x2="79.0" y1="139" y2="141" stroke="#445969" stroke-width="0.65" />
+  <text x="79.0" y="149" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">0%</text>
+  <line x1="113.6" x2="113.6" y1="54" y2="139" stroke="#C3CBD0" stroke-width="0.44" stroke-dasharray="1.4 2.2" />
+  <line x1="113.6" x2="113.6" y1="139" y2="141" stroke="#445969" stroke-width="0.65" />
+  <text x="113.6" y="149" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">10%</text>
+  <line x1="148.2" x2="148.2" y1="54" y2="139" stroke="#C3CBD0" stroke-width="0.44" stroke-dasharray="1.4 2.2" />
+  <line x1="148.2" x2="148.2" y1="139" y2="141" stroke="#445969" stroke-width="0.65" />
+  <text x="148.2" y="149" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">20%</text>
+  <line x1="182.8" x2="182.8" y1="54" y2="139" stroke="#C3CBD0" stroke-width="0.44" stroke-dasharray="1.4 2.2" />
+  <line x1="182.8" x2="182.8" y1="139" y2="141" stroke="#445969" stroke-width="0.65" />
+  <text x="182.8" y="149" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">30%</text>
+  <line x1="217.4" x2="217.4" y1="54" y2="139" stroke="#C3CBD0" stroke-width="0.44" stroke-dasharray="1.4 2.2" />
+  <line x1="217.4" x2="217.4" y1="139" y2="141" stroke="#445969" stroke-width="0.65" />
+  <text x="217.4" y="149" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">40%</text>
+  <line x1="252.0" x2="252.0" y1="54" y2="139" stroke="#C3CBD0" stroke-width="0.44" stroke-dasharray="1.4 2.2" />
+  <line x1="252.0" x2="252.0" y1="139" y2="141" stroke="#445969" stroke-width="0.65" />
+  <text x="252.0" y="149" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">50%</text>
+  <line x1="79.0" x2="252.0" y1="139" y2="139" stroke="#445969" stroke-width="0.7" />
+  <rect x="80.8325" y="42.8325" width="4.335" height="4.335" fill="#445969" stroke="#445969" stroke-width="0.65" />
+  <text x="88" y="47.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.7" fill="#172B3C" text-anchor="start">All-zero group</text>
+  <circle cx="173" cy="45" r="2.55" fill="#174C73" stroke="#174C73" stroke-width=".65" />
+  <text x="178" y="47.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.7" fill="#172B3C" text-anchor="start">Intact group</text>
+  <polygon points="252,42.45 254.55,45 252,47.55 249.45,45" fill="#80521E" stroke="#80521E" stroke-width="0.7" />
+  <text x="257" y="47.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.7" fill="#172B3C" text-anchor="start">Unstimulated group</text>
+  <text x="390" y="60" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="7.4" fill="#445969" text-anchor="end">All-zero / intact / unstimulated</text>
+  <text x="6" y="72.6" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.25" fill="#172B3C" text-anchor="start">Move one cell</text>
+  <g data-mark="action-frequency" data-arm="masked" data-action="move" data-percent="ACT-masked-move-pct" data-denominator="A-DEC">
+    <rect x="242.88907986111116" y="62.6725" width="3.655" height="3.655" fill="#445969" stroke="#445969" stroke-width="0.65" />
+  </g>
+  <g data-mark="action-frequency" data-arm="baseline" data-action="move" data-percent="ACT-baseline-move-pct" data-denominator="A-DEC">
+    <circle cx="236.30685763888889" cy="70.0" r="2.15" fill="#174C73" stroke="#174C73" stroke-width=".65" />
+  </g>
+  <g data-mark="action-frequency" data-arm="sham" data-action="move" data-percent="ACT-sham-move-pct" data-denominator="A-DEC">
+    <polygon points="235.40581597222223,73.35 237.55581597222223,75.5 235.40581597222223,77.65 233.25581597222222,75.5" fill="#80521E" stroke="#80521E" stroke-width="0.7" />
+  </g>
+  <text x="390" y="72.6" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.7" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;ACT-masked-move-pct&quot;,&quot;display&quot;:&quot;47.89&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;ACT-baseline-move-pct&quot;,&quot;display&quot;:&quot;45.46&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;ACT-sham-move-pct&quot;,&quot;display&quot;:&quot;45.20&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;}]">47.89% / 45.46% / 45.20%</text>
+  <text x="6" y="92.6" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.25" fill="#172B3C" text-anchor="start">Navigate</text>
+  <g data-mark="action-frequency" data-arm="masked" data-action="navigate" data-percent="ACT-masked-navigate-pct" data-denominator="A-DEC">
+    <rect x="106.75670138888889" y="82.6725" width="3.655" height="3.655" fill="#445969" stroke="#445969" stroke-width="0.65" />
+  </g>
+  <g data-mark="action-frequency" data-arm="baseline" data-action="navigate" data-percent="ACT-baseline-navigate-pct" data-denominator="A-DEC">
+    <circle cx="116.61848958333333" cy="90.0" r="2.15" fill="#174C73" stroke="#174C73" stroke-width=".65" />
+  </g>
+  <g data-mark="action-frequency" data-arm="sham" data-action="navigate" data-percent="ACT-sham-navigate-pct" data-denominator="A-DEC">
+    <polygon points="116.46831597222223,93.35 118.61831597222223,95.5 116.46831597222223,97.65 114.31831597222222,95.5" fill="#80521E" stroke="#80521E" stroke-width="0.7" />
+  </g>
+  <text x="390" y="92.6" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.7" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;ACT-masked-navigate-pct&quot;,&quot;display&quot;:&quot;8.55&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;ACT-baseline-navigate-pct&quot;,&quot;display&quot;:&quot;10.87&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;ACT-sham-navigate-pct&quot;,&quot;display&quot;:&quot;10.83&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;}]">8.55% / 10.87% / 10.83%</text>
+  <text x="6" y="112.6" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.25" fill="#172B3C" text-anchor="start">Gather</text>
+  <g data-mark="action-frequency" data-arm="masked" data-action="gather" data-percent="ACT-masked-gather-pct" data-denominator="A-DEC">
+    <rect x="114.64081597222223" y="102.6725" width="3.655" height="3.655" fill="#445969" stroke="#445969" stroke-width="0.65" />
+  </g>
+  <g data-mark="action-frequency" data-arm="baseline" data-action="gather" data-percent="ACT-baseline-gather-pct" data-denominator="A-DEC">
+    <circle cx="120.14756944444444" cy="110.0" r="2.15" fill="#174C73" stroke="#174C73" stroke-width=".65" />
+  </g>
+  <g data-mark="action-frequency" data-arm="sham" data-action="gather" data-percent="ACT-sham-gather-pct" data-denominator="A-DEC">
+    <polygon points="120.67317708333333,113.35 122.82317708333333,115.5 120.67317708333333,117.65 118.52317708333332,115.5" fill="#80521E" stroke="#80521E" stroke-width="0.7" />
+  </g>
+  <text x="390" y="112.6" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.7" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;ACT-masked-gather-pct&quot;,&quot;display&quot;:&quot;10.83&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;ACT-baseline-gather-pct&quot;,&quot;display&quot;:&quot;11.89&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;ACT-sham-gather-pct&quot;,&quot;display&quot;:&quot;12.04&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;}]">10.83% / 11.89% / 12.04%</text>
+  <text x="6" y="132.6" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.25" fill="#172B3C" text-anchor="start">Wait</text>
+  <g data-mark="action-frequency" data-arm="masked" data-action="wait" data-percent="ACT-masked-wait-pct" data-denominator="A-DEC">
+    <rect x="136.79142361111113" y="122.6725" width="3.655" height="3.655" fill="#445969" stroke="#445969" stroke-width="0.65" />
+  </g>
+  <g data-mark="action-frequency" data-arm="baseline" data-action="wait" data-percent="ACT-baseline-wait-pct" data-denominator="A-DEC">
+    <circle cx="134.78949652777777" cy="130.0" r="2.15" fill="#174C73" stroke="#174C73" stroke-width=".65" />
+  </g>
+  <g data-mark="action-frequency" data-arm="sham" data-action="wait" data-percent="ACT-sham-wait-pct" data-denominator="A-DEC">
+    <polygon points="135.69053819444446,133.35 137.84053819444446,135.5 135.69053819444446,137.65 133.54053819444445,135.5" fill="#80521E" stroke="#80521E" stroke-width="0.7" />
+  </g>
+  <text x="390" y="132.6" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.7" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;ACT-masked-wait-pct&quot;,&quot;display&quot;:&quot;17.23&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;ACT-baseline-wait-pct&quot;,&quot;display&quot;:&quot;16.12&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;ACT-sham-wait-pct&quot;,&quot;display&quot;:&quot;16.38&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;}]">17.23% / 16.12% / 16.38%</text>
+  <text x="6" y="159" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.5" fill="#445969" text-anchor="start">The four displayed actions are a subset of all choices. Descriptive frequencies; no between-group test.</text>
+</svg>

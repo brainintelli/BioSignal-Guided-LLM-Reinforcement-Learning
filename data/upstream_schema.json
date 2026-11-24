@@ -1,0 +1,384 @@
+[
+  {
+    "source": "paired game CSV",
+    "filename": "22021_逐局配对实测.csv",
+    "bytes": 43724,
+    "sha256": "ae2208a8f4c24fea780bb12045b1865a11bd5f225f6ea075ef79179595e660ae",
+    "original_rows": 768,
+    "derivative_or_scope": "data/exploration.csv",
+    "fields": [
+      {
+        "column_name": "训练种子",
+        "dtype": "integer",
+        "unit": "simulation seed",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Original training-seed key"
+      },
+      {
+        "column_name": "地图种子",
+        "dtype": "integer",
+        "unit": "simulation map seed",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Original game-map key crossed with training seeds"
+      },
+      {
+        "column_name": "决策次数",
+        "dtype": "integer",
+        "unit": "decisions",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Decision budget of the short evaluation"
+      },
+      {
+        "column_name": "开局已揭示格数",
+        "dtype": "integer",
+        "unit": "cells",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Cells already revealed at game start"
+      },
+      {
+        "column_name": "屏蔽组新增格",
+        "dtype": "integer",
+        "unit": "cells",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Newly revealed cells after the decision budget in the all-zero group"
+      },
+      {
+        "column_name": "自发组新增格",
+        "dtype": "integer",
+        "unit": "cells",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Newly revealed cells after the decision budget in the intact group"
+      },
+      {
+        "column_name": "零输出组新增格",
+        "dtype": "integer",
+        "unit": "cells",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Newly revealed cells after the decision budget in the unstimulated group"
+      },
+      {
+        "column_name": "自发减屏蔽_格",
+        "dtype": "integer",
+        "unit": "cells",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Intact minus all-zero paired difference"
+      },
+      {
+        "column_name": "零输出减屏蔽_格",
+        "dtype": "integer",
+        "unit": "cells",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Unstimulated minus all-zero paired difference"
+      },
+      {
+        "column_name": "屏蔽组结束刻",
+        "dtype": "integer",
+        "unit": "game ticks",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Final tick after the decision budget in the all-zero group"
+      },
+      {
+        "column_name": "自发组结束刻",
+        "dtype": "integer",
+        "unit": "game ticks",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Final tick after the decision budget in the intact group"
+      },
+      {
+        "column_name": "零输出组结束刻",
+        "dtype": "integer",
+        "unit": "game ticks",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Final tick after the decision budget in the unstimulated group"
+      },
+      {
+        "column_name": "屏蔽组第6刻新增格",
+        "dtype": "integer",
+        "unit": "cells",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Newly revealed cells at game tick six in the all-zero group"
+      },
+      {
+        "column_name": "自发组第6刻新增格",
+        "dtype": "integer",
+        "unit": "cells",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Newly revealed cells at game tick six in the intact group"
+      },
+      {
+        "column_name": "零输出组第6刻新增格",
+        "dtype": "integer",
+        "unit": "cells",
+        "allowed_values": "Integer",
+        "missingness": "0 / 768",
+        "description": "Newly revealed cells at game tick six in the unstimulated group"
+      }
+    ]
+  },
+  {
+    "source": "historical result catalogue",
+    "filename": "data_table.csv",
+    "bytes": 152170,
+    "sha256": "745d9507c864808cbe6a333b35219af341def2f995a56c3798282fb72eafc3cf",
+    "original_rows": 645,
+    "derivative_or_scope": "Published outcomes are independently computed from the named game inputs; original catalogue retained separately.",
+    "fields": [
+      {
+        "column_name": "实验",
+        "dtype": "string",
+        "unit": "category",
+        "allowed_values": "Instrument or study label",
+        "missingness": "0 / 645",
+        "description": "Source experiment label and scope"
+      },
+      {
+        "column_name": "组别或配对方向",
+        "dtype": "string",
+        "unit": "category",
+        "allowed_values": "Instrument or study label",
+        "missingness": "0 / 645",
+        "description": "Original group or difference direction; interpret within its own cohort"
+      },
+      {
+        "column_name": "指标",
+        "dtype": "string",
+        "unit": "endpoint",
+        "allowed_values": "Instrument or study label",
+        "missingness": "0 / 645",
+        "description": "Metric, integrity field or resource name"
+      },
+      {
+        "column_name": "估计值",
+        "dtype": "string",
+        "unit": "metric dependent",
+        "allowed_values": "Instrument or study label",
+        "missingness": "0 / 645",
+        "description": "Archived statistic or inventory value; may be text for a non-numeric field"
+      },
+      {
+        "column_name": "区间下界",
+        "dtype": "number",
+        "unit": "endpoint units",
+        "allowed_values": "Numeric value",
+        "missingness": "168 / 645",
+        "description": "Lower interval endpoint when that source reports an interval"
+      },
+      {
+        "column_name": "区间上界",
+        "dtype": "number",
+        "unit": "endpoint units",
+        "allowed_values": "Numeric value",
+        "missingness": "168 / 645",
+        "description": "Upper interval endpoint when that source reports an interval"
+      },
+      {
+        "column_name": "置信水平百分数",
+        "dtype": "number",
+        "unit": "percent",
+        "allowed_values": "Numeric value",
+        "missingness": "168 / 645",
+        "description": "Nominal interval level for this entry when documented"
+      },
+      {
+        "column_name": "训练种子数",
+        "dtype": "integer",
+        "unit": "training seeds",
+        "allowed_values": "Integer",
+        "missingness": "34 / 645",
+        "description": "Software training seeds represented in the row"
+      },
+      {
+        "column_name": "每种子地图数",
+        "dtype": "integer",
+        "unit": "maps",
+        "allowed_values": "Integer",
+        "missingness": "36 / 645",
+        "description": "Number of maps per training seed when applicable"
+      },
+      {
+        "column_name": "正向种子数",
+        "dtype": "integer",
+        "unit": "seeds",
+        "allowed_values": "Integer",
+        "missingness": "202 / 645",
+        "description": "Count in the original direction according to this row's sign convention"
+      },
+      {
+        "column_name": "单位",
+        "dtype": "string",
+        "unit": "unit",
+        "allowed_values": "Instrument or study label",
+        "missingness": "0 / 645",
+        "description": "Physical, game or bookkeeping unit of this entry"
+      },
+      {
+        "column_name": "源文件_项目相对路径",
+        "dtype": "string",
+        "unit": "relative path",
+        "allowed_values": "Instrument or study label",
+        "missingness": "0 / 645",
+        "description": "Original project-relative file locator; excluded from the portable outcome tables"
+      },
+      {
+        "column_name": "判读说明",
+        "dtype": "string",
+        "unit": "text",
+        "allowed_values": "Instrument or study label",
+        "missingness": "80 / 645",
+        "description": "Original scope, sign and interpretive notes"
+      }
+    ]
+  },
+  {
+    "source": "raw acquisition index",
+    "filename": "原始H5索引.csv",
+    "bytes": 61545,
+    "sha256": "697d4e39b00018aca05adc375f7e3d31a234467afffdf36a45885a9f7e20efe3",
+    "original_rows": 192,
+    "derivative_or_scope": "data/h5_manifest.csv",
+    "fields": [
+      {
+        "column_name": "汇总文件名",
+        "dtype": "string",
+        "unit": "archive name",
+        "allowed_values": "Instrument or study label",
+        "missingness": "0 / 192",
+        "description": "Collected-file name in the original index"
+      },
+      {
+        "column_name": "芯片编号",
+        "dtype": "string",
+        "unit": "chip label",
+        "allowed_values": "22021 | 22554 | 27701 | 28073 | 28080",
+        "missingness": "0 / 192",
+        "description": "Chip identifier in the acquisition inventory"
+      },
+      {
+        "column_name": "芯片标识依据",
+        "dtype": "string",
+        "unit": "text",
+        "allowed_values": "Instrument or study label",
+        "missingness": "0 / 192",
+        "description": "Recorded basis for assigning the chip label"
+      },
+      {
+        "column_name": "记录起始时间_北京时间",
+        "dtype": "string",
+        "unit": "local time",
+        "allowed_values": "Instrument or study label",
+        "missingness": "1 / 192",
+        "description": "Archived acquisition start in Beijing time"
+      },
+      {
+        "column_name": "记录类型",
+        "dtype": "string",
+        "unit": "category",
+        "allowed_values": "尖峰事件记录 | 波形零帧 | 结构异常，保留原件 | 连续波形",
+        "missingness": "0 / 192",
+        "description": "Acquisition type or retained structural exception"
+      },
+      {
+        "column_name": "映射通道数",
+        "dtype": "integer",
+        "unit": "channels",
+        "allowed_values": "Integer",
+        "missingness": "1 / 192",
+        "description": "Mapped channels reported for the file"
+      },
+      {
+        "column_name": "波形行数",
+        "dtype": "integer",
+        "unit": "rows",
+        "allowed_values": "Integer",
+        "missingness": "3 / 192",
+        "description": "Rows in the raw waveform matrix when present"
+      },
+      {
+        "column_name": "波形帧数",
+        "dtype": "integer",
+        "unit": "frames",
+        "allowed_values": "Integer",
+        "missingness": "3 / 192",
+        "description": "Frames of continuous waveform when available"
+      },
+      {
+        "column_name": "采样率_Hz",
+        "dtype": "number",
+        "unit": "Hz",
+        "allowed_values": "Numeric value",
+        "missingness": "1 / 192",
+        "description": "Recorded acquisition sampling frequency"
+      },
+      {
+        "column_name": "尖峰事件数",
+        "dtype": "integer",
+        "unit": "events",
+        "allowed_values": "Integer",
+        "missingness": "1 / 192",
+        "description": "Count of archived spike events, when available"
+      },
+      {
+        "column_name": "字节数",
+        "dtype": "integer",
+        "unit": "bytes",
+        "allowed_values": "Integer",
+        "missingness": "0 / 192",
+        "description": "Source length in bytes"
+      },
+      {
+        "column_name": "SHA256",
+        "dtype": "string",
+        "unit": "hex digest",
+        "allowed_values": "64 lowercase hexadecimal characters",
+        "missingness": "0 / 192",
+        "description": "Byte-level SHA-256 of the recording"
+      },
+      {
+        "column_name": "22021确认性原始19份",
+        "dtype": "string",
+        "unit": "binary category",
+        "allowed_values": "否 | 是",
+        "missingness": "0 / 192",
+        "description": "Whether the recording belongs to the adverse-start input set"
+      },
+      {
+        "column_name": "项目内来源",
+        "dtype": "string",
+        "unit": "locator",
+        "allowed_values": "Instrument or study label",
+        "missingness": "0 / 192",
+        "description": "Original project-relative source location"
+      },
+      {
+        "column_name": "压缩包内成员",
+        "dtype": "string",
+        "unit": "member name",
+        "allowed_values": "Instrument or study label",
+        "missingness": "183 / 192",
+        "description": "Member path when the original came from an archive"
+      },
+      {
+        "column_name": "备注",
+        "dtype": "string",
+        "unit": "text",
+        "allowed_values": "Instrument or study label",
+        "missingness": "191 / 192",
+        "description": "Free-text source qualifiers"
+      }
+    ]
+  }
+]

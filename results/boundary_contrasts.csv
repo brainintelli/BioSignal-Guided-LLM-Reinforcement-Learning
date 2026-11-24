@@ -1,0 +1,7 @@
+scene,n,contrast,change_in_mean_contrast
+hunger,2048,intact versus all-zero,-0.000006101455860135400390625
+hunger,2048,intact versus shuffled,-0.00000368626287523837890625
+low_health,2048,intact versus all-zero,-7.118632158908984375E-7
+low_health,2048,intact versus shuffled,2.5830078125E-18
+thirst,2048,intact versus all-zero,0.000027746587036808544921875
+thirst,2048,intact versus shuffled,0.000010218464406400048828125

@@ -1,0 +1,65 @@
+{
+  "source": "./LLM湿件生存游戏/output/mea_live_22554_20261117/event_fixed_package/BrainStimulation/brain_stimulation",
+  "files": [
+    {
+      "path": "maxlab/__init__.py",
+      "sha256": "0dcdbe5b37ca01a4a217d093450cdafd90adbf2cbbc327272a5053a73a19d58e"
+    },
+    {
+      "path": "maxlab/api_object.py",
+      "sha256": "eb2a275d6090b4805d36c221bab649a6dbbcea7cee7b8e790ee925d51fe8e331"
+    },
+    {
+      "path": "maxlab/characterize.py",
+      "sha256": "89ee2867675d2b7309b38b747474501267e2969a20d5d7848454b08c2d3fb59f"
+    },
+    {
+      "path": "maxlab/chip.py",
+      "sha256": "a8c1357793bb429775d92ded053e22aae7645d4babf01124574ef7153ed0d33b"
+    },
+    {
+      "path": "maxlab/comm.py",
+      "sha256": "484770a91dbe03345ab71477cba0ea689b390e5f306ed0ac5b81f6d0b02a6586"
+    },
+    {
+      "path": "maxlab/config.py",
+      "sha256": "31e545aebe3377c49c6a70698762a8d339f22611524fde485250539084236360"
+    },
+    {
+      "path": "maxlab/loop.py",
+      "sha256": "fdc0876885cf93073ec88c23452d11468a5c675d61e537266b331b0ce6a69846"
+    },
+    {
+      "path": "maxlab/pycompat.py",
+      "sha256": "d2e03ab3b28091c1b34c75f39043d0eecb9e5466da002b6749ec2881b252fcb3"
+    },
+    {
+      "path": "maxlab/saving.py",
+      "sha256": "fd4bcda319cd500bd487918dfc24e36b784af47b997a69a0706ad6a20d8f7349"
+    },
+    {
+      "path": "maxlab/sequence.py",
+      "sha256": "66c57883885b1a9e108a33713806a6a054ff70c64a27d3f87ebe16b1a2507761"
+    },
+    {
+      "path": "maxlab/stream.py",
+      "sha256": "a55ef0f5cb7893de5d6223578a8a89a576003aa3404f288ad004fa28861d9537"
+    },
+    {
+      "path": "maxlab/system.py",
+      "sha256": "233c808d66b127bcaf4afddab667e7d46e330853212751481477cfbc182ffa8a"
+    },
+    {
+      "path": "maxlab/util.py",
+      "sha256": "cc693ddf08a0e1bb2f17d55ad994f95852f1c5d2b5c1ab0a403b0cadad8f73f6"
+    },
+    {
+      "path": "maxlab/wellplate.py",
+      "sha256": "f0022ed0f02678ba623ae34b8a5ab1f4e16cea28979adbb6c128c6138d294a5e"
+    },
+    {
+      "path": "transport.py",
+      "sha256": "4c4d0d2e54e2c8e8806c8a31b5f6878a65b453ee12d6e58d1f3c5edf6db65340"
+    }
+  ]
+}

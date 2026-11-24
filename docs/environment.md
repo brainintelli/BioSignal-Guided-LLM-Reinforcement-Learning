@@ -1,0 +1,11 @@
+# Reproduction environment
+
+The maintained outcome analysis runs on CPU. Python 3.12.14 on Windows x86-64 was used for the package checks. NumPy 2.3.5 supplies the resampling functions. The smoke and paired-distribution commands require only the Python standard library. CUDA and a GPU are unnecessary for these analyses.
+
+Core, raw HDF5, figure and development dependencies are pinned separately. Run `python -m pip install -r configs/figure-requirements.txt` to regenerate figures with `python figures/draw.py --all --output runs/figures`. The archived PDFs embed Times New Roman. The renderer accepts installed Times New Roman regular and bold faces or the Liberation Serif fallback on Linux. Changing fonts can change the PDF and SVG bytes. Raw verification additionally requires `configs/raw-requirements.txt`.
+
+`configs/study.yaml` is JSON-compatible YAML. Configuration records the resampling seeds, observation ordering, decision and game-time horizons, normalization and input locations. The unsigned JavaScript generator for the archived fixed-map comparisons is implemented directly. Other resampling workflows use NumPy's seeded generator. BLAS thread counts are set before the numerical module is imported. Run timestamp and directory names are intentionally unique. The raw results and input fingerprints can be compared across runs with the same inputs. Floating-point results on another architecture are checked against the archived tolerance.
+
+The original successful PPO processes were not rerun in this release. Complete historical driver, CUDA, GPU, dependency, process-fingerprint and GPU-hour records were not verified across all runs. The original HDF5 bytes and upstream weights, tokenizers and game code have distinct access and licensing requirements. The CLI can verify original archived training and evaluation source if the holder supplies the matching archive. That operation does not reproduce historical runtime determinism.
+
+A future retraining run would need a locked accelerator environment, Python, NumPy and torch seeds, deterministic algorithm selection such as `torch.use_deterministic_algorithms(True)`, and recorded CUDA configuration. Some device operations use nondeterministic kernels or reject deterministic mode. The maintained CPU outcome computations do not invoke torch or replace an archived training trace.

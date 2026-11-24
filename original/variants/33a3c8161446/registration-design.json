@@ -1,0 +1,109 @@
+{
+  "study": "offline_confirmatory_stress_22021_v1",
+  "status": "draft",
+  "purpose": "在不启用 R2、不刺激和不实时闭环的条件下，确认按时间顺序回放的 MEA 特征是否改善相同游戏时长内的探索和压力生存决策。",
+  "source_study": "predict22021-20261119T042416Z",
+  "source_paired_data": "../offline-stress-three-arms/stress/paired.csv",
+  "source_paired_data_sha256": "cc86d8fa2e610c73ad77c771bd88c60282c3fa7ec0f153276bcb25edec88be99",
+  "arms": [
+    {
+      "name": "ordered",
+      "description": "按登记的物理记录顺序回放四维 MEA 特征"
+    },
+    {
+      "name": "masked",
+      "description": "Actor 与 Critic 同时屏蔽 MEA 特征"
+    },
+    {
+      "name": "shuffled",
+      "description": "每次试验内按两秒块置换完整四维特征，保持幅度分布并破坏时间顺序"
+    }
+  ],
+  "sample_size": {
+    "training_seeds": 32,
+    "holdout_worlds_per_seed_and_scene": 64,
+    "scenes": ["low_health", "thirst", "hunger"],
+    "episodes": 18432,
+    "episodes_formula": "32 training seeds × 64 worlds × 3 scenes × 3 arms",
+    "same_seed_and_world_pairing": true,
+    "power_note": "以现有簇变异模拟，+5 个百分点的濒渴存活主要比较联合功效约 0.91，濒饿约 0.79。低生命探索 +5 格的联合功效约 0.61，+8 格约 0.999。低生命探索结果需按估计值和区间解释。"
+  },
+  "training": {
+    "base_model": "与源研究相同的 Qwen3.5-0.8B 暖启动检查点",
+    "budget_per_seed_and_arm": "4 batches × 12 decisions, 8 Actor updates, 64 Critic updates",
+    "starting_reserves": {"health": 100, "thirst": 95, "hunger": 95},
+    "alpha": 1.0,
+    "beta": 0.0,
+    "r2_enabled": false,
+    "r2_contribution": 0.0,
+    "realtime_training": false,
+    "stimulation": false,
+    "input_mode": "offline archived replay"
+  },
+  "primary_endpoints": [
+    {
+      "scene": "low_health",
+      "metric": "cells",
+      "definition": "第 60 刻或死亡前新揭示的地图格数",
+      "beneficial_direction": "ordered greater than control",
+      "comparisons": ["ordered-masked", "ordered-shuffled"]
+    },
+    {
+      "scene": "thirst",
+      "metric": "survived",
+      "definition": "第 60 刻仍存活的比例",
+      "beneficial_direction": "ordered greater than control",
+      "comparisons": ["ordered-masked", "ordered-shuffled"]
+    },
+    {
+      "scene": "hunger",
+      "metric": "survived",
+      "definition": "第 60 刻仍存活的比例",
+      "beneficial_direction": "ordered greater than control",
+      "comparisons": ["ordered-masked", "ordered-shuffled"]
+    }
+  ],
+  "secondary_endpoints": [
+    {
+      "scene": "thirst",
+      "metric": "drink_wait",
+      "definition": "首次成功补水等待刻数，未成功或先死亡计 60",
+      "beneficial_direction": "ordered less than control"
+    },
+    {
+      "scene": "hunger",
+      "metric": "eat_wait",
+      "definition": "首次成功进食等待刻数，未成功或先死亡计 60",
+      "beneficial_direction": "ordered less than control"
+    }
+  ],
+  "analysis": {
+    "pairing_unit": "training seed × holdout world × scene",
+    "inference_cluster": "training seed",
+    "primary_familywise_alpha": 0.05,
+    "primary_two_sided_alpha_per_comparison": 0.008333333333333334,
+    "primary_interval": "双侧 99.167% 配对区间",
+    "bootstrap_resamples": 40000,
+    "bootstrap_scheme": "按训练种子与地图交叉配对重采样",
+    "stable_gain_rule": "有利方向的区间完全高于零，且至少 75% 训练种子的种子均值有利",
+    "overall_confirmatory_claim": "三个主要终点均同时相对屏蔽和分块打乱达标后，才报告总体确认性改善",
+    "secondary_alpha": 0.0125,
+    "secondary_interval": "双侧 98.75% 配对区间，作为次要终点解释"
+  },
+  "controls_and_randomization": {
+    "common_maps_across_arms": true,
+    "common_training_seed_list_across_arms": true,
+    "world_seed_order_fixed_before_training": true,
+    "arm_order_randomized_before_execution": true,
+    "checkpoint_evaluation_frozen": true,
+    "channel_count": "按同一 22021 样本登记的非刺激通道规则"
+  },
+  "quality_checks": [
+    "训练前后核对 Actor、Critic 实际输入维度和屏蔽状态",
+    "冻结 checkpoint 后独立重载并核对动作轨迹",
+    "逐动作核对 Godot 状态、死亡、60 刻边界、补水和进食确认",
+    "保存每局 episodes.csv、配对 paired.csv、比较 comparison.json 和输入哈希",
+    "在揭示终点前锁定登记文件和随机种子"
+  ],
+  "exclusions": "不因结果方向、存活率或训练失败而事后删除局次。仅按预先登记的输入完整性、引擎转移和 checkpoint 核验规则处理无效记录。"
+}

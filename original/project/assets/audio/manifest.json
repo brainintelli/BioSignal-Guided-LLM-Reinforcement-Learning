@@ -1,0 +1,86 @@
+{
+  "provenance": "Original procedural composition written for Sproutwild; no samples or existing melodies used.",
+  "style": "8-bit chiptune: pulse, triangle, noise; 16-bit PCM WAV delivery",
+  "files": [
+    {
+      "file": "meadow_loop.wav",
+      "seconds": 17.143,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "loop": true,
+      "peak": 0.4385,
+      "sha256": "fe055fb24adfd6516d7bc44809f06ce85efaf3f32e56c5afd7d961f38dd8f283"
+    },
+    {
+      "file": "night_loop.wav",
+      "seconds": 20.87,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "loop": true,
+      "peak": 0.2746,
+      "sha256": "eb798ca588aec0ae1b0a3a2d491c1dc1d8d3d06d3ccc959534c4e7e47010ce64"
+    },
+    {
+      "file": "gather.wav",
+      "seconds": 0.28,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "loop": false,
+      "peak": 0.4424,
+      "sha256": "e9112e326734067514eb3ef08e45c40ca22f673286d48d0bdda54ef5e38b6118"
+    },
+    {
+      "file": "eat.wav",
+      "seconds": 0.34,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "loop": false,
+      "peak": 0.2967,
+      "sha256": "d00738d6f8c0cb2980dea547b357f87a37c03ebfd555b8e3cf34d8cb8e3960ba"
+    },
+    {
+      "file": "drink.wav",
+      "seconds": 0.36,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "loop": false,
+      "peak": 0.2733,
+      "sha256": "42999e2ae607c98b0179c28f890b28362bdc25a68edceeaa0ffb91d0320c9cee"
+    },
+    {
+      "file": "build.wav",
+      "seconds": 0.65,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "loop": false,
+      "peak": 0.5169,
+      "sha256": "6ba50d3493c979ed8ad9c3a2e7df951f9a46bc314bf254d2fdd1748f45990f80"
+    },
+    {
+      "file": "hurt.wav",
+      "seconds": 0.28,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "loop": false,
+      "peak": 0.4529,
+      "sha256": "e117c1abf436642699d69b3837ab581e397de8066e3724855fc0ded08e5b5d12"
+    },
+    {
+      "file": "click.wav",
+      "seconds": 0.1,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "loop": false,
+      "peak": 0.215,
+      "sha256": "29cdf4c3b13d47959e4aa7e40bcdb5fd5feca603cd12f5c8972c68305b8ec927"
+    }
+  ]
+}

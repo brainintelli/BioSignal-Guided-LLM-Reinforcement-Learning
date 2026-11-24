@@ -1,0 +1,7 @@
+Data access and redistribution
+
+Brainintelli Research Lab authorizes public access to the study-owned paired-game and derived tables in this repository and their redistribution. When sharing the tables, the original column dictionary, checksums and the paper citation identify the dataset and analysis. This statement records the permissions confirmed for this release. A blanket CC BY or CC0 license has not been granted.
+
+The raw microelectrode-array H5 files and their extraction code have a public download entry in docs/data-access.md. Authorization to make that entry public covers access to the recordings; other reuse or redistribution rights for raw recordings have not been specified. Contact research@brainintelli.com for uses beyond the documented permissions.
+
+The MIT software license is in LICENSE. Historical model parameters, optimizer states, release archives and third-party components are subject to their respective access and licensing terms. A repository link or archive checksum identifies an artifact without granting additional rights.

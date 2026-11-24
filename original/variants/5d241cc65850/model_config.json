@@ -1,0 +1,6 @@
+{
+  "initial_checkpoint": "/home/researcher/mea-r2-22554/import_20261116_01/assets/m8b-runs/exploration_attempt1/checkpoint_0032",
+  "model": "/home/researcher/mea-r2-22554/import_20261116_01/assets/models/Qwen3.5-0.8B",
+  "parent_checkpoint": "/home/researcher/mea-r2-22554/import_20261116_01/assets/m6-runs/small_v2_stable/checkpoint_0016",
+  "warm_checkpoint": "/home/researcher/mea-r2-22554/import_20261116_01/assets/m9-runs/research_attempt5/confirm/combined_r2/checkpoint_0064"
+}

@@ -1,0 +1,202 @@
+{
+  "archived_model_code": {
+    "bytes": 157790368,
+    "members": {
+      "play60.py": "c88b435ef8ede167aa8ba877950ac36e6d0f935dff99b97f522ad3fc610e50b0",
+      "resources.py": "558cbc05d8611b8a31269fbb2f3bb7ef29e6c08f51fa4925c72b9ed309fb486f",
+      "stress/analyze.py": "4022b79169199d0c8efb8f81e5533604a5c42c9c3aa6957051907afdd8d72ec6",
+      "stress/evaluate.py": "0d8583fe1bda9c1378e11a2c80481ff2eddfc0dac874294e09ea49cc1b490748",
+      "stress/setup_scenes.py": "da2263c07d30fd433cc0ef7ceeff3db81e324033901d6dff0e4d10b2581cc2cb",
+      "train.py": "035afbc9224ec0dc15114faf9181a61716cf3222a0d5bc34aaadc2c8858bec02"
+    },
+    "sha256": "248907bc759199690d475dd8c6ccbac2920f30df21316cb944a6ad7a1fa523f2"
+  },
+  "boundary_difference_threshold": "1E-10",
+  "day19": {
+    "bootstrap_seed": 225541120,
+    "draws": 20000,
+    "maps": 12,
+    "ticks": [
+      48,
+      192
+    ],
+    "training_seeds": 6
+  },
+  "first_day_22554": {
+    "draws": 12000,
+    "seeds": {
+      "intact/pure-r1/exploration": 101,
+      "intact/pure-r1/r1": 92,
+      "intact/shuffled/exploration": 103,
+      "intact/shuffled/r1": 94,
+      "shuffled/pure-r1/exploration": 101,
+      "shuffled/pure-r1/r1": 92
+    }
+  },
+  "inputs": {
+    "actions": "data/actions.csv",
+    "boundary": "data/boundary.csv",
+    "budgets": "data/model_budgets.csv",
+    "cross-chip": "data/chip22554.csv",
+    "deviations": "results/deviations.json",
+    "exploration": "data/exploration.csv",
+    "h5_manifest": "data/h5_manifest.csv",
+    "heldout": "data/heldout.csv",
+    "roi": "data/roi.csv",
+    "score": "data/score_steps.csv",
+    "stimulation": "data/stimulation.csv",
+    "stress": "data/stress.csv",
+    "windows": "data/windows.csv"
+  },
+  "raw_h5": {
+    "normalization": {
+      "baseline_windows": 24,
+      "centers": [
+        0.20696319529482116,
+        0.13734567901234568,
+        0.2593668503353323,
+        0.630254636659755
+      ],
+      "clip": 3.0,
+      "decimals": 3,
+      "floors": [
+        0.1,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "names": [
+        "log_rate",
+        "active_fraction",
+        "temporal_concentration",
+        "spatial_entropy"
+      ],
+      "scales": [
+        0.27068759036828965,
+        0.16930925925925927,
+        0.14149342388507147,
+        0.29728547380930376
+      ],
+      "schema": "mea.features.state2.v2"
+    }
+  },
+  "release": "v9",
+  "schema_version": 1,
+  "score": {
+    "bootstrap_seed": 220211119,
+    "discount_per_tick": 0.99985,
+    "draws": 30000,
+    "reward_per_tick": 0.01
+  },
+  "short": {
+    "bootstrap_seed": 2026112201,
+    "draws": 40000,
+    "draws_decisions_archived": 12000,
+    "draws_tick_archived": 20000,
+    "maps": 48,
+    "ordering_maps0": [
+      27,
+      13,
+      36,
+      34,
+      0,
+      25,
+      40,
+      28,
+      5,
+      16,
+      14,
+      26,
+      35,
+      2,
+      37,
+      31,
+      8,
+      21,
+      32,
+      10,
+      46,
+      23,
+      19,
+      20,
+      15,
+      22,
+      11,
+      17,
+      12,
+      41,
+      43,
+      7,
+      3,
+      1,
+      30,
+      44,
+      6,
+      24,
+      38,
+      9,
+      18,
+      39,
+      45,
+      33,
+      47,
+      4,
+      29,
+      42
+    ],
+    "ordering_seeds0": [
+      1,
+      0,
+      3,
+      5,
+      2,
+      6,
+      7,
+      4,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "seed_decisions_archived": {
+      "intact": 101,
+      "unstimulated": 102
+    },
+    "seed_tick_archived": 2026112006,
+    "seeds": 16,
+    "sensitivity_family": 3
+  },
+  "source_manuscript_sha256": "9c47b3cdfef0e99f3e2a62bf36ff7869361a25b89e632e9f3849ca77ad7ba644",
+  "stimulation": {
+    "18": {
+      "draws": 30000,
+      "quantiles": [
+        0.004166666666666667,
+        0.9958333333333333
+      ],
+      "seed": 632201
+    },
+    "19": {
+      "draws": 30000,
+      "quantiles": [
+        0.004166666666666667,
+        0.9958333333333333
+      ],
+      "seed": 632201
+    }
+  },
+  "stress": {
+    "bootstrap_seed": 2202111194402,
+    "draws": 40000,
+    "favorable_seed_threshold": 24,
+    "horizon": 60,
+    "maps": 64,
+    "primary_family": 6,
+    "secondary_family": 4,
+    "seeds": 32
+  }
+}

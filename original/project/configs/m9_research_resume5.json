@@ -1,0 +1,223 @@
+{
+  "protocol": "m9_research_attempt2_20261111",
+  "project": "/home/researcher/meadowmind-gpu/m9-research-v5-project",
+  "output": "/home/researcher/meadowmind-gpu/m9-runs/research_attempt5",
+  "job": "/home/researcher/meadowmind-gpu/m9-training-jobs/research5",
+  "model": "/home/researcher/meadowmind-gpu/models/Qwen3.5-0.8B",
+  "godot": "/home/researcher/meadowmind-gpu/godot/Godot_v4.7.2-stable_linux.x86_64",
+  "initial_checkpoint": "/home/researcher/meadowmind-gpu/m8b-runs/exploration_attempt1/checkpoint_0032",
+  "parent_checkpoint": "/home/researcher/meadowmind-gpu/m6-runs/small_v2_stable/checkpoint_0016",
+  "warm_checkpoint": "/home/researcher/meadowmind-gpu/m8s3-runs/survival_supply_attempt3/checkpoint_0048",
+  "kernel_overlay": "/home/researcher/meadowmind-gpu/m8b-runtime-candidates/causal_conv1d_1_7_0_sourcebuild/site",
+  "parent_registration": "/home/researcher/meadowmind-gpu/m8s3-runs/survival_supply_attempt3/registration.json",
+  "hard_wall_seconds": 275334,
+  "smoke_wall_seconds": 7200,
+  "common": {
+    "map_mode": "finite",
+    "navigation_steps": 1,
+    "state_variant": "legacy",
+    "reward_variant": "supply",
+    "gamma_tick": 0.9995,
+    "gae_lambda": 0.999,
+    "envs": 16,
+    "rollout_steps": 128,
+    "epochs": 2,
+    "minibatch": 128,
+    "microbatch": 4,
+    "critic_epochs": 16,
+    "critic_minibatch": 256,
+    "actor_lr": 2e-06,
+    "critic_lr": 0.0001,
+    "reference_kl": 0.02,
+    "clip": 0.1,
+    "target_kl": 0.015,
+    "entropy_coef": 0.002,
+    "actor_grad_clip": 1,
+    "critic_grad_clip": 1,
+    "verb_exploration_epsilon": 0.1,
+    "zero_update_logp_tolerance": 1e-06,
+    "temperature": 1,
+    "max_tokens": 4096,
+    "train_seed_count": 8192,
+    "horizon": 5400
+  },
+  "arms": {
+    "control": {},
+    "state_reserves": {
+      "state_variant": "reserves"
+    },
+    "state_compact": {
+      "state_variant": "compact"
+    },
+    "action_macro4": {
+      "navigation_steps": 4
+    },
+    "reward_bottleneck": {
+      "reward_variant": "bottleneck"
+    },
+    "reward_survival": {
+      "reward_variant": "survival"
+    },
+    "long_credit": {
+      "gamma_tick": 0.99985
+    },
+    "infinite_freeze": {
+      "map_mode": "infinite_freeze"
+    },
+    "infinite_global": {
+      "map_mode": "infinite_global"
+    },
+    "combined": {
+      "state_variant": "reserves",
+      "navigation_steps": 4,
+      "reward_variant": "bottleneck",
+      "gamma_tick": 0.99985,
+      "map_mode": "infinite_freeze"
+    }
+  },
+  "phases": {
+    "calibration": {
+      "replicates": [
+        0
+      ],
+      "updates": 2,
+      "evaluation_worlds": 4,
+      "train_seed_base": 3940000,
+      "evaluation_seed_base": 3960000
+    },
+    "explore": {
+      "replicates": [
+        0,
+        1
+      ],
+      "updates": 8,
+      "evaluation_worlds": 8,
+      "train_seed_base": 3200000,
+      "evaluation_seed_base": 3300000
+    },
+    "confirm": {
+      "replicates": [
+        2
+      ],
+      "updates": 64,
+      "evaluation_worlds": 24,
+      "train_seed_base": 3240000,
+      "evaluation_seed_base": 3340000
+    },
+    "smoke": {
+      "replicates": [
+        0
+      ],
+      "updates": 1,
+      "evaluation_worlds": 4,
+      "train_seed_base": 3900000,
+      "evaluation_seed_base": 3920000
+    }
+  },
+  "test_seeds": [
+    3400000,
+    3400001,
+    3400002,
+    3400003,
+    3400004,
+    3400005,
+    3400006,
+    3400007,
+    3400008,
+    3400009,
+    3400010,
+    3400011,
+    3400012,
+    3400013,
+    3400014,
+    3400015,
+    3400016,
+    3400017,
+    3400018,
+    3400019,
+    3400020,
+    3400021,
+    3400022,
+    3400023,
+    3400024,
+    3400025,
+    3400026,
+    3400027,
+    3400028,
+    3400029,
+    3400030,
+    3400031,
+    3400032,
+    3400033,
+    3400034,
+    3400035,
+    3400036,
+    3400037,
+    3400038,
+    3400039,
+    3400040,
+    3400041,
+    3400042,
+    3400043,
+    3400044,
+    3400045,
+    3400046,
+    3400047,
+    3400048,
+    3400049,
+    3400050,
+    3400051,
+    3400052,
+    3400053,
+    3400054,
+    3400055,
+    3400056,
+    3400057,
+    3400058,
+    3400059,
+    3400060,
+    3400061,
+    3400062,
+    3400063,
+    3400064,
+    3400065,
+    3400066,
+    3400067,
+    3400068,
+    3400069,
+    3400070,
+    3400071,
+    3400072,
+    3400073,
+    3400074,
+    3400075,
+    3400076,
+    3400077,
+    3400078,
+    3400079,
+    3400080,
+    3400081,
+    3400082,
+    3400083,
+    3400084,
+    3400085,
+    3400086,
+    3400087,
+    3400088,
+    3400089,
+    3400090,
+    3400091,
+    3400092,
+    3400093,
+    3400094,
+    3400095,
+    3400096,
+    3400097,
+    3400098,
+    3400099
+  ],
+  "selection": "Rank across two optimization replicates by total30-day successes, worse-replicate CVaR20, totalRMST, earlier registered arm; top2 train fresh64 updates; choose confirmation winner on new24 worlds; require>=23/24 at5400 and>=23/24 at1800 with no early deaths before test",
+  "final_gate": "One fresh100-world matrix: >=95 alive at5400 and>=90 alive at1800; <=5 deaths before360; same-rule warm supply3 baseline pairedRMST lowerCI>-270,success lowerCI>-.05,CVaR>=90%; bootstrap10000 seed912800; audit and online acceptance required separately",
+  "limitations": "Research candidate source supply3_0048 is unreleased. M8B remains88/100 failed. M9 may start by explicit user instruction. Same policy-draw budgets, not equal world-tick budgets for macro actions; record both and walltime. Infinite region prototype has coordinate bound +/-1000000 and keeps visited chunks in RAM; not production infinite-world rendering/save integration.",
+  "resume_from": "/home/researcher/meadowmind-gpu/m9-runs/research_attempt4_registration/registration.json"
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "mea.p0.config.v1",
+  "alpha": 1.0,
+  "source": "simulation",
+  "action_source": "scripted_p0",
+  "map_mode": "infinite_freeze",
+  "navigation_steps": 4,
+  "state_variant": "reserves",
+  "reward_variant": "bottleneck",
+  "gamma_tick": 0.99985,
+  "sample_rate_hz": 1000,
+  "blank_frames": 10,
+  "window_frames": 100,
+  "normalization": {"centers": [0, 0, 0, 0], "scales": [1, 1, 1, 1]},
+  "max_decisions": 128,
+  "max_spikes": 100000,
+  "max_line_bytes": 1048576
+}

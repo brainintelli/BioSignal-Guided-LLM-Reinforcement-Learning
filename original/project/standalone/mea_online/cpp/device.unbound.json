@@ -1,0 +1,15 @@
+{
+  "binding": null,
+  "r2_enabled": false,
+  "stimulation_enabled": false,
+  "producer": {
+    "path": null,
+    "binary_sha256": null,
+    "header_sha256": null,
+    "library_sha256": null
+  },
+  "evidence_dir": null,
+  "registry_dir": null,
+  "host": "127.0.0.1",
+  "port": 5560
+}

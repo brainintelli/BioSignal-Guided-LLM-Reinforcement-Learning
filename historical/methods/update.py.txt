@@ -1,0 +1,87 @@
+def update(policy,actor_optimizer,critic_optimizer,rows,c):
+    policy.assert_reference_frozen()
+    device=policy.device_name
+    t=tensors(rows,device)
+    adv=t["advantage"]
+    adv=(adv-adv.mean())/adv.std(unbiased=False).clamp_min(1.e-8)
+    metrics=[]
+    actor_parameters=[p for p in policy.model.parameters() if p.requires_grad]
+    # Measure numerical error BEFORE a gradient update, at the actual microbatch size.
+    with torch.no_grad():
+        indices=list(range(min(16,len(rows))))
+        errors=[]
+        for start in range(0,len(indices),c.microbatch):
+            ix=indices[start:start+c.microbatch]
+            vd,td=policy.distributions([rows[i]["prepared"] for i in ix],t["verbs"][ix].tolist())
+            errors.extend((vd.log_prob(t["verbs"][ix])+td.log_prob(t["targets"][ix])-t["logp"][ix]).tolist())
+        zero_max=max(abs(x) for x in errors)
+        if zero_max>c.zero_update_logp_tolerance:
+            raise RuntimeError(f"Zero-update log probability drift {zero_max}; do not train on corrupt ratios")
+        before=policy.values([r["prepared"] for r in rows])
+        variance_before=explained_variance(before,t["return"])
+    stop=False
+    for epoch in range(c.epochs):
+        order=torch.randperm(len(rows)).tolist()
+        for start in range(0,len(rows),c.minibatch):
+            indices=order[start:start+c.minibatch]
+            actor_optimizer.zero_grad(set_to_none=True)
+            aggregate=dict(policy_loss=0.,entropy=0.,reference_kl=0.,approx_kl=0.,clip_fraction=0.,branch_importance=0.)
+            branch_max=0.
+            for part in range(0,len(indices),c.microbatch):
+                ix=indices[part:part+c.microbatch]
+                vd,td=policy.distributions([rows[i]["prepared"] for i in ix],t["verbs"][ix].tolist())
+                logp=vd.log_prob(t["verbs"][ix])+td.log_prob(t["targets"][ix])
+                logratio=logp-t["logp"][ix]; ratio=logratio.exp()
+                policy_loss=torch.maximum(-adv[ix]*ratio,-adv[ix]*ratio.clamp(1-c.clip,1+c.clip)).mean()
+                # Conditional branch sampled by old verb policy: exact importance correction.
+                # Denominator is frozen, numerator retains gradients. No clipping or hidden renormalization.
+                importance=(vd.log_prob(t["verbs"][ix])-t["verb_logp"][ix]).exp()
+                refv=t["reference_verb"][ix].clamp_min(1.e-12)
+                reft=t["reference_target"][ix].clamp_min(1.e-12)
+                vkl=(vd.probs*(vd.logits-refv.log())).sum(-1)
+                tkl=(td.probs*(td.logits-reft.log())).sum(-1)
+                reference_kl=(vkl+importance*tkl).mean()
+                entropy=(vd.entropy()+importance*td.entropy()).mean()
+                loss=policy_loss+c.reference_kl*reference_kl-c.entropy_coef*entropy
+                if not torch.isfinite(loss): raise FloatingPointError("Non-finite actor objective")
+                weight=len(ix)/len(indices)
+                (loss*weight).backward()
+                values=dict(policy_loss=policy_loss,entropy=entropy,reference_kl=reference_kl,
+                            approx_kl=((ratio-1)-logratio).mean(),clip_fraction=((ratio-1).abs()>c.clip).float().mean(),
+                            branch_importance=importance.mean())
+                for key,value in values.items(): aggregate[key]+=float(value.detach())*weight
+                branch_max=max(branch_max,float(importance.detach().max()))
+            norm=float(torch.nn.utils.clip_grad_norm_(actor_parameters,c.actor_grad_clip))
+            if not math.isfinite(norm): raise FloatingPointError("Non-finite actor gradient")
+            # Stop BEFORE applying a minibatch whose old-policy KL already exceeds the budget.
+            if aggregate["approx_kl"]>c.target_kl:
+                stop=True
+            else:
+                actor_optimizer.step()
+            metrics.append({**aggregate,"actor_grad_norm":norm,"branch_importance_max":branch_max,"applied":not stop})
+            if stop: break
+        if stop: break
+    # Critic never sends gradients into the LM. Its reward prediction cannot choose actions.
+    critic_losses=[]; critic_norms=[]
+    for _ in range(c.critic_epochs):
+        order=torch.randperm(len(rows)).tolist()
+        for start in range(0,len(rows),c.critic_minibatch):
+            ix=order[start:start+c.critic_minibatch]
+            critic_optimizer.zero_grad(set_to_none=True)
+            values=policy.values([rows[i]["prepared"] for i in ix])
+            loss=.5*(values-t["return"][ix]).square().mean()
+            loss.backward()
+            norm=float(torch.nn.utils.clip_grad_norm_(policy.critic.parameters(),c.critic_grad_clip))
+            if not math.isfinite(norm): raise FloatingPointError("Non-finite critic gradient")
+            critic_optimizer.step(); critic_losses.append(float(loss.detach()));critic_norms.append(norm)
+    policy.assert_reference_frozen()
+    with torch.no_grad(): after=policy.values([r["prepared"] for r in rows])
+    return {**{k:sum(m[k] for m in metrics)/len(metrics) for k in metrics[0] if k!="applied"},
+            "approx_kl_max":max(m["approx_kl"] for m in metrics),
+            "branch_importance_max":max(m["branch_importance_max"] for m in metrics),
+            "optimizer_steps":sum(m["applied"] for m in metrics),"kl_early_stop":stop,
+            "zero_update_logp_max":zero_max,"critic_loss":sum(critic_losses)/len(critic_losses),
+            "critic_grad_norm":sum(critic_norms)/len(critic_norms),"explained_variance_before":variance_before,
+            "explained_variance_after":explained_variance(after,t["return"]),
+            "advantage_std":float(t["advantage"].std(unbiased=False)),"return_mean":float(t["return"].mean()),
+            "return_std":float(t["return"].std(unbiased=False))}

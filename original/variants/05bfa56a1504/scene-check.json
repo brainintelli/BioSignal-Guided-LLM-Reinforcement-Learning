@@ -1,0 +1,450 @@
+{
+  "pins": {
+    "low_health": {
+      "plain": "19bf93892254b3aa735e9e169024b10e0d415771a2463b86fefbf04fc3b3a745",
+      "audit": "7335f8b2f3e42af5b19e7a9103f1b188e56c434045d921f85bed68d31ffc8ba9"
+    },
+    "thirst": {
+      "plain": "5423744652bd0153282eaf7bfd2298d36cd7642888a801416ec76649de40d24e",
+      "audit": "a7f42b67924fe7b0f49bc8ae0439527dce7f74eb8d0155c0934c2a0a544ab71f"
+    },
+    "hunger": {
+      "plain": "42f15d86b905f7bbb5fa671fed1abac2b749bbae0677bf5e71ced3c39661bb78",
+      "audit": "23ad16f8fd92dbf3d61708a796ce8fe3fcb70dc23bd723738942ad86e8e6d50d"
+    }
+  },
+  "worlds": [
+    246101007,
+    246101123,
+    246101311,
+    246101411
+  ],
+  "tests": {
+    "low_health": [
+      {
+        "world": 246101007,
+        "policy": "wait",
+        "end_tick": 60,
+        "survived": true,
+        "events": []
+      },
+      {
+        "world": 246101007,
+        "policy": "drink",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "drink",
+            2,
+            94.92,
+            99.92
+          ]
+        ]
+      },
+      {
+        "world": 246101007,
+        "policy": "eat",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "eat",
+            1,
+            95.0,
+            99.8
+          ]
+        ]
+      },
+      {
+        "world": 246101123,
+        "policy": "wait",
+        "end_tick": 60,
+        "survived": true,
+        "events": []
+      },
+      {
+        "world": 246101123,
+        "policy": "drink",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "drink",
+            2,
+            94.92,
+            99.92
+          ]
+        ]
+      },
+      {
+        "world": 246101123,
+        "policy": "eat",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "eat",
+            1,
+            95.0,
+            99.8
+          ]
+        ]
+      },
+      {
+        "world": 246101311,
+        "policy": "wait",
+        "end_tick": 60,
+        "survived": true,
+        "events": []
+      },
+      {
+        "world": 246101311,
+        "policy": "drink",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "drink",
+            2,
+            94.92,
+            99.92
+          ]
+        ]
+      },
+      {
+        "world": 246101311,
+        "policy": "eat",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "eat",
+            1,
+            95.0,
+            99.8
+          ]
+        ]
+      },
+      {
+        "world": 246101411,
+        "policy": "wait",
+        "end_tick": 60,
+        "survived": true,
+        "events": []
+      },
+      {
+        "world": 246101411,
+        "policy": "drink",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "drink",
+            2,
+            94.92,
+            99.92
+          ]
+        ]
+      },
+      {
+        "world": 246101411,
+        "policy": "eat",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "eat",
+            1,
+            95.0,
+            99.8
+          ]
+        ]
+      }
+    ],
+    "thirst": [
+      {
+        "world": 246101007,
+        "policy": "wait",
+        "end_tick": 33,
+        "survived": false,
+        "events": []
+      },
+      {
+        "world": 246101007,
+        "policy": "drink",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "drink",
+            2,
+            1.52,
+            51.44
+          ]
+        ]
+      },
+      {
+        "world": 246101007,
+        "policy": "eat",
+        "end_tick": 33,
+        "survived": false,
+        "events": [
+          [
+            "eat",
+            1,
+            95.0,
+            99.8
+          ]
+        ]
+      },
+      {
+        "world": 246101123,
+        "policy": "wait",
+        "end_tick": 33,
+        "survived": false,
+        "events": []
+      },
+      {
+        "world": 246101123,
+        "policy": "drink",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "drink",
+            2,
+            1.52,
+            51.44
+          ]
+        ]
+      },
+      {
+        "world": 246101123,
+        "policy": "eat",
+        "end_tick": 33,
+        "survived": false,
+        "events": [
+          [
+            "eat",
+            1,
+            95.0,
+            99.8
+          ]
+        ]
+      },
+      {
+        "world": 246101311,
+        "policy": "wait",
+        "end_tick": 33,
+        "survived": false,
+        "events": []
+      },
+      {
+        "world": 246101311,
+        "policy": "drink",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "drink",
+            2,
+            1.52,
+            51.44
+          ]
+        ]
+      },
+      {
+        "world": 246101311,
+        "policy": "eat",
+        "end_tick": 33,
+        "survived": false,
+        "events": [
+          [
+            "eat",
+            1,
+            95.0,
+            99.8
+          ]
+        ]
+      },
+      {
+        "world": 246101411,
+        "policy": "wait",
+        "end_tick": 33,
+        "survived": false,
+        "events": []
+      },
+      {
+        "world": 246101411,
+        "policy": "drink",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "drink",
+            2,
+            1.52,
+            51.44
+          ]
+        ]
+      },
+      {
+        "world": 246101411,
+        "policy": "eat",
+        "end_tick": 33,
+        "survived": false,
+        "events": [
+          [
+            "eat",
+            1,
+            95.0,
+            99.8
+          ]
+        ]
+      }
+    ],
+    "hunger": [
+      {
+        "world": 246101007,
+        "policy": "wait",
+        "end_tick": 40,
+        "survived": false,
+        "events": []
+      },
+      {
+        "world": 246101007,
+        "policy": "drink",
+        "end_tick": 40,
+        "survived": false,
+        "events": [
+          [
+            "drink",
+            2,
+            94.92,
+            99.92
+          ]
+        ]
+      },
+      {
+        "world": 246101007,
+        "policy": "eat",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "eat",
+            1,
+            4.0,
+            21.8
+          ]
+        ]
+      },
+      {
+        "world": 246101123,
+        "policy": "wait",
+        "end_tick": 40,
+        "survived": false,
+        "events": []
+      },
+      {
+        "world": 246101123,
+        "policy": "drink",
+        "end_tick": 40,
+        "survived": false,
+        "events": [
+          [
+            "drink",
+            2,
+            94.92,
+            99.92
+          ]
+        ]
+      },
+      {
+        "world": 246101123,
+        "policy": "eat",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "eat",
+            1,
+            4.0,
+            21.8
+          ]
+        ]
+      },
+      {
+        "world": 246101311,
+        "policy": "wait",
+        "end_tick": 40,
+        "survived": false,
+        "events": []
+      },
+      {
+        "world": 246101311,
+        "policy": "drink",
+        "end_tick": 40,
+        "survived": false,
+        "events": [
+          [
+            "drink",
+            2,
+            94.92,
+            99.92
+          ]
+        ]
+      },
+      {
+        "world": 246101311,
+        "policy": "eat",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "eat",
+            1,
+            4.0,
+            21.8
+          ]
+        ]
+      },
+      {
+        "world": 246101411,
+        "policy": "wait",
+        "end_tick": 40,
+        "survived": false,
+        "events": []
+      },
+      {
+        "world": 246101411,
+        "policy": "drink",
+        "end_tick": 40,
+        "survived": false,
+        "events": [
+          [
+            "drink",
+            2,
+            94.92,
+            99.92
+          ]
+        ]
+      },
+      {
+        "world": 246101411,
+        "policy": "eat",
+        "end_tick": 60,
+        "survived": true,
+        "events": [
+          [
+            "eat",
+            1,
+            4.0,
+            21.8
+          ]
+        ]
+      }
+    ]
+  }
+}

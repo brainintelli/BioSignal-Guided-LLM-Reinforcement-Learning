@@ -1,0 +1,358 @@
+{
+  "origin": "research4/state_compact_r1",
+  "seed": 3301001,
+  "tick": 5085,
+  "expected_tokens": 1541,
+  "observation": {
+    "allowed_actions": [
+      {
+        "target_id": "tile_77_83",
+        "verb": "move"
+      },
+      {
+        "target_id": "tile_78_84",
+        "verb": "move"
+      },
+      {
+        "target_id": "tile_77_85",
+        "verb": "move"
+      },
+      {
+        "target_id": "tile_76_84",
+        "verb": "move"
+      },
+      {
+        "verb": "eat"
+      },
+      {
+        "target_id": "r_76_85",
+        "verb": "navigate"
+      },
+      {
+        "target_id": "r_79_85",
+        "verb": "navigate"
+      },
+      {
+        "target_id": "r_79_82",
+        "verb": "navigate"
+      },
+      {
+        "target_id": "r_78_87",
+        "verb": "navigate"
+      },
+      {
+        "target_id": "r_78_81",
+        "verb": "navigate"
+      },
+      {
+        "target_id": "r_78_80",
+        "verb": "navigate"
+      },
+      {
+        "target_id": "r_80_81",
+        "verb": "navigate"
+      },
+      {
+        "target_id": "r_80_88",
+        "verb": "navigate"
+      },
+      {
+        "target_id": "r_82_82",
+        "verb": "navigate"
+      },
+      {
+        "target_id": "r_73_88",
+        "verb": "navigate"
+      },
+      {
+        "target_id": "tile_75_84",
+        "verb": "navigate"
+      },
+      {
+        "target_id": "camp",
+        "verb": "navigate"
+      },
+      {
+        "verb": "rest"
+      },
+      {
+        "verb": "wait"
+      }
+    ],
+    "balance_sha256": "db89fd6b652c5386e3bfc2fd26edad9bf63f490defe1ccbf4f7eac7640aece2c",
+    "camp": {
+      "exists": true,
+      "x": 46,
+      "y": 49
+    },
+    "day": 29,
+    "environment_version": "m9_regions_v1",
+    "inventory": {
+      "berries": 125,
+      "stone": 76,
+      "wood": 142
+    },
+    "local_map": {
+      "center": "player",
+      "legend": {
+        "#": "solid",
+        "*": "flowers",
+        ".": "grass",
+        "?": "unknown",
+        "f": "forest",
+        "s": "sand",
+        "~": "water_blocked"
+      },
+      "north": "row0",
+      "radius": 2,
+      "rows": [
+        "s...*",
+        "s..*f",
+        "s..*f",
+        "s#.*#",
+        "s.*f*"
+      ]
+    },
+    "local_visits": [
+      [
+        7,
+        10,
+        8,
+        1,
+        2
+      ],
+      [
+        2,
+        5,
+        9,
+        6,
+        10
+      ],
+      [
+        2,
+        4,
+        20,
+        25,
+        13
+      ],
+      [
+        1,
+        0,
+        14,
+        16,
+        0
+      ],
+      [
+        2,
+        4,
+        8,
+        10,
+        11
+      ]
+    ],
+    "map_mode": "finite",
+    "navigation_assistance": "selected_target_one_collision_safe_step",
+    "navigation_steps": 1,
+    "nearby": [
+      {
+        "available": false,
+        "distance": 1.4,
+        "id": "r_76_85",
+        "kind": "rock",
+        "path_steps": 1,
+        "ready_in": 64,
+        "x": 76,
+        "y": 85
+      },
+      {
+        "available": false,
+        "distance": 2.2,
+        "id": "r_79_85",
+        "kind": "pine",
+        "path_steps": 2,
+        "ready_in": 7,
+        "x": 79,
+        "y": 85
+      },
+      {
+        "available": false,
+        "distance": 2.8,
+        "id": "r_79_82",
+        "kind": "mushroom",
+        "path_steps": 4,
+        "ready_in": 10,
+        "x": 79,
+        "y": 82
+      },
+      {
+        "available": true,
+        "distance": 3.2,
+        "id": "r_78_87",
+        "kind": "berry",
+        "path_steps": 3,
+        "ready_in": 0,
+        "x": 78,
+        "y": 87
+      },
+      {
+        "available": true,
+        "distance": 3.2,
+        "id": "r_78_81",
+        "kind": "pine",
+        "path_steps": 3,
+        "ready_in": 0,
+        "x": 78,
+        "y": 81
+      },
+      {
+        "available": true,
+        "distance": 4.1,
+        "id": "r_78_80",
+        "kind": "mushroom",
+        "path_steps": 5,
+        "ready_in": 0,
+        "x": 78,
+        "y": 80
+      },
+      {
+        "available": true,
+        "distance": 4.2,
+        "id": "r_80_81",
+        "kind": "berry",
+        "path_steps": 5,
+        "ready_in": 0,
+        "x": 80,
+        "y": 81
+      },
+      {
+        "available": true,
+        "distance": 5.0,
+        "id": "r_80_88",
+        "kind": "rock",
+        "path_steps": 6,
+        "ready_in": 0,
+        "x": 80,
+        "y": 88
+      },
+      {
+        "available": true,
+        "distance": 5.4,
+        "id": "r_82_82",
+        "kind": "tree",
+        "path_steps": 6,
+        "ready_in": 0,
+        "x": 82,
+        "y": 82
+      },
+      {
+        "available": true,
+        "distance": 5.7,
+        "id": "r_73_88",
+        "kind": "tree",
+        "path_steps": 7,
+        "ready_in": 0,
+        "x": 73,
+        "y": 88
+      },
+      {
+        "available": true,
+        "distance": 2.0,
+        "id": "tile_75_84",
+        "kind": "water",
+        "path_steps": 2,
+        "x": 75,
+        "y": 84
+      },
+      {
+        "available": true,
+        "distance": 46.8,
+        "id": "camp",
+        "kind": "camp",
+        "path_steps": 65,
+        "x": 46,
+        "y": 49
+      }
+    ],
+    "phase": "day",
+    "player": {
+      "health": 100.0,
+      "hunger": 97.4,
+      "thirst": 99.6,
+      "x": 77,
+      "y": 84
+    },
+    "profile": "m9",
+    "recent_actions": [
+      {
+        "action": {
+          "target_id": "tile_75_85",
+          "verb": "move"
+        },
+        "delta": {
+          "health": 0.0,
+          "hunger": -0.2,
+          "thirst": -0.1
+        },
+        "position": {
+          "x": 75,
+          "y": 85
+        },
+        "tick": 5082
+      },
+      {
+        "action": {
+          "target_id": "tile_75_84",
+          "verb": "move"
+        },
+        "delta": {
+          "health": 0.0,
+          "hunger": -0.2,
+          "thirst": -0.1
+        },
+        "position": {
+          "x": 75,
+          "y": 84
+        },
+        "tick": 5083
+      },
+      {
+        "action": {
+          "target_id": "tile_76_84",
+          "verb": "move"
+        },
+        "delta": {
+          "health": 0.0,
+          "hunger": -0.2,
+          "thirst": -0.1
+        },
+        "position": {
+          "x": 76,
+          "y": 84
+        },
+        "tick": 5084
+      },
+      {
+        "action": {
+          "target_id": "tile_77_84",
+          "verb": "move"
+        },
+        "delta": {
+          "health": 0.0,
+          "hunger": -0.2,
+          "thirst": -0.1
+        },
+        "position": {
+          "x": 77,
+          "y": 84
+        },
+        "tick": 5085
+      }
+    ],
+    "schema_version": 1,
+    "threats": [],
+    "tick": 5085,
+    "visited_count": 2478,
+    "world_tick": 5085,
+    "world_version": 7
+  }
+}

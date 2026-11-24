@@ -1,0 +1,72 @@
+{
+  "hunger/eat_wait/all-zero": {
+    "diff": -0.7822265625,
+    "favorable_seeds": 10,
+    "high": 1.1821441650390625,
+    "low": -2.733413696289059,
+    "stable": false
+  },
+  "hunger/eat_wait/shuffled": {
+    "diff": -0.31591796875,
+    "favorable_seeds": 13,
+    "high": 1.2485382080078125,
+    "low": -2.0620178222656236,
+    "stable": false
+  },
+  "hunger/survived/all-zero": {
+    "diff": -3.173828125,
+    "favorable_seeds": 5,
+    "high": 2.34375,
+    "low": -9.033203125,
+    "stable": false
+  },
+  "hunger/survived/shuffled": {
+    "diff": -1.123046875,
+    "favorable_seeds": 9,
+    "high": 3.287963867187571,
+    "low": -5.712890625,
+    "stable": false
+  },
+  "low_health/cells/all-zero": {
+    "diff": 5.591796875,
+    "favorable_seeds": 25,
+    "high": 11.255706787109379,
+    "low": -0.18896484375,
+    "stable": false
+  },
+  "low_health/cells/shuffled": {
+    "diff": 2.27880859375,
+    "favorable_seeds": 21,
+    "high": 7.1284423828125085,
+    "low": -1.9179931640625,
+    "stable": false
+  },
+  "thirst/drink_wait/all-zero": {
+    "diff": -1.5390625,
+    "favorable_seeds": 7,
+    "high": 0.91455078125,
+    "low": -4.2637084960937415,
+    "stable": false
+  },
+  "thirst/drink_wait/shuffled": {
+    "diff": -0.74365234375,
+    "favorable_seeds": 13,
+    "high": 1.1474609375,
+    "low": -2.77734375,
+    "stable": false
+  },
+  "thirst/survived/all-zero": {
+    "diff": -2.880859375,
+    "favorable_seeds": 7,
+    "high": 2.734375,
+    "low": -9.08203125,
+    "stable": false
+  },
+  "thirst/survived/shuffled": {
+    "diff": -1.66015625,
+    "favorable_seeds": 10,
+    "high": 2.83203125,
+    "low": -6.34765625,
+    "stable": false
+  }
+}

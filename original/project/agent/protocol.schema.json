@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Meadowmind observation v1, world v2",
+  "type": "object",
+  "required": ["schema_version", "tick", "player", "allowed_actions"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "world_version": {"type": "integer", "minimum": 1},
+    "difficulty": {"type": "string"},
+    "profile": {"enum": ["d0", "d1"]},
+    "navigation_assistance": {"type": "string"},
+    "recent_actions": {"type": "array", "items": {"type": "object"}},
+    "tick": {"type": "integer", "minimum": 0},
+    "day": {"type": "integer", "minimum": 1},
+    "phase": {"type": "string"},
+    "player": {
+      "type": "object",
+      "required": ["health", "hunger", "thirst", "energy", "x", "y"],
+      "properties": {
+        "health": {"type": "number", "minimum": 0, "maximum": 100},
+        "hunger": {"type": "number", "minimum": 0, "maximum": 100},
+        "thirst": {"type": "number", "minimum": 0, "maximum": 100},
+        "energy": {"type": "number", "minimum": 0, "maximum": 100},
+        "x": {"type": "number"}, "y": {"type": "number"}
+      }
+    },
+    "inventory": {"type": "object"},
+    "nearby": {"type": "array", "items": {"type": "object"}},
+    "threats": {"type": "array", "items": {"type": "object"}},
+    "camp": {"type": "object"},
+    "allowed_actions": {
+      "type": "array", "minItems": 1, "maxItems": 64,
+      "contains": {"const": {"verb": "wait"}},
+      "items": {"$ref": "#/$defs/action"}
+    }
+  },
+  "$defs": {
+    "action": {
+      "type": "object", "additionalProperties": false, "required": ["verb"],
+      "properties": {
+        "verb": {"enum": ["move", "navigate", "gather", "eat", "drink", "rest", "build_camp", "flee", "wait"]},
+        "target_id": {"type": "string", "minLength": 1, "maxLength": 128}
+      }
+    }
+  }
+}

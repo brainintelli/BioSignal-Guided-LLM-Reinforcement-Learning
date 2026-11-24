@@ -1,0 +1,15 @@
+{
+  "affected_receipts": 18720,
+  "native_reproduction_endpoint_mismatches": 0,
+  "original_receipts_with_independent_spec_only_evidence": 99,
+  "pilot_overlap": {
+    "evaluation_maps": 64,
+    "training_seeds": 8
+  },
+  "policy_reloaded_action_mismatches": 0,
+  "policy_reloaded_decisions": 9351,
+  "policy_reloaded_episodes": 288,
+  "prospective_registration_integrity": "incomplete: post-evaluation metadata replacement, registration digest placeholder and legacy execution-plan labels, cyclic condition dispatch",
+  "registered_primary_stable_gains": 0,
+  "registered_secondary_stable_gains": 0
+}

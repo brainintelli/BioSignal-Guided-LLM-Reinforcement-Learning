@@ -1,0 +1,7 @@
+.godot/
+.tools/
+__pycache__/
+*.pyc
+*.local.json
+output/agent/live_decisions.jsonl
+output/verification/*.log

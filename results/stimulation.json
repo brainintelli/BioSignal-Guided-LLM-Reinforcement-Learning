@@ -1,0 +1,62 @@
+{
+  "18": {
+    "irregular-sham": {
+      "intervals": {
+        "new_cells": [
+          -1.49482421875,
+          1.6822916666666667
+        ],
+        "r1_sum": [
+          -0.0015364562844075035,
+          0.0038395797554009576
+        ]
+      },
+      "jointly_positive": 3,
+      "stable": false
+    },
+    "regular-sham": {
+      "intervals": {
+        "new_cells": [
+          -3.18232421875,
+          0.90625
+        ],
+        "r1_sum": [
+          -0.003446443167477973,
+          0.0013257795484047168
+        ]
+      },
+      "jointly_positive": 1,
+      "stable": false
+    }
+  },
+  "19": {
+    "irregular-sham": {
+      "intervals": {
+        "new_cells": [
+          -2.7057508680555555,
+          2.4010742187499923
+        ],
+        "r1_sum": [
+          -0.004778643621426003,
+          0.0023927020866487945
+        ]
+      },
+      "jointly_positive": 3,
+      "stable": false
+    },
+    "regular-sham": {
+      "intervals": {
+        "new_cells": [
+          -2.760427517361111,
+          1.4244900173611086
+        ],
+        "r1_sum": [
+          -0.003989936882385446,
+          0.00153890844892823
+        ]
+      },
+      "jointly_positive": 1,
+      "stable": false
+    }
+  }
+}

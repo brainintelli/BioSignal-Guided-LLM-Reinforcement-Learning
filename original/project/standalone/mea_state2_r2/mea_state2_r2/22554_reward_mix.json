@@ -1,0 +1,20 @@
+{
+  "replay_sha256": "2fc7e0211eb3267b2ce31f0a2e494e658c1696efbae078f496291851a69028c7",
+  "mix": {
+    "version": "r1-relative-v1",
+    "r1_weight": 1.0,
+    "r2_weight": 0.1,
+    "amplitude_fraction": 0.5,
+    "reference_per_tick": 0.00977500000000002
+  },
+  "reference": "median nonzero nonterminal abs(pure R1)/discounted elapsed ticks",
+  "training_trace_hashes": {
+    "2255401": "7f1b0ee7d8e28bd07cdfafb4787fae497b8da2d961c4abd1614b2ab506e68ee2",
+    "2255402": "a0d301e0a43fb27e40355a0401b60cf8d1bf0c3540d8993c168856d71d4e8dac",
+    "2255403": "3c6b51d32cba2c2d868d927be415d47e3aab71148da1a88b823353fd572ecc55",
+    "2255404": "ee6a55009cde20b80866299ad5ccad166e659767b962d83c180034665e76f11b",
+    "2255405": "09a94ced2c29c1acde0b7dbe93a995d7fda19481de67b26f492b67b71b7e6dae",
+    "2255406": "87c079ef78446fc5685b66124e2c1beca25de2772fcc11ad8a741e113907f439"
+  },
+  "valid_reference_steps": 576
+}

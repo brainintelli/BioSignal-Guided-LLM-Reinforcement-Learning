@@ -1,0 +1,11 @@
+{
+  "protocol": "photo_full_v1",
+  "chip_id": null,
+  "session_started_at": null,
+  "acquisition_host": "192.0.2.101",
+  "route_cfg": null,
+  "alpha": 1,
+  "r2_mode": "record_only",
+  "realtime_training": false,
+  "offline_training": false
+}

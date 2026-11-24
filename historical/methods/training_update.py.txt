@@ -1,0 +1,5 @@
+def training_update(policy,actor_optimizer,critic_optimizer,rows,config):
+    from agent.m8_train import update
+    from agent.mea_memory import saved_on_cpu_preserve_layout
+    with saved_on_cpu_preserve_layout():
+        return update(policy,actor_optimizer,critic_optimizer,rows,config)

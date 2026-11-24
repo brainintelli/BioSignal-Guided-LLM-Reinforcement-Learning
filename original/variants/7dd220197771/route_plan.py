@@ -1,0 +1,90 @@
+"""Build a software-only route from the newly recorded chip's physical electrodes."""
+import argparse
+import fcntl
+import hashlib
+import json
+from pathlib import Path
+import re
+from types import SimpleNamespace
+import uuid
+
+from livepair.device import write_once
+from mea_stim_v2.live import mx, _server_snapshot
+from mea_stim_v2.recording import H5Recording
+from select_sites import candidates
+from vendor.brain_stimulation import transport
+
+
+def plan(stage):
+    b=json.loads((stage/'baseline-binding.json').read_text())
+    src=Path(b['record_root'])/(b['session_id']+'-site-selection')
+    original=json.loads((src/'site-candidates.json').read_text())
+    with H5Recording(src/'quiet.raw.h5',SimpleNamespace(threshold_h5_dataset=b['threshold_h5_dataset'])) as rec:
+        measured=candidates(rec,b['chip_id'],b['bad_channels'])
+        if original!=measured or rec.events or rec.metadata['frame_gaps']:
+            raise ValueError('Original site selection did not reproduce on this chip')
+        import math
+        spec=json.loads((stage/'protocol.json').read_bytes())
+        prior=Path(b['record_root'])/'cpp-crossover-v1'
+        prior_route=json.loads((stage.parent/'session-route.json').read_bytes())
+        prior_design=json.loads((prior/'design.json').read_bytes())
+        if hashlib.sha256((prior/'design.json').read_bytes()).hexdigest()!=spec['prior_plan_sha']:
+            raise ValueError('Previous exposure plan differs')
+        used={prior_route['electrodes'][site] for row in prior_design['trials'] for site,offset in row['events']}
+        if used!={8418,24709,16859} or spec['sites']['W'] in used:raise ValueError('Direct exposure history mismatch')
+        eligible_first={r['electrode']:r for r in measured['candidates']}
+        with H5Recording(prior/'warmup/warmup.raw.h5',SimpleNamespace(threshold_h5_dataset=b['threshold_h5_dataset'])) as before:
+            eligible_second=candidates(before,b['chip_id'],b['bad_channels'])['candidates']
+            all_e=sorted(e for c,e in before.mapping)
+            eligible=[r for r in eligible_second if r['electrode'] not in used and r['electrode'] in eligible_first and
+                      min(r['min_spikes_per_20s'],eligible_first[r['electrode']]['min_spikes_per_20s'])>=5]
+            def score(r):
+                xy=(r['x_um'],r['y_um'])
+                return (min(math.dist(xy,x) for x in prior_route['coordinates'].values()),
+                        min(r['min_spikes_per_20s'],eligible_first[r['electrode']]['min_spikes_per_20s']),-r['electrode'])
+            choice=max(eligible,key=score)
+            selected=spec['sites']
+            if choice['electrode']!=selected['W'] or selected['H']!=8418 or selected['F']!=16859:raise ValueError('Registered sites differ')
+            coordinates={e:before.channel_xy_um[c] for c,e in before.mapping}
+            coords={k:list(coordinates[e]) for k,e in selected.items()}
+    contract=stage/'session-route.json'
+    lease=Path.home()/'.local/state/mea_photo_full/device.lock'
+    with lease.open('a') as guard, transport.bind_sdk(mx,transport.Endpoint(timeout=90)):
+        fcntl.flock(guard,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        if _server_snapshot()[1] or mx.send_raw('wellplate_query_version').strip()!='0':
+            raise ValueError('Instrument busy or not MaxOne')
+        for n,pool in enumerate([set(all_e),set(all_e[::2])|set(selected.values())]):
+            a=mx.Array('design_'+uuid.uuid4().hex)
+            try:
+                a.reset();a.clear_selected_electrodes()
+                a.select_electrodes(sorted(pool));a.select_stimulation_electrodes(list(selected.values()));a.route()
+                for u in range(32):
+                    ch=a.query_amplifier_at_stimulation(u).strip()
+                    if ch not in ('','-1'):a.disconnect_amplifier_from_stimulation(int(ch))
+                units={}
+                for k,e in selected.items():
+                    a.connect_electrode_to_stimulation(e)
+                    units[k]=int(a.query_stimulation_at_electrode(e).strip())
+                if len(set(units.values()))!=3 or any(not 0<=u<32 for u in units.values()):continue
+                cur=mx.send_raw('mea_array_command '+a.token+'\nmea_array_get_config').strip()
+                mapping={int(e):int(c) for c,e in re.findall(r'(\d+)\((\d+)\)',cur.split()[0])}
+                if len(mapping)<51 or any(e not in mapping for e in selected.values()):continue
+                if any(a.query_amplifier_at_stimulation(units[k]).strip()!=str(mapping[e]) for k,e in selected.items()):continue
+                for e in selected.values():a.disconnect_amplifier_from_stimulation(mapping[e])
+                cfg=stage/'sample-route.cfg'
+                with cfg.open('x') as f:f.write(mx.send_raw('mea_array_command '+a.token+'\nmea_array_get_config').strip())
+                write_once(contract,dict(chip_id=b['chip_id'],organoid_id=b['organoid_id'],session_id=b['session_id'],
+                    baseline=measured['source'],electrodes=selected,coordinates=coords,software_units=units,
+                    route_file=str(cfg),route_sha256=hashlib.sha256(cfg.read_bytes()).hexdigest(),channels=len(mapping),
+                    strategy=n,hardware_downloaded=False))
+                print(contract.read_text(),flush=True)
+                return
+            finally:
+                a.close()
+    raise ValueError('Three individually addressable baseline electrodes could not be routed together')
+
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser()
+    p.add_argument('stage',type=Path)
+    plan(p.parse_args().stage)

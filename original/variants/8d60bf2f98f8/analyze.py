@@ -1,0 +1,174 @@
+"""Verify equal budgets, then compare crossed pairs of training seeds and game worlds."""
+import csv
+import hashlib
+import json
+import math
+from pathlib import Path
+
+import numpy as np
+
+from livepair.predictability import outcome
+from mea_state2_r2.features import digest
+from mea_state2_r2.trajectory import audit as audit_gae
+
+ROOT=Path(__file__).resolve().parent
+KEYS=('new_cells','r1_sum')
+
+
+def read(path):
+    return json.loads(path.read_text(encoding='utf8'))
+
+
+def sha(path):
+    with path.open('rb') as stream:
+        return hashlib.file_digest(stream,'sha256').hexdigest()
+
+
+def verify(root,spec,ctx,seed,arm):
+    reg=read(root/'registration.json')
+    update=read(root/'update.json')
+    result=read(root/'result.json')
+    manifest=read(root/'checkpoint/manifest.json')
+    local_audit=read(root/'replay-audit.json')
+    series=ctx['series']
+    if (reg['study_digest']!=digest(spec) or reg['source_sha']!=ctx['source_sha256'] or
+        reg['training_seed']!=seed or reg['arm']!=arm or reg['windows_digest']!=digest(series) or
+        update['actor_steps']!=[8] or update['critic_steps']!=[64] or update['initial']!=reg['initial'] or
+        any((update['after'][k]!=reg['initial'][k])!=(k in ('actor','critic')) for k in reg['initial']) or
+        result['checkpoint_digest']!=digest(manifest) or manifest['registration_sha256']!=digest(reg) or
+        manifest['actor_sha256']!=update['after']['actor'] or manifest['update']!=spec['updates']):
+        raise ValueError(f'Study binding, checkpoint or budget differs at {root}')
+    for name,expected in manifest['files'].items():
+        if sha(root/'checkpoint'/name)!=expected:
+            raise ValueError(f'Checksum differs at {root}/{name}')
+    metadata=read(root/'checkpoint/policy.json')
+    beta=spec['beta'] if arm=='ordered' else 0.
+    mix=spec['reward_mix']
+    assert reg['beta']==metadata['beta']==beta and reg['alpha']==metadata['alpha']==spec['alpha']
+    assert reg['reward_mix']==mix and metadata['r1_reference_per_tick']==mix['reference_per_tick']
+    assert metadata['reward_mix_schema']==mix['schema'] and metadata['r2_scale_fraction']==mix['scale_fraction']
+    feedback=dict(positive=0,negative=0,silent=0,sum_contribution=0.,total_decisions=0,abs_contribution=0.,abs_r1=0.,max_relative_contribution=0.,active_ratios=[])
+    episodes=spec['episodes'][str(seed)]
+    if [r['world'] for r in update['rounds']]!=episodes:
+        raise ValueError('Training schedule changed')
+    first=[]
+    for batch,summary in enumerate(update['rounds'],1):
+        rows=[json.loads(line) for line in (root/f'train-{batch}.jsonl').read_text(encoding='utf8').splitlines()]
+        if len(rows)!=spec['batch'] or summary['update']['optimizer_steps']!=2:
+            raise ValueError('Update budget mismatch')
+        audit_gae(rows,summary['bootstrap'],mix['gamma_tick'],reg['config']['gae_lambda'])
+        for i,r in enumerate(rows):
+            trace=outcome(r['transition'])
+            expected_sign=(1 if trace['correct'] else -1) if (i+1)%3==0 and not r['terminal'] else 0
+            native=r['r1_score']['reward']
+            discount_sum=sum(mix['gamma_tick']**j for j in range(r['duration']))
+            scaled=expected_sign*mix['scale_fraction']*min(abs(native),mix['reference_per_tick']*discount_sum)
+            term=beta*scaled
+            assert math.isclose(scaled,r['r2_scaled'],rel_tol=1e-12,abs_tol=1e-15)
+            assert abs(term)<=spec['effective_r2_limit_relative_to_r1']*abs(native)+1e-15
+            assert native==0 and r['reward']==0 or native*r['reward']>0
+            feedback['abs_contribution']+=abs(term)
+            feedback['abs_r1']+=abs(native)
+            if expected_sign and native:
+                ratio=abs(term/native)
+                feedback['active_ratios'].append(ratio)
+                feedback['max_relative_contribution']=max(feedback['max_relative_contribution'],ratio)
+            snap=r['snapshot']
+            window=series['train'][(batch-1)*spec['batch']+i]
+            if (i!=r['index'] or r['seed']!=summary['world'] or expected_sign!=r['r2'] or
+                not math.isclose(r['contribution'],term,abs_tol=1e-12) or
+                not math.isclose(r['reward'],spec['alpha']*r['r1_score']['reward']+term,abs_tol=1e-12) or
+                snap['events_sha256']!=window['events_sha'] or snap['window_index']!=window['index'] or
+                [snap['window_start'],snap['window_end']]!=[window['frame_start'],window['frame_end']] or
+                snap['features']!=window['features'] or snap['source_pin']!=ctx['source_sha256'] or
+                r['prepared']['wetware_features']!=window['normalized'] or
+                (i==0 and any(r['observation']['player'][k]!=v for k,v in spec['starting_reserves'].items()))):
+                raise ValueError(f'Training step or fixed MEA context differs at {seed}/{arm}/{batch}/{i}')
+            feedback[{1:'positive',-1:'negative',0:'silent'}[expected_sign]]+=1
+            feedback['sum_contribution']+=term
+            feedback['total_decisions']+=1
+            if batch==1:
+                first.append([r['snapshot']['context_id'],r['action'],r['r1_score']['reward'],expected_sign])
+    ev=result['evaluation']
+    held=[json.loads(line) for line in (root/'holdout.jsonl').read_text(encoding='utf8').splitlines()]
+    if [g['world'] for g in held]!=spec['holdout_seeds'] or any(
+        any(r['wetware_window']!=w['index'] or r['wetware_events_sha']!=w['events_sha']
+            for r,w in zip(g['rows'],series['holdout'])) for g in held):
+        raise ValueError('Held-out MEA inputs changed during evaluation')
+    if ([v['seed'] for v in ev]!=spec['holdout_seeds'] or local_audit!=dict(seed=seed,arm=arm,worlds=len(ev),decisions=sum(v['decisions'] for v in ev))):
+        raise ValueError('Independent Godot audit mismatch')
+    return reg,ev,feedback,digest(first)
+
+
+def signs(values):
+    values=np.asarray(values)
+    return dict(higher=int((values>1e-10).sum()),tied=int((abs(values)<=1e-10).sum()),lower=int((values< -1e-10).sum()))
+
+
+def main():
+    spec=read(ROOT/'design.json')
+    ctx=read(ROOT/'context.json')
+    assert digest(ctx)==spec['context_sha']
+    seeds=spec['training_seeds']
+    worlds=spec['holdout_seeds']
+    curves={arm:[] for arm in spec['arms']}
+    feedback={}
+    table=[]
+    config=None
+    for j,seed in enumerate(seeds):
+        paired_start=None
+        for arm in spec['arms']:
+            reg,ev,counts,first=verify(ROOT/'models'/str(seed)/arm,spec,ctx,seed,arm)
+            if config is None:
+                config=(reg['initial'],reg['config'])
+            if config!=(reg['initial'],reg['config']) or (paired_start and first!=paired_start):
+                raise ValueError('Mismatched initial weights, training hyperparameters or first episode')
+            paired_start=first
+            feedback[f'{seed}/{arm}']=counts
+            curves[arm].append([[w[k] for k in KEYS] for w in ev])
+        for i,w in enumerate(worlds):
+            record=dict(training_seed=seed,holdout_seed=w)
+            for k,name in enumerate(KEYS):
+                base=curves['r1'][j][i][k]
+                treat=curves['ordered'][j][i][k]
+                record.update({name+'_r1':base,name+'_r1_r2':treat,name+'_diff':treat-base})
+            table.append(record)
+    with (ROOT/'paired-worlds.csv').open('w',encoding='utf-8-sig',newline='') as stream:
+        writer=csv.DictWriter(stream,fieldnames=list(table[0]))
+        writer.writeheader()
+        writer.writerows(table)
+    a=np.asarray(curves['r1'])
+    b=np.asarray(curves['ordered'])
+    delta=b-a
+    interval=spec['interval']
+    rng=np.random.default_rng(interval['seed'])
+    samples=[]
+    for _ in range(interval['draws']//500):
+        reps=rng.integers(len(seeds),size=(500,len(seeds),1))
+        envs=rng.integers(len(worlds),size=(500,1,len(worlds)))
+        samples.append(delta[reps,envs].mean(axis=(1,2)))
+    bounds=np.quantile(np.concatenate(samples),interval['quantiles'],axis=0)
+    per_seed=delta.mean(axis=1)
+    summaries={}
+    for k,name in enumerate(KEYS):
+        summaries[name]=dict(r1=a[:,:,k].mean(),r1_r2=b[:,:,k].mean(),difference=delta[:,:,k].mean(),
+                             interval=bounds[:,k].tolist(),by_training_seed=per_seed[:,k].tolist(),
+                             training_seed_signs=signs(per_seed[:,k]),paired_world_runs=signs(delta[:,:,k]),
+                             holdout_world_signs=signs(delta[:,:,k].mean(axis=0)))
+    both=int((per_seed>1e-10).all(axis=1).sum())
+    out=dict(metrics=summaries,joint_positive_training_seeds=both,stable=bool(both>=6 and np.all(bounds[0]>0)),
+             feedback=feedback,training_decisions_per_arm=8*48,eval_games_per_arm=len(seeds)*len(worlds),
+             dataset_sha=ctx['source_sha256'],context_sha=spec['context_sha'],study_digest=digest(spec))
+    totals={}
+    for arm in spec['arms']:
+        items=[feedback[f'{s}/{arm}'] for s in seeds]
+        active=[v for item in items for v in item['active_ratios']]
+        totals[arm]={'decisions':sum(i['total_decisions'] for i in items),
+            'absolute_mass_ratio':sum(i['abs_contribution'] for i in items)/sum(i['abs_r1'] for i in items),
+            'max_step_ratio':max(active, default=0.),'median_active_ratio':float(np.median(active)) if active else 0.,
+            'positive':sum(i['positive'] for i in items),'negative':sum(i['negative'] for i in items),'silent':sum(i['silent'] for i in items),
+            'deaths_at_evaluation':sum(g['terminated'] for seed in seeds for g in read(ROOT/'models'/str(seed)/arm/'result.json')['evaluation'])}
+    out['reward_totals']=totals
+    (ROOT/'comparison.json').write_text(json.dumps(out,indent=2,ensure_ascii=False),encoding='utf8')
+if __name__=='__main__':
+    main()

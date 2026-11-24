@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+type: software
+title: "Organoid Replay Arena"
+message: "Please cite the accompanying preprint when using this research software."
+authors:
+  - name: "Brainintelli Research Lab"
+    email: research@brainintelli.com
+repository-code: "https://github.com/brainintelli/Organoid-Replay-Arena"
+license: MIT
+preferred-citation:
+  type: report
+  title: "Language Model Exploration and Survival Behavior Under Offline Replay of Organoid Neural Signals: A Paired Controlled Study Using Matched Seeds"
+  authors:
+    - name: "Brainintelli Research Lab"
+      email: research@brainintelli.com
+  institution:
+    name: "Brainintelli"
+    city: "Shanghai"
+    country: CN
+  year: 2026
+  url: "https://github.com/brainintelli/Organoid-Replay-Arena/blob/main/paper.pdf"

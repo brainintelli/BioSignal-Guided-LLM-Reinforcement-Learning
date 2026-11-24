@@ -1,0 +1,27 @@
+def play(policy,env,plain,spec,world,mode):
+    first=env.reset(world);shadow=plain.reset(world)
+    assert digest(first['observation'])==digest(shadow['observation'])
+    obs=first['observation']
+    assert first['starting_scene']==spec['starting_scene'] and all(obs['player'][k]==v for k,v in spec['starting_reserves'].items())
+    tracker=Reward(obs,'bottleneck',GAMMA); visited=obs['visited_count'];rows=[];total=0.;alive_score=0.
+    schedule=spec['shuffle'][str(world)] if mode=='shuffled' else list(range(spec['horizon']))
+    done=False
+    while obs['world_tick']<spec['horizon'] and not done:
+        t=obs['world_tick'];w=spec['windows'][schedule[t]];prep,snap=policy.replay_input(obs,w)
+        vec=[0.]*4 if mode=='masked' else w['normalized']
+        fmt=','.join(f'{n}={v:.3f}' for n,v in zip(NAMES,vec))
+        assert prep['wetware_features']==vec==prep['critic_input'][-4:] and fmt in prep['messages'][1]['content']
+        assert snap['source_pin']==spec['source_sha'] and snap['window_index']==w['index']
+        torch.manual_seed(world*100+t)
+        act=policy.act([prep],with_reference=False)['actions'][0]
+        n=env.step(act); ck=plain.step(act)
+        assert digest(n['transition'])==digest(ck['transition']) and digest(n['observation'])==digest(ck['observation'])
+        rew,living,end,cut=score_step(n['transition'],n['observation'],tracker,env,spec['horizon'])
+        total+=rew;alive_score+=living
+        rows.append(dict(tick=t,window=w['index'],events=w['events_sha'],features=vec,action=act,transition_sha=digest(ck['transition']),end_tick=end['tick'],reward=rew,cut=cut,new_cells_at_end=end['visited_count']-visited,
+                         r2_logged=int(not cut and act['verb']=='drink' and ck['transition']['before']['thirst']<=20 and end['thirst']>ck['transition']['before']['thirst']),r2_contribution=0))
+        obs=n['observation']; done=n['terminated']
+    assert end['tick']==spec['horizon'] or end['dead']
+    return dict(world=world,mode=mode,decisions=len(rows),end_tick=end['tick'],survived=int(not end['dead']),
+        r1=total,r1_per_tick=total/end['tick'],living=alive_score,shape=total-alive_score,new_cells=end['visited_count']-visited,
+        health=end['health'],thirst=end['thirst'],hunger=end['hunger'],cut=cut,rows=rows)

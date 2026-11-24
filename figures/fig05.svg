@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="396pt" height="235pt" viewBox="0 0 396 235" role="img" aria-labelledby="chart-title chart-desc">
+  <title id="chart-title">Exploration contrasts and pairwise outcomes</title>
+  <desc id="chart-desc">Two short first-chip comparisons exclude zero on the fixed maps. The other three confidence intervals cross zero. The counts underneath show the many tied paired games.</desc>
+  <rect x="0" y="0" width="396.0" height="235" fill="#FFFFFF" stroke="none" stroke-width="0.65" />
+  <text x="5" y="13" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="11" fill="#174C73" text-anchor="start">A</text>
+  <text x="19" y="13" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="10.6" fill="#172B3C" text-anchor="start">Mean difference in newly visible cells</text>
+  <line x1="5" x2="391" y1="19" y2="19" stroke="#C3CBD0" stroke-width="0.7" />
+  <text x="6" y="30" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;A-eval_horizon&quot;,&quot;display&quot;:&quot;6&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;A-train_seeds_per_group&quot;,&quot;display&quot;:&quot;16&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;A-heldout_worlds_per_group&quot;,&quot;display&quot;:&quot;48&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;DES-q95&quot;,&quot;display&quot;:&quot;95&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">First three rows: 6 decisions; 16 seeds × 48 maps; fixed-map 95% CIs.</text>
+  <g data-mark="shared-ci-level" data-levels="B-low_health-masked-cells-interval_level B-low_health-shuffled-cells-interval_level">
+    <text x="6" y="42" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;DES-horizon&quot;,&quot;display&quot;:&quot;60&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;DES-training_seeds&quot;,&quot;display&quot;:&quot;32&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;DES-holdout_worlds_per_seed_and_scene&quot;,&quot;display&quot;:&quot;64&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;B-low_health-shuffled-cells-interval_level&quot;,&quot;display&quot;:&quot;99.167&quot;,&quot;precision&quot;:3,&quot;transform&quot;:&quot;identity&quot;}]">Last two (low-health): tick 60 or earlier death; 32 seeds × 64 maps; crossed 99.167% CIs.</text>
+  </g>
+  <text x="6" y="57" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="7.5" fill="#445969" text-anchor="start">Recording and contrast</text>
+  <text x="196" y="57" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="7.5" fill="#445969" text-anchor="middle">Cells/game</text>
+  <text x="342" y="57" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="7.5" fill="#445969" text-anchor="end">Mean [CI]</text>
+  <text x="390" y="57" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="7.5" fill="#445969" text-anchor="end">Positive seeds</text>
+  <line x1="153.46666666666667" x2="153.46666666666667" y1="62" y2="147" stroke="#C3CBD0" stroke-width="0.44" stroke-dasharray="1.4 2.2" />
+  <line x1="153.46666666666667" x2="153.46666666666667" y1="147" y2="149" stroke="#445969" stroke-width="0.65" />
+  <text x="153.46666666666667" y="157" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">−2</text>
+  <line x1="166.4" x2="166.4" y1="62" y2="147" stroke="#C3CBD0" stroke-width="0.44" />
+  <line x1="166.4" x2="166.4" y1="147" y2="149" stroke="#445969" stroke-width="0.65" />
+  <text x="166.4" y="157" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">0</text>
+  <line x1="192.26666666666665" x2="192.26666666666665" y1="62" y2="147" stroke="#C3CBD0" stroke-width="0.44" stroke-dasharray="1.4 2.2" />
+  <line x1="192.26666666666665" x2="192.26666666666665" y1="147" y2="149" stroke="#445969" stroke-width="0.65" />
+  <text x="192.26666666666665" y="157" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">4</text>
+  <line x1="218.13333333333333" x2="218.13333333333333" y1="62" y2="147" stroke="#C3CBD0" stroke-width="0.44" stroke-dasharray="1.4 2.2" />
+  <line x1="218.13333333333333" x2="218.13333333333333" y1="147" y2="149" stroke="#445969" stroke-width="0.65" />
+  <text x="218.13333333333333" y="157" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">8</text>
+  <line x1="244.0" x2="244.0" y1="62" y2="147" stroke="#C3CBD0" stroke-width="0.44" stroke-dasharray="1.4 2.2" />
+  <line x1="244.0" x2="244.0" y1="147" y2="149" stroke="#445969" stroke-width="0.65" />
+  <text x="244.0" y="157" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">12</text>
+  <line x1="153.46666666666667" x2="244.0" y1="147" y2="147" stroke="#445969" stroke-width="0.7" />
+  <line x1="166.4" x2="166.4" y1="61" y2="147" stroke="#445969" stroke-width="0.9" />
+  <line x1="5" x2="391" y1="110" y2="110" stroke="#C3CBD0" stroke-width="0.55" />
+  <text x="6" y="72.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="7.8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;V0-P025-02&quot;,&quot;display&quot;:&quot;22021&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">22021 (I)</text>
+  <text x="50" y="72.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8.05" fill="#172B3C" text-anchor="start">intact − all-zero</text>
+  <g data-mark="paired-ci" data-contrast="baseline-masked" data-mean="E-22021-baseline-masked-exploration-mean_difference" data-low="E-22021-baseline-masked-exploration-ci_low" data-high="E-22021-baseline-masked-exploration-ci_high">
+    <line x1="174.03706597222222" x2="184.05724175347223" y1="70" y2="70" stroke="#174C73" stroke-width="1.25" />
+    <line x1="174.03706597222222" x2="174.03706597222222" y1="67.2" y2="72.8" stroke="#174C73" stroke-width="0.9" />
+    <line x1="184.05724175347223" x2="184.05724175347223" y1="67.2" y2="72.8" stroke="#174C73" stroke-width="0.9" />
+    <circle cx="179.24913194444446" cy="70" r="2.9" fill="#174C73" stroke="#174C73" stroke-width=".65" />
+  </g>
+  <text x="342" y="72.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.85" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;E-22021-baseline-masked-exploration-mean_difference&quot;,&quot;display&quot;:&quot;+1.99&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;E-22021-baseline-masked-exploration-ci_low&quot;,&quot;display&quot;:&quot;1.18&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;E-22021-baseline-masked-exploration-ci_high&quot;,&quot;display&quot;:&quot;2.73&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;}]">+1.99 [1.18, 2.73]</text>
+  <text x="383" y="72.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;E-22021-baseline-masked-exploration-positive_seeds&quot;,&quot;display&quot;:&quot;14&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;A-train_seeds_per_group&quot;,&quot;display&quot;:&quot;16&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">14/16</text>
+  <text x="6" y="88.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="7.8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;V0-P025-02&quot;,&quot;display&quot;:&quot;22021&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">22021 (I)</text>
+  <text x="50" y="88.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8.05" fill="#172B3C" text-anchor="start">unstimulated − all-zero</text>
+  <g data-mark="paired-ci" data-contrast="sham-masked" data-mean="E-22021-sham-masked-exploration-mean_difference" data-low="E-22021-sham-masked-exploration-ci_low" data-high="E-22021-sham-masked-exploration-ci_high">
+    <line x1="176.63867838541668" x2="184.20038411458333" y1="86" y2="86" stroke="#80521E" stroke-width="1.25" />
+    <line x1="176.63867838541668" x2="176.63867838541668" y1="83.2" y2="88.8" stroke="#80521E" stroke-width="0.9" />
+    <line x1="184.20038411458333" x2="184.20038411458333" y1="83.2" y2="88.8" stroke="#80521E" stroke-width="0.9" />
+    <polygon points="180.35217013888888,83.1 183.25217013888889,86 180.35217013888888,88.9 177.45217013888887,86" fill="#80521E" stroke="#80521E" stroke-width="0.7" />
+  </g>
+  <text x="342" y="88.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.85" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;E-22021-sham-masked-exploration-mean_difference&quot;,&quot;display&quot;:&quot;+2.16&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;E-22021-sham-masked-exploration-ci_low&quot;,&quot;display&quot;:&quot;1.58&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;E-22021-sham-masked-exploration-ci_high&quot;,&quot;display&quot;:&quot;2.75&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;}]">+2.16 [1.58, 2.75]</text>
+  <text x="383" y="88.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;E-22021-sham-masked-exploration-positive_seeds&quot;,&quot;display&quot;:&quot;15&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;A-train_seeds_per_group&quot;,&quot;display&quot;:&quot;16&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">15/16</text>
+  <text x="6" y="104.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="7.8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;V0-P078-06&quot;,&quot;display&quot;:&quot;22554&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">22554</text>
+  <text x="50" y="104.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8.05" fill="#172B3C" text-anchor="start">intact − native R1-only</text>
+  <g data-mark="paired-ci" data-contrast="ordered-pure" data-mean="E-22554-ordered-pure-exploration-mean_difference" data-low="E-22554-ordered-pure-exploration-ci_low" data-high="E-22554-ordered-pure-exploration-ci_high">
+    <line x1="154.85598958333335" x2="172.7323654513889" y1="102" y2="102" stroke="#445969" stroke-width="1.25" />
+    <line x1="154.85598958333335" x2="154.85598958333335" y1="99.2" y2="104.8" stroke="#445969" stroke-width="0.9" />
+    <line x1="172.7323654513889" x2="172.7323654513889" y1="99.2" y2="104.8" stroke="#445969" stroke-width="0.9" />
+    <rect x="161.32475694444446" y="99.535" width="4.93" height="4.93" fill="#445969" stroke="#445969" stroke-width="0.65" />
+  </g>
+  <text x="342" y="104.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.85" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;E-22554-ordered-pure-exploration-mean_difference&quot;,&quot;display&quot;:&quot;−0.40&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;E-22554-ordered-pure-exploration-ci_low&quot;,&quot;display&quot;:&quot;−1.79&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;E-22554-ordered-pure-exploration-ci_high&quot;,&quot;display&quot;:&quot;0.98&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;}]">−0.40 [−1.79, 0.98]</text>
+  <text x="383" y="104.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;E-22554-ordered-pure-exploration-positive_seeds&quot;,&quot;display&quot;:&quot;5&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;A-train_seeds_per_group&quot;,&quot;display&quot;:&quot;16&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">5/16</text>
+  <text x="6" y="120.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="7.8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;V0-P025-02&quot;,&quot;display&quot;:&quot;22021&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">22021 (II)</text>
+  <text x="50" y="120.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8.05" fill="#172B3C" text-anchor="start">intact − all-zero</text>
+  <g data-mark="paired-ci" data-contrast="ordered-masked" data-mean="B-low_health-masked-cells-delta" data-low="B-low_health-masked-cells-lo" data-high="B-low_health-masked-cells-hi">
+    <line x1="165.17802734375" x2="239.186903889974" y1="118" y2="118" stroke="#445969" stroke-width="1.25" />
+    <line x1="165.17802734375" x2="165.17802734375" y1="115.2" y2="120.8" stroke="#445969" stroke-width="0.9" />
+    <line x1="239.186903889974" x2="239.186903889974" y1="115.2" y2="120.8" stroke="#445969" stroke-width="0.9" />
+    <rect x="200.09528645833333" y="115.535" width="4.93" height="4.93" fill="#445969" stroke="#445969" stroke-width="0.65" />
+  </g>
+  <text x="342" y="120.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.85" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;B-low_health-masked-cells-delta&quot;,&quot;display&quot;:&quot;+5.59&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;B-low_health-masked-cells-lo&quot;,&quot;display&quot;:&quot;−0.19&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;B-low_health-masked-cells-hi&quot;,&quot;display&quot;:&quot;11.26&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;}]">+5.59 [−0.19, 11.26]</text>
+  <text x="383" y="120.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;B-low_health-masked-cells-wins&quot;,&quot;display&quot;:&quot;25&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;DES-training_seeds&quot;,&quot;display&quot;:&quot;32&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">25/32</text>
+  <text x="6" y="136.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="7.8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;V0-P025-02&quot;,&quot;display&quot;:&quot;22021&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">22021 (II)</text>
+  <text x="50" y="136.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8.05" fill="#172B3C" text-anchor="start">intact − shuffled</text>
+  <g data-mark="paired-ci" data-contrast="ordered-shuffled" data-mean="B-low_health-shuffled-cells-delta" data-low="B-low_health-shuffled-cells-lo" data-high="B-low_health-shuffled-cells-hi">
+    <line x1="153.9969775390625" x2="212.49726074218756" y1="134" y2="134" stroke="#445969" stroke-width="1.25" />
+    <line x1="153.9969775390625" x2="153.9969775390625" y1="131.2" y2="136.8" stroke="#445969" stroke-width="0.9" />
+    <line x1="212.49726074218756" x2="212.49726074218756" y1="131.2" y2="136.8" stroke="#445969" stroke-width="0.9" />
+    <rect x="178.67129557291665" y="131.535" width="4.93" height="4.93" fill="#445969" stroke="#445969" stroke-width="0.65" />
+  </g>
+  <text x="342" y="136.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.85" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;B-low_health-shuffled-cells-delta&quot;,&quot;display&quot;:&quot;+2.28&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;B-low_health-shuffled-cells-lo&quot;,&quot;display&quot;:&quot;−1.92&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;B-low_health-shuffled-cells-hi&quot;,&quot;display&quot;:&quot;7.13&quot;,&quot;precision&quot;:2,&quot;transform&quot;:&quot;identity&quot;}]">+2.28 [−1.92, 7.13]</text>
+  <text x="383" y="136.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;B-low_health-shuffled-cells-wins&quot;,&quot;display&quot;:&quot;21&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;DES-training_seeds&quot;,&quot;display&quot;:&quot;32&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">21/32</text>
+  <text x="6" y="168" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.3" fill="#445969" text-anchor="start">I / II denote the first / second organoids on the same chip.</text>
+  <line x1="5" x2="391" y1="176" y2="176" stroke="#C3CBD0" stroke-width="0.7" />
+  <text x="5" y="190" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="11" fill="#174C73" text-anchor="start">B</text>
+  <text x="19" y="190" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="10.6" fill="#172B3C" text-anchor="start">Paired outcomes on the first organoid</text>
+  <text x="390" y="190" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.6" fill="#445969" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;A-N&quot;,&quot;display&quot;:&quot;768&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">768 pairs per comparison</text>
+  <text x="6" y="205.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8.2" fill="#172B3C" text-anchor="start">Intact − all-zero</text>
+  <g data-mark="outcome-count" data-arm="baseline" data-count="A-baseline-six-losses">
+    <rect x="101" y="197" width="11.104166666666666" height="12" fill="#80521E" stroke="#FFFFFF" stroke-width="0.55" />
+  </g>
+  <g data-mark="outcome-count" data-arm="baseline" data-count="A-baseline-six-ties">
+    <rect x="112.10416666666667" y="197" width="131.328125" height="12" fill="#E6EAED" stroke="#FFFFFF" stroke-width="0.55" />
+  </g>
+  <g data-mark="outcome-count" data-arm="baseline" data-count="A-baseline-six-wins">
+    <rect x="243.43229166666669" y="197" width="21.567708333333332" height="12" fill="#174C73" stroke="#FFFFFF" stroke-width="0.55" />
+  </g>
+  <rect x="269" y="200.6" width="3.6" height="3.6" fill="#80521E" stroke="#445969" stroke-width="0.45" />
+  <text x="274.6" y="205.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.25" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;A-baseline-six-losses&quot;,&quot;display&quot;:&quot;52&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">52 fewer</text>
+  <rect x="306" y="200.6" width="3.6" height="3.6" fill="#E6EAED" stroke="#445969" stroke-width="0.45" />
+  <text x="311.6" y="205.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.25" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;A-baseline-six-ties&quot;,&quot;display&quot;:&quot;615&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;A-N&quot;,&quot;display&quot;:&quot;768&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">615/768 tied</text>
+  <rect x="358" y="200.6" width="3.6" height="3.6" fill="#174C73" stroke="#445969" stroke-width="0.45" />
+  <text x="363.6" y="205.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.25" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;A-baseline-six-wins&quot;,&quot;display&quot;:&quot;101&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">101 more</text>
+  <text x="6" y="223.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8.2" fill="#172B3C" text-anchor="start">Unstimulated − all-zero</text>
+  <g data-mark="outcome-count" data-arm="sham" data-count="A-sham-six-losses">
+    <rect x="101" y="215" width="12.171875" height="12" fill="#80521E" stroke="#FFFFFF" stroke-width="0.55" />
+  </g>
+  <g data-mark="outcome-count" data-arm="sham" data-count="A-sham-six-ties">
+    <rect x="113.171875" y="215" width="128.55208333333334" height="12" fill="#E6EAED" stroke="#FFFFFF" stroke-width="0.55" />
+  </g>
+  <g data-mark="outcome-count" data-arm="sham" data-count="A-sham-six-wins">
+    <rect x="241.72395833333334" y="215" width="23.276041666666668" height="12" fill="#174C73" stroke="#FFFFFF" stroke-width="0.55" />
+  </g>
+  <rect x="269" y="218.6" width="3.6" height="3.6" fill="#80521E" stroke="#445969" stroke-width="0.45" />
+  <text x="274.6" y="223.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.25" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;A-sham-six-losses&quot;,&quot;display&quot;:&quot;57&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">57 fewer</text>
+  <rect x="306" y="218.6" width="3.6" height="3.6" fill="#E6EAED" stroke="#445969" stroke-width="0.45" />
+  <text x="311.6" y="223.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.25" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;A-sham-six-ties&quot;,&quot;display&quot;:&quot;602&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;A-N&quot;,&quot;display&quot;:&quot;768&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">602/768 tied</text>
+  <rect x="358" y="218.6" width="3.6" height="3.6" fill="#174C73" stroke="#445969" stroke-width="0.45" />
+  <text x="363.6" y="223.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.25" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;A-sham-six-wins&quot;,&quot;display&quot;:&quot;109&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">109 more</text>
+</svg>

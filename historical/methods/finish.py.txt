@@ -1,0 +1,13 @@
+def finish(rows, bootstrap, gamma, lam):
+    if not rows or not math.isfinite(bootstrap):
+        raise ValueError('Finite nonempty trajectory required')
+    for i, row in enumerate(rows):
+        if type(row['terminal']) is not bool or type(row['duration']) is not int or row['duration'] < 1:
+            raise ValueError('Invalid terminal/duration')
+        row['boundary'] = row['terminal'] or i == len(rows) - 1
+        row['next_value'] = 0. if row['terminal'] else rows[i+1]['value'] if i+1 < len(rows) else bootstrap
+    advantages, returns = gae(*[[r[k] for r in rows] for k in
+        ('reward','value','next_value','duration','terminal','boundary')], gamma, lam)
+    for row, advantage, target in zip(rows, advantages, returns):
+        row.update(advantage=advantage, **{'return': target})
+    audit(rows, bootstrap, gamma, lam)

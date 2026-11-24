@@ -1,0 +1,40 @@
+{
+  "@context": [
+    "https://w3id.org/codemeta/3.0",
+    {
+      "parentOrganization": "https://schema.org/parentOrganization",
+      "PostalAddress": "https://schema.org/PostalAddress",
+      "streetAddress": "https://schema.org/streetAddress",
+      "addressLocality": "https://schema.org/addressLocality",
+      "addressCountry": "https://schema.org/addressCountry"
+    }
+  ],
+  "@type": "SoftwareSourceCode",
+  "name": "Organoid Replay Arena",
+  "description": "Godot survival game, training source and paired evaluation software for offline replay of organoid microelectrode-array recordings.",
+  "url": "https://github.com/brainintelli/Organoid-Replay-Arena",
+  "codeRepository": "https://github.com/brainintelli/Organoid-Replay-Arena",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Brainintelli Research Lab",
+      "email": "research@brainintelli.com",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Brainintelli"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 55 Shuiyun Road, Lin-gang Special Area, China (Shanghai) Pilot Free Trade Zone",
+        "addressLocality": "Shanghai",
+        "addressCountry": "CN"
+      }
+    }
+  ],
+  "license": "https://spdx.org/licenses/MIT.html",
+  "programmingLanguage": [
+    "Python",
+    "GDScript"
+  ],
+  "applicationCategory": "Scientific analysis"
+}

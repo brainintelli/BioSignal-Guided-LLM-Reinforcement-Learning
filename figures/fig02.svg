@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="396pt" height="176pt" viewBox="0 0 396 176" role="img" aria-labelledby="chart-title chart-desc">
+  <title id="chart-title">One recorded first-batch training decision</title>
+  <desc id="chart-desc">The same neural features reach the policy and value networks. The advantage and value target are calculated over the batch.</desc>
+  <rect x="0" y="0" width="396.0" height="176" fill="#FFFFFF" stroke="none" stroke-width="0.65" />
+  <text x="5" y="13" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="10.6" fill="#172B3C" text-anchor="start">One decision in the intact group</text>
+  <text x="391" y="13" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.5" fill="#445969" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;V0-P047-01&quot;,&quot;display&quot;:&quot;351855818&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">Training seed 351855818</text>
+  <line x1="5" x2="391" y1="19" y2="19" stroke="#C3CBD0" stroke-width="0.7" />
+  <text x="6" y="34" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="9.1" fill="#172B3C" text-anchor="start">Inputs on a map from the first training batch</text>
+  <text x="390" y="34" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.7" fill="#445969" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;LOG-seed&quot;,&quot;display&quot;:&quot;353949302&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">Map 353949302</text>
+  <rect x="6" y="41" width="123" height="99" fill="#EDF1F3" stroke="none" stroke-width="0.65" />
+  <text x="12" y="53" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.6" fill="#172B3C" text-anchor="start">Game state</text>
+  <text x="12" y="66" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.6" fill="#172B3C" text-anchor="start">Neural features</text>
+  <text x="12" y="80" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.8" fill="#172B3C" text-anchor="start">Log firing rate</text>
+  <text x="123" y="80" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.1" fill="#174C73" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;S1.figure.2.input.0&quot;,&quot;display&quot;:&quot;0.722&quot;,&quot;precision&quot;:3,&quot;transform&quot;:&quot;identity&quot;}]">0.722</text>
+  <text x="12" y="94" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.8" fill="#172B3C" text-anchor="start">Active fraction</text>
+  <text x="123" y="94" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.1" fill="#174C73" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;S1.figure.2.input.1&quot;,&quot;display&quot;:&quot;0.933&quot;,&quot;precision&quot;:3,&quot;transform&quot;:&quot;identity&quot;}]">0.933</text>
+  <text x="12" y="108" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.8" fill="#172B3C" text-anchor="start">Temporal concentration</text>
+  <text x="123" y="108" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.1" fill="#174C73" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;S1.figure.2.input.2&quot;,&quot;display&quot;:&quot;0.251&quot;,&quot;precision&quot;:3,&quot;transform&quot;:&quot;identity&quot;}]">0.251</text>
+  <text x="12" y="122" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.8" fill="#172B3C" text-anchor="start">Spatial entropy</text>
+  <text x="123" y="122" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.1" fill="#174C73" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;S1.figure.2.input.3&quot;,&quot;display&quot;:&quot;0.283&quot;,&quot;precision&quot;:3,&quot;transform&quot;:&quot;identity&quot;}]">0.283</text>
+  <line x1="130" x2="139" y1="90" y2="90" stroke="#445969" stroke-width="0.7" />
+  <line x1="139" x2="139" y1="61" y2="113" stroke="#445969" stroke-width="0.7" />
+  <line x1="139" x2="151" y1="61" y2="61" stroke="#445969" stroke-width="0.85" />
+  <polygon points="151,61 147.0,63.0 147.0,59.0" fill="#445969" stroke="none" stroke-width="0.7" />
+  <line x1="139" x2="151" y1="113" y2="113" stroke="#445969" stroke-width="0.85" />
+  <polygon points="151,113 147.0,115.0 147.0,111.0" fill="#445969" stroke="none" stroke-width="0.7" />
+  <text x="155" y="59" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="9.1" fill="#172B3C" text-anchor="start">Policy selects an action</text>
+  <text x="155" y="73" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;LOG-duration&quot;,&quot;display&quot;:&quot;1&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">Move one cell in 1 tick</text>
+  <text x="155" y="86" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#174C73" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;LOG-reward&quot;,&quot;display&quot;:&quot;+0.009775&quot;,&quot;precision&quot;:6,&quot;transform&quot;:&quot;identity&quot;}]">Game score +0.009775</text>
+  <text x="155" y="111" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="9.1" fill="#172B3C" text-anchor="start">Value network</text>
+  <text x="155" y="126" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;LOG-value&quot;,&quot;display&quot;:&quot;37.53467&quot;,&quot;precision&quot;:5,&quot;transform&quot;:&quot;identity&quot;}]">Estimate 37.53467</text>
+  <line x1="252" x2="271" y1="70" y2="70" stroke="#445969" stroke-width="0.65" stroke-dasharray="1.4 2" />
+  <line x1="252" x2="271" y1="122" y2="122" stroke="#445969" stroke-width="0.65" stroke-dasharray="1.4 2" />
+  <text x="276" y="59" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="9.1" fill="#172B3C" text-anchor="start">Policy adapter (LoRA)</text>
+  <text x="276" y="74" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;LOG-advantage&quot;,&quot;display&quot;:&quot;+0.06858&quot;,&quot;precision&quot;:5,&quot;transform&quot;:&quot;identity&quot;}]">Batch advantage +0.06858</text>
+  <text x="276" y="111" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="9.1" fill="#172B3C" text-anchor="start">Value parameters</text>
+  <text x="276" y="126" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;LOG-return&quot;,&quot;display&quot;:&quot;37.60325&quot;,&quot;precision&quot;:5,&quot;transform&quot;:&quot;identity&quot;}]">Target 37.60325</text>
+  <line x1="5" x2="391" y1="146" y2="146" stroke="#C3CBD0" stroke-width="0.7" />
+  <text x="6" y="158" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="start">In the all-zero group, neural features are masked at both the policy and value-network inputs.</text>
+  <text x="6" y="170" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;DES-beta&quot;,&quot;display&quot;:&quot;0&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">The language-model base stays frozen. The auxiliary reward weight is β = 0.</text>
+</svg>

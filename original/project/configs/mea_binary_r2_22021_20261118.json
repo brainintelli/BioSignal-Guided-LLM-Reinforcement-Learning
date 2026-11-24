@@ -1,0 +1,153 @@
+{
+  "schema": "mea.stimulus_profile_import.v1",
+  "source": {
+    "path": ".\\LLM湿件生存游戏\\output\\mea_latest_r1r2_20261118\\import01\\source.h5",
+    "bytes": 69980386,
+    "sha256": "8ba000037b053f47e70c9576808b9d6f2e3609bf6d85dd8e2ffa55496f465771",
+    "original_path": "./local-recordings/data.raw(1).h5"
+  },
+  "execution_profile": {
+    "schema": "mea.pulse_profile.v1",
+    "profile_id": "h5-22021-000014-8ba000037b05",
+    "source_sha256": "8ba000037b053f47e70c9576808b9d6f2e3609bf6d85dd8e2ffa55496f465771",
+    "target_mv": 200.0,
+    "phase_us": 200,
+    "pulse_interval_us": 10000,
+    "pulses_per_stimulus": 3,
+    "polarity": "positive_first"
+  },
+  "stimulus_profile_sha256": "6a5d2705c057eb023f4c51730b1e7631050385ed9cbcc8ea5f8dbe9ffae1ca6c",
+  "historical_recording": {
+    "chip_id": "22021",
+    "chip_type": "MaxOne Single Well MEA",
+    "assay_run_id": "000014",
+    "assay_script_id": "VoltageStimulation_v1.0",
+    "sampling_hz": 20000.0,
+    "gain": 512.0,
+    "hpf_hz": 300.0,
+    "recording_adc_lsb_volts": 6.29425039733178e-06,
+    "stimulation_dac_lsb_mv": null,
+    "load_voltage_measured": false,
+    "amplitude_range_as_stored": [
+      "200",
+      "200",
+      "200"
+    ],
+    "declared_target_mv": 200.0,
+    "declared_phase_us": 200,
+    "pulses_per_train": 3,
+    "train_count": 202,
+    "pulse_onset_interval_ms": 10.0,
+    "group_onset_interval_seconds": 1.0,
+    "randomize_as_stored": "true",
+    "configured_stimulation_electrodes": [
+      7143,
+      2733,
+      3820,
+      4684,
+      1634,
+      5152,
+      2506,
+      1640,
+      4726,
+      3627
+    ],
+    "matching_recording_channels": {
+      "7143": [
+        807,
+        823
+      ],
+      "2733": [
+        701
+      ],
+      "3820": [
+        807,
+        823
+      ],
+      "4684": [
+        528
+      ],
+      "1634": [
+        941
+      ],
+      "5152": [
+        582
+      ],
+      "2506": [
+        936
+      ],
+      "1640": [
+        1022
+      ],
+      "4726": [
+        907
+      ],
+      "3627": [
+        381
+      ]
+    },
+    "actual_stimulus_routing_verified": false,
+    "mapped_channel_count": 746,
+    "observed_event_count": 606,
+    "observed_pulse_interval_frames": [
+      200
+    ],
+    "observed_group_start_interval_frames": [
+      20000
+    ],
+    "first_event_frame": 1046501801,
+    "last_event_frame": 1050522201,
+    "spike_count": 4349866,
+    "spike_frame_min": 1046496367,
+    "spike_frame_max": 1051762343,
+    "observed_spike_seconds_after_last_marker": 62.0071,
+    "continuous_raw_present": false,
+    "continuous_coverage_verified": false,
+    "recording_start_unix_ms": 1794912889126,
+    "recording_stop_unix_ms": 1794913152484,
+    "recording_start_china": "2026-11-17T18:54:49.126000+08:00",
+    "recording_stop_china": "2026-11-17T18:59:12.484000+08:00",
+    "wall_duration_seconds": 263.358,
+    "pre_stim_period_as_stored": "0",
+    "post_stim_period_as_stored": "1"
+  },
+  "software_mapping": {
+    "scope": "one3pulse feedback group when game encoder requests stimulation",
+    "healthy_feedback": "intentional_quiet",
+    "game_threshold_enter_below": 85,
+    "game_threshold_exit_at": 90,
+    "candidate_minimum_cycle_seconds": 20,
+    "candidate_response_window_seconds": [
+      12,
+      13
+    ],
+    "candidate_timing_validated_by_this_recording": false,
+    "polarity_source": "inherited_software_candidate_not_verified_in_h5",
+    "historical_train_count_used_per_game_action": false,
+    "configured_electrodes_are_not_live_routes": true
+  },
+  "reward_contract": {
+    "r1_source": "native_game_required_not_in_h5",
+    "r2_quiet": 1,
+    "r2_stimulation": -1,
+    "beta": 0.002,
+    "gamma_tick": 0.99985,
+    "total_formula": "R1 + beta * r2_raw * sum(gamma_tick**k for k in range(game_duration))",
+    "simulation_r2_enabled": true
+  },
+  "admission": {
+    "parameter_import_passed": true,
+    "historical_training_admitted": false,
+    "real_stimulation_enabled": false,
+    "real_r2_enabled": false,
+    "reasons": [
+      "no_continuous_raw_waveform",
+      "no_game_transition_or_r1_link",
+      "organoid_identity_unknown",
+      "route_and_dac_output_unverified",
+      "recovery_qc_unverified",
+      "intentional_quiet_unverified",
+      "no_independent_baseline_admitted"
+    ]
+  }
+}

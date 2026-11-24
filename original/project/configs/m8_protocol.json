@@ -1,0 +1,110 @@
+{
+  "protocol": "m8_reliable_v1",
+  "version": 1,
+  "world_version": 2,
+  "profile": "open1",
+  "parent_actor_sha256": "02111ea2ce34f61647713d348099de4fc577763bc2423e2a1078097e36dff211",
+  "base_model_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+  "reward_version": "survival_potential_v2",
+  "contract": "open_world_semantic_v4",
+  "attempt_configs": [
+    "configs/m8_reliable_attempt1.json",
+    "configs/m8_reliable_attempt2.json"
+  ],
+  "maximum_attempts": 2,
+  "maximum_manager_seconds": 172800,
+  "attempt2_trigger": "attempt1 formally rejected; no changes to attempt2 allowed based on observations",
+  "train_decisions": 32768,
+  "training_reset": "natural death only",
+  "selected_updates": [
+    8,
+    16,
+    24,
+    32
+  ],
+  "selection": {
+    "worlds": 8,
+    "replicates": [
+      0,
+      1
+    ],
+    "ranking": [
+      "alive_at_horizon DESC",
+      "fractional_cvar20 DESC",
+      "rmst DESC",
+      "update ASC"
+    ],
+    "minimum_alive": 15,
+    "maximum_early_deaths": 0,
+    "ratios": {
+      "original_v2": 1.2,
+      "semantic_parent": 1.1
+    }
+  },
+  "test": {
+    "worlds": 100,
+    "replicates": [
+      0
+    ],
+    "minimum_alive": 90,
+    "maximum_early_deaths": 5,
+    "ratios": {
+      "original_v2": 1.2,
+      "semantic_parent": 1.1
+    },
+    "paired_bootstrap_lower_percentile": 2.5,
+    "paired_bootstrap_lower_strictly_above": 0,
+    "one_use_per_attempt": true
+  },
+  "horizon": 1800,
+  "early_death_strictly_before": 360,
+  "temperature": 1,
+  "arms": [
+    "original_v2",
+    "semantic_parent",
+    "candidate"
+  ],
+  "quantile": "nearest rank",
+  "tail": "fractional mass lower CVaR alpha=0.2",
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 812800,
+    "pairing": "world",
+    "comparison_order": [
+      "original_v2",
+      "semantic_parent"
+    ],
+    "reuse_same_drawn_indices": true
+  },
+  "confidence": {
+    "binomial": "one-sided 95% exact Clopper-Pearson",
+    "descriptive": true,
+    "across_attempt_familywise_adjustment": false,
+    "population90_guarantee": false
+  },
+  "rng": {
+    "prefix": "m8_reliable_v1",
+    "episode": "int.from_bytes(sha256(f'{prefix}|{profile}|{seed}|{replicate}').digest()[:8], 'big') % (2**63-1)",
+    "draws": "one CUDA multinomial verb and one CUDA multinomial target per decision, including singleton"
+  },
+  "no_cheating": {
+    "teacher_actions": false,
+    "hidden_state": false,
+    "preferred_action_mask": false,
+    "world_modification": false,
+    "action_override": false,
+    "replay_used_for_training": false,
+    "test_retries": false
+  },
+  "freeze_requirement": "source and config hashes, successful disposable GPU probe, preserved parent, CPU and actual Godot audits before formal launch",
+  "probe": {
+    "decisions": 8,
+    "discard_weights": true,
+    "training_worlds_only": true,
+    "exact_parent_reference": true,
+    "exact_batched_single_probabilities_and_rng": true,
+    "exact_grad_nograd_logp": true,
+    "exact_reload": true
+  },
+  "release": "all registered metrics and independent integrity audits pass; otherwise keep released M6; normal live runtime has no step/day cap"
+}

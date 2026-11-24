@@ -1,0 +1,150 @@
+file,column_name,dtype,unit,allowed_values,missingness,description
+data/actions.csv,arm,string,label,all-zero | intact | unstimulated,0 / 2304,Replay/input group defined for the study in this table.
+data/actions.csv,seed_index,integer,index,Positive integer,0 / 2304,Study-local training seed index. Shared within the relevant paired comparison.
+data/actions.csv,map_index,integer,index,Positive integer,0 / 2304,Study-local index of the game map shared across relevant arms and seeds.
+data/actions.csv,verbs,string,action sequence,Action names delimited by |,0 / 2304,"Selected action verbs in time order, separated by vertical bars."
+data/boundary.csv,scene,string,label,hunger | low_health | thirst,0 / 18432,Initial game condition under the adverse-start design.
+data/boundary.csv,seed_index,integer,index,Positive integer,0 / 18432,Study-local training seed index. Shared within the relevant paired comparison.
+data/boundary.csv,map_index,integer,index,Positive integer,0 / 18432,Study-local index of the game map shared across relevant arms and seeds.
+data/boundary.csv,arm,string,label,all-zero | intact | shuffled,0 / 18432,Replay/input group defined for the study in this table.
+data/boundary.csv,cut,integer,indicator,0 or 1,0 / 18432,Indicator that the source trajectory crossed the score cutoff.
+data/boundary.csv,r1_recorded,number,game points,Decimal score,0 / 18432,Archived game score for the episode or its group mean.
+data/boundary.csv,r1_native,number,game points,Decimal score,0 / 18432,Score recomputed at the native cutoff for the episode or its group mean.
+data/chip22554.csv,seed_index,integer,index,Positive integer,0 / 2304,Study-local training seed index. Shared within the relevant paired comparison.
+data/chip22554.csv,map_index,integer,index,Positive integer,0 / 2304,Study-local index of the game map shared across relevant arms and seeds.
+data/chip22554.csv,arm,string,label,intact | pure-r1 | shuffled,0 / 2304,Replay/input group defined for the study in this table.
+data/chip22554.csv,cells,number,cells,Nonnegative integer-valued count,0 / 2304,Newly revealed map cells through the recorded evaluation cutoff.
+data/chip22554.csv,r1,number,game points,Real number,0 / 2304,Recorded game score (R1) for the corresponding episode.
+data/exploration.csv,seed_index,integer,index,Positive integer,0 / 768,Study-local training seed index. Shared within the relevant paired comparison.
+data/exploration.csv,map_index,integer,index,Positive integer,0 / 768,Study-local index of the game map shared across relevant arms and seeds.
+data/exploration.csv,all_zero_d6,integer,cells,Nonnegative integer,0 / 768,Newly revealed cells after the sixth decision in the all-zero group.
+data/exploration.csv,all_zero_t6,integer,cells,Nonnegative integer,0 / 768,Newly revealed cells at the sixth game tick of the same trajectory in the all-zero group.
+data/exploration.csv,intact_d6,integer,cells,Nonnegative integer,0 / 768,Newly revealed cells after the sixth decision in the intact group.
+data/exploration.csv,intact_t6,integer,cells,Nonnegative integer,0 / 768,Newly revealed cells at the sixth game tick of the same trajectory in the intact group.
+data/exploration.csv,unstimulated_d6,integer,cells,Nonnegative integer,0 / 768,Newly revealed cells after the sixth decision in the unstimulated group.
+data/exploration.csv,unstimulated_t6,integer,cells,Nonnegative integer,0 / 768,Newly revealed cells at the sixth game tick of the same trajectory in the unstimulated group.
+data/h5_manifest.csv,sha256,string,hex digest,64 lowercase hexadecimal characters,0 / 182,SHA-256 of the specified file or serialized event sequence.
+data/h5_manifest.csv,bytes,integer,bytes,Positive integer,0 / 182,Length of the original raw recording in bytes.
+data/h5_manifest.csv,chip,string,instrument label,22021 | 22554 | 27701 | 28073 | 28080,0 / 182,Acquisition chip label as recorded in the raw-file inventory.
+data/h5_manifest.csv,kind,string,label,continuous | spike-events | structural-anomaly | zero-frame,0 / 182,"Original raw recording classification, including structural exceptions and zero-frame entries."
+data/h5_manifest.csv,stress_record,boolean,indicator,True or False,0 / 182,Whether the raw recording belongs to the adverse-start source set.
+data/heldout.csv,arm,string,label,intact | pure-r1 | shuffled,0 / 432,Replay/input group defined for the study in this table.
+data/heldout.csv,seed_index,integer,index,Positive integer,0 / 432,Study-local training seed index. Shared within the relevant paired comparison.
+data/heldout.csv,map_index,integer,index,Positive integer,0 / 432,Study-local index of the game map shared across relevant arms and seeds.
+data/heldout.csv,heldout,string,label,F | H | W,0 / 432,Site whose recording file was held out for the relevant training seed.
+data/heldout.csv,tick,integer,game ticks,192 | 48,0 / 432,Evaluation time budget counted in game updates.
+data/heldout.csv,cells,number,cells,Nonnegative integer-valued count,0 / 432,Newly revealed map cells through the recorded evaluation cutoff.
+data/heldout.csv,drink,number,actions,Nonnegative integer-valued count,0 / 432,Count of the selected drinking or eating action through the evaluation tick.
+data/heldout.csv,eat,number,actions,Nonnegative integer-valued count,0 / 432,Count of the selected drinking or eating action through the evaluation tick.
+data/heldout.csv,water,number,game reserve points,Real game state,0 / 432,Character's water reserve at the evaluation tick.
+data/heldout.csv,food,number,game reserve points,Real game state,0 / 432,Character's food reserve at the evaluation tick.
+data/heldout.csv,health,number,health points,Real game state,0 / 432,Character's health at the evaluation tick.
+data/heldout.csv,drink_gain,number,events,Nonnegative integer-valued count,0 / 432,Number of drinking actions followed by a net increase in water reserve.
+data/heldout.csv,eat_gain,number,events,Nonnegative integer-valued count,0 / 432,Number of eating actions followed by a net increase in food reserve.
+data/heldout.csv,death,number,indicator,0 or 1,0 / 432,Cumulative death indicator by the evaluation tick.
+data/model_budgets.csv,arm,string,label,all-zero | intact | shuffled,0 / 96,Replay/input group defined for the study in this table.
+data/model_budgets.csv,seed_index,integer,index,Positive integer,0 / 96,Study-local training seed index. Shared within the relevant paired comparison.
+data/model_budgets.csv,training_decisions,integer,decisions,Nonnegative integer,0 / 96,Total game decisions recorded during training for the model.
+data/model_budgets.csv,training_ticks,integer,game ticks,Nonnegative integer,0 / 96,Total game time represented by the training decisions.
+data/model_budgets.csv,actor_steps,integer,updates,Nonnegative integer,0 / 96,Recorded number of optimizer updates for the stated network.
+data/model_budgets.csv,critic_steps,integer,updates,Nonnegative integer,0 / 96,Recorded number of optimizer updates for the stated network.
+data/model_budgets.csv,batch_decisions,string,counts per batch,Comma-delimited nonnegative integers,0 / 96,Ordered per-batch contributions to the correspondingly named total for the model.
+data/model_budgets.csv,batch_ticks,string,counts per batch,Comma-delimited nonnegative integers,0 / 96,Ordered per-batch contributions to the correspondingly named total for the model.
+data/model_budgets.csv,batch_actor_steps,string,counts per batch,Comma-delimited nonnegative integers,0 / 96,Ordered per-batch contributions to the correspondingly named total for the model.
+data/model_budgets.csv,batch_critic_steps,string,counts per batch,Comma-delimited nonnegative integers,0 / 96,Ordered per-batch contributions to the correspondingly named total for the model.
+data/model_budgets.csv,kl_early_stop_batches,integer,batches,Nonnegative integer,0 / 96,Number of recorded training batches ending at the KL early-stop rule.
+data/roi.csv,channel,integer,hardware index,Nonnegative integer,0 / 324,Device channel or electrode identifier in the fixed acquisition region of interest.
+data/roi.csv,electrode,integer,hardware index,Nonnegative integer,0 / 324,Device channel or electrode identifier in the fixed acquisition region of interest.
+data/score_steps.csv,seed_index,integer,index,Positive integer,0 / 6912,Study-local training seed index. Shared within the relevant paired comparison.
+data/score_steps.csv,map_index,integer,index,Positive integer,0 / 6912,Study-local index of the game map shared across relevant arms and seeds.
+data/score_steps.csv,arm,string,label,all-zero | intact | unstimulated,0 / 6912,Replay/input group defined for the study in this table.
+data/score_steps.csv,start_tick,integer,game ticks,Nonnegative integer,0 / 6912,Game time immediately before this action.
+data/score_steps.csv,end_tick,integer,game ticks,Nonnegative integer,0 / 6912,"Game time at the end of the action or at the episode endpoint, as defined by the table."
+data/score_steps.csv,action,string,label,drink | eat | gather | move | navigate | rest | wait,0 / 6912,Action verb selected at this decision.
+data/score_steps.csv,r1,number,game points,Real number,0 / 6912,Recorded game-score contribution for this action interval.
+data/stimulation.csv,day,integer,day of month,18 | 19,0 / 3840,Acquisition date label identifying the separate within-day comparison.
+data/stimulation.csv,seed_index,integer,index,Positive integer,0 / 3840,Study-local training seed index. Shared within the relevant paired comparison.
+data/stimulation.csv,map_index,integer,index,Positive integer,0 / 3840,Study-local index of the game map shared across relevant arms and seeds.
+data/stimulation.csv,arm,string,label,all-zero | intact | irregular | regular | unstimulated,0 / 3840,Replay/input group defined for the study in this table.
+data/stimulation.csv,cells,number,cells,Nonnegative integer-valued count,0 / 3840,Newly revealed map cells through the recorded evaluation cutoff.
+data/stimulation.csv,r1,number,game points,Real number,0 / 3840,Recorded game score (R1) for the corresponding episode.
+data/stress.csv,scene,string,label,hunger | low_health | thirst,0 / 18432,Initial game condition under the adverse-start design.
+data/stress.csv,seed_index,integer,index,Positive integer,0 / 18432,Study-local training seed index. Shared within the relevant paired comparison.
+data/stress.csv,map_index,integer,index,Positive integer,0 / 18432,Study-local index of the game map shared across relevant arms and seeds.
+data/stress.csv,arm,string,label,all-zero | intact | shuffled,0 / 18432,Replay/input group defined for the study in this table.
+data/stress.csv,cells,number,cells,Nonnegative integer-valued count,0 / 18432,Newly revealed map cells through the recorded evaluation cutoff.
+data/stress.csv,survived,integer,indicator,0 or 1,0 / 18432,"Indicator of the corresponding outcome at the cutoff: alive, drank, or ate."
+data/stress.csv,end_tick,integer,game ticks,Nonnegative integer,0 / 18432,"Game time at the end of the action or at the episode endpoint, as defined by the table."
+data/stress.csv,drank,integer,indicator,0 or 1,0 / 18432,"Indicator of the corresponding outcome at the cutoff: alive, drank, or ate."
+data/stress.csv,ate,integer,indicator,0 or 1,0 / 18432,"Indicator of the corresponding outcome at the cutoff: alive, drank, or ate."
+data/stress.csv,drink_wait,integer,game ticks,Nonnegative and no greater than the configured horizon,0 / 18432,"Restricted waiting time for the relevant resource event. Games without the event by cutoff retain the configured horizon, including earlier deaths."
+data/stress.csv,eat_wait,integer,game ticks,Nonnegative and no greater than the configured horizon,0 / 18432,"Restricted waiting time for the relevant resource event. Games without the event by cutoff retain the configured horizon, including earlier deaths."
+data/windows.csv,phase,string,label,batch_value | calibration | heldout | training,0 / 136,"Use of the acquisition window in model calibration, training, batch-value calculation, or held-out evaluation."
+data/windows.csv,physical_trial,integer,trial label,Integer acquisition index,0 / 136,Acquisition trial identifier retained in the diagnostic mapping.
+data/windows.csv,diagnostic_window_id,integer,window label,Signed integer,0 / 136,Signed diagnostic window identifier within the relevant experimental phase.
+data/windows.csv,device_first_frame,integer,device frames,Nonnegative integer,0 / 136,Device-frame index at the named edge of the half-open acquisition window.
+data/windows.csv,device_exclusive_end_frame,integer,device frames,Nonnegative integer,0 / 136,Device-frame index at the named edge of the half-open acquisition window.
+data/windows.csv,raw_sha256,string,hex digest,64 lowercase hexadecimal characters,0 / 136,SHA-256 of the specified file or serialized event sequence.
+data/windows.csv,spike_event_sha256,string,hex digest,64 lowercase hexadecimal characters,0 / 136,SHA-256 of the specified file or serialized event sequence.
+data/windows.csv,feature_vector,string,component-specific,JSON array of finite numbers,0 / 136,"Unstandardized vector ordered as log rate, active fraction, temporal concentration and spatial entropy."
+data/windows.csv,standardized_vector,string,standardized coordinates,JSON numeric array or empty calibration entry,24 / 136,Clipped and rounded feature coordinates with the same component order. Calibration reference windows have an empty entry.
+docs/reproduction_matrix.csv,claim_id,string,document identifier,Nonempty text,0 / 33,Frozen paper-claim identifier or additional reproduction item.
+docs/reproduction_matrix.csv,paper_result,string,text,Nonempty text,0 / 33,Short English description of the paper result or design item.
+docs/reproduction_matrix.csv,section,string,document locator,Nonempty text,0 / 33,"Frozen paragraph, table, or appendix locator."
+docs/reproduction_matrix.csv,script,string,relative path,Repository-relative path,5 / 33,Repository-relative path to the named deliverable.
+docs/reproduction_matrix.csv,command,string,command,Python invocation or blank if unavailable,5 / 33,"Command issued at the repository root for this item, when executable."
+docs/reproduction_matrix.csv,expected_output,string,text,Nonempty text,0 / 33,Named results or evidence returned by the command.
+docs/reproduction_matrix.csv,deterministic,string,text,fixed inputs and config | not applicable,0 / 33,Scope of the deterministic reproduction claim or applicability.
+docs/reproduction_matrix.csv,status,string,label,not-reproduced | one-click | requires-data-access,0 / 33,Release status for this result.
+docs/reproduction_matrix.csv,scope_or_requirement,string,text,Nonempty text,0 / 33,Material or interpretive condition required for this entry.
+figures/figure_manifest.csv,figure_id,string,label,fig01 | fig02 | fig03 | fig04 | fig05 | fig06 | fig07,0 / 7,Identifier assigned in manuscript figure order.
+figures/figure_manifest.csv,source_data_file,string,relative path,Repository-relative path,0 / 7,Repository-relative path to the named deliverable.
+figures/figure_manifest.csv,script,string,relative path,Repository-relative path,0 / 7,Repository-relative path to the named deliverable.
+figures/figure_manifest.csv,seed,string,label,none (deterministic drawing),0 / 7,Drawing seed if applicable or an explicit deterministic-drawing declaration.
+figures/figure_manifest.csv,git_commit,string,Git object ID,Full hexadecimal Git commit,0 / 7,Git object that contains the exact figure source and input files.
+figures/figure_manifest.csv,source_section,string,document locator,P027 | P040 | P054 | P066 | P104 | P109 | P115,0 / 7,"Frozen paragraph, table, or appendix locator."
+figures/figure_manifest.csv,source_key,string,JSON object key,figures.1 | figures.2 | figures.3 | figures.4 | figures.5 | figures.6 | figures.7,0 / 7,Path within the frozen figure-input JSON.
+figures/figure_manifest.csv,provenance_file,string,relative path,Repository-relative path,0 / 7,Repository-relative path to the named deliverable.
+figures/figure_manifest.csv,pdf,string,relative path,Repository-relative path,0 / 7,Repository-relative path to the named deliverable.
+figures/figure_manifest.csv,svg,string,relative path,Repository-relative path,0 / 7,Repository-relative path to the named deliverable.
+figures/figure_manifest.csv,width_pt,number,points,Positive number,0 / 7,Figure dimensions or smallest type size in PostScript points.
+figures/figure_manifest.csv,height_pt,number,points,Positive number,0 / 7,Figure dimensions or smallest type size in PostScript points.
+figures/figure_manifest.csv,minimum_font_pt,number,points,Positive number,0 / 7,Figure dimensions or smallest type size in PostScript points.
+figures/figure_manifest.csv,source_sha256,string,hex digest,64 lowercase hexadecimal characters,0 / 7,SHA-256 of the specified file or serialized event sequence.
+figures/figure_manifest.csv,pdf_sha256,string,hex digest,64 lowercase hexadecimal characters,0 / 7,SHA-256 of the specified file or serialized event sequence.
+figures/figure_manifest.csv,svg_sha256,string,hex digest,64 lowercase hexadecimal characters,0 / 7,SHA-256 of the specified file or serialized event sequence.
+results/boundary_contrasts.csv,scene,string,label,hunger | low_health | thirst,0 / 6,Initial game condition under the adverse-start design.
+results/boundary_contrasts.csv,n,integer,episodes or pairs,Positive integer,0 / 6,Number of episodes or matched seed–map differences underlying this row.
+results/boundary_contrasts.csv,contrast,string,label,intact versus all-zero | intact versus shuffled,0 / 6,Direction of the group comparison used in the table.
+results/boundary_contrasts.csv,change_in_mean_contrast,number,game points,Decimal score,0 / 6,Native-minus-recorded change in the intact-minus-comparator paired mean.
+results/boundary_groups.csv,scene,string,label,hunger | low_health | thirst,0 / 9,Initial game condition under the adverse-start design.
+results/boundary_groups.csv,arm,string,label,all-zero | intact | shuffled,0 / 9,Replay/input group defined for the study in this table.
+results/boundary_groups.csv,n,integer,episodes or pairs,Positive integer,0 / 9,Number of episodes or matched seed–map differences underlying this row.
+results/boundary_groups.csv,cut,integer,episodes,Nonnegative integer,0 / 9,Number of episodes in the group crossing the cutoff.
+results/boundary_groups.csv,above_threshold,integer,episodes,Nonnegative integer,0 / 9,"Count of above-threshold discrepancies, or of the positive or negative discrepancies within that subset."
+results/boundary_groups.csv,positive,integer,episodes,Nonnegative integer,0 / 9,"Count of above-threshold discrepancies, or of the positive or negative discrepancies within that subset."
+results/boundary_groups.csv,negative,integer,episodes,Nonnegative integer,0 / 9,"Count of above-threshold discrepancies, or of the positive or negative discrepancies within that subset."
+results/boundary_groups.csv,mean_recorded,number,game points,Decimal score,0 / 9,Archived game score for the episode or its group mean.
+results/boundary_groups.csv,mean_native,number,game points,Decimal score,0 / 9,Score recomputed at the native cutoff for the episode or its group mean.
+results/boundary_groups.csv,mean_signed_delta,number,game points,Decimal score,0 / 9,Named summary of native-minus-recorded paired episode scores.
+results/boundary_groups.csv,min_signed,number,game points,Decimal score,0 / 9,Named summary of native-minus-recorded paired episode scores.
+results/boundary_groups.csv,max_signed,number,game points,Decimal score,0 / 9,Named summary of native-minus-recorded paired episode scores.
+results/heldout.csv,tick,integer,game ticks,192 | 48,0 / 18,Evaluation time budget counted in game updates.
+results/heldout.csv,endpoint,string,label,cells | death | drink | drink_gain | eat | eat_gain | food | health | water,0 / 18,Outcome measured at the given budget; its units are defined by the corresponding column of data/heldout.csv.
+results/heldout.csv,pairs_per_comparison,integer,episodes or pairs,Positive integer,0 / 18,Number of episodes or matched seed–map differences underlying this row.
+results/heldout.csv,ordered,number,endpoint units,Real number,0 / 18,Arm mean for the named endpoint. Ordered denotes intact and pure denotes the native game-reward-only comparator.
+results/heldout.csv,shuffled,number,endpoint units,Real number,0 / 18,Arm mean for the named endpoint. Ordered denotes intact and pure denotes the native game-reward-only comparator.
+results/heldout.csv,pure,number,endpoint units,Real number,0 / 18,Arm mean for the named endpoint. Ordered denotes intact and pure denotes the native game-reward-only comparator.
+results/heldout.csv,ordered_minus_shuffled_delta,number,endpoint units,Real number,0 / 18,Intact minus shuffled: mean paired difference at this endpoint and budget.
+results/heldout.csv,ordered_minus_shuffled_ci_lo,number,endpoint units,Real number,0 / 18,Intact minus shuffled: lower interval endpoint at this endpoint and budget.
+results/heldout.csv,ordered_minus_shuffled_ci_hi,number,endpoint units,Real number,0 / 18,Intact minus shuffled: upper interval endpoint at this endpoint and budget.
+results/heldout.csv,ordered_minus_pure_delta,number,endpoint units,Real number,0 / 18,Intact minus pure: mean paired difference at this endpoint and budget.
+results/heldout.csv,ordered_minus_pure_ci_lo,number,endpoint units,Real number,0 / 18,Intact minus pure: lower interval endpoint at this endpoint and budget.
+results/heldout.csv,ordered_minus_pure_ci_hi,number,endpoint units,Real number,0 / 18,Intact minus pure: upper interval endpoint at this endpoint and budget.
+data/data_dictionary.csv,file,string,metadata,Field-level metadata text,0 / 149,"Path of the table described, relative to the repository root."
+data/data_dictionary.csv,column_name,string,metadata,Field-level metadata text,0 / 149,"Description of the named table field, its logical type, units, domain or measured missingness."
+data/data_dictionary.csv,dtype,string,metadata,Field-level metadata text,0 / 149,"Description of the named table field, its logical type, units, domain or measured missingness."
+data/data_dictionary.csv,unit,string,metadata,Field-level metadata text,0 / 149,"Description of the named table field, its logical type, units, domain or measured missingness."
+data/data_dictionary.csv,allowed_values,string,metadata,Field-level metadata text,0 / 149,"Description of the named table field, its logical type, units, domain or measured missingness."
+data/data_dictionary.csv,missingness,string,metadata,Field-level metadata text,0 / 149,"Description of the named table field, its logical type, units, domain or measured missingness."
+data/data_dictionary.csv,description,string,metadata,Field-level metadata text,0 / 149,"Description of the named table field, its logical type, units, domain or measured missingness."

@@ -1,0 +1,20 @@
+{
+  "all-zero": {
+    "gather": 499,
+    "move": 2207,
+    "navigate": 394,
+    "wait": 794
+  },
+  "intact": {
+    "gather": 548,
+    "move": 2095,
+    "navigate": 501,
+    "wait": 743
+  },
+  "unstimulated": {
+    "gather": 555,
+    "move": 2083,
+    "navigate": 499,
+    "wait": 755
+  }
+}

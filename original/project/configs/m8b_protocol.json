@@ -1,0 +1,50 @@
+{
+  "protocol": "m8_balanced_reliable_v1",
+  "scope": "User-requested world balance amendment; separate from M8 open1 attempts",
+  "attempts": 1,
+  "training_decisions": 49152,
+  "selection_updates": [
+    8,
+    16,
+    24
+  ],
+  "selection_worlds": 16,
+  "selection_replicates": [
+    0
+  ],
+  "test_worlds": 100,
+  "test_replicates": [
+    0
+  ],
+  "horizon": 1800,
+  "training_horizon": null,
+  "runtime_horizon": null,
+  "selection_successes": 15,
+  "selection_early_deaths_max": 0,
+  "early_death_before": 360,
+  "test_successes": 90,
+  "test_early_deaths_max": 5,
+  "rmst_noninferiority_margin_ticks": 90,
+  "success_noninferiority_margin": 0.05,
+  "cvar20_parent_ratio_min": 0.9,
+  "bootstrap_seed": 912800,
+  "bootstrap_resamples": 10000,
+  "bootstrap_lower_percentile": 0.025,
+  "bootstrap_upper_percentile": 0.975,
+  "rl_improvement_claim_requires_positive_paired_rmst_lower": true,
+  "prefer_parent_if_parent_passes_and_rl_gain_not_demonstrated": true,
+  "selection_order": [
+    "successes descending",
+    "fractional CVaR20 descending",
+    "RMST1800 descending",
+    "earliest completed checkpoint"
+  ],
+  "decoding": "T=1; categorical verb then target; private CUDA RNG per episode; always two draws",
+  "evaluation_scheduler": "deterministic dynamic refill of four fixed physical slots; exact GPU batch-invariance preflight mandatory",
+  "next_milestone": {
+    "success_fraction": 0.95,
+    "horizon": 5400,
+    "status": "not evaluated or unlocked by the current 1800-tick test",
+    "requires_new_preregistration_and_fresh_test_worlds": true
+  }
+}

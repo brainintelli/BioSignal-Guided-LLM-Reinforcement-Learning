@@ -1,0 +1,101 @@
+{
+  "archive_sha256": {
+    "program-and-receipt-export": "248907bc759199690d475dd8c6ccbac2920f30df21316cb944a6ad7a1fa523f2",
+    "runtime-snapshot-A": "11252f110ed82b99f01aa8c16dd5382c92779277e5831eaf0e96950fe08dc676",
+    "runtime-snapshot-B": "a4778db8c9da3a0f6020ec5ed697379f9b82dad00ff7dbf679484341b993e210"
+  },
+  "files": [
+    {
+      "archive": "program-and-receipt-export",
+      "distributed_sha256": "035afbc9224ec0dc15114faf9181a61716cf3222a0d5bc34aaadc2c8858bec02",
+      "kind": "verbatim file",
+      "member": "train.py",
+      "path": "train.py",
+      "upstream_sha256": "035afbc9224ec0dc15114faf9181a61716cf3222a0d5bc34aaadc2c8858bec02"
+    },
+    {
+      "archive": "program-and-receipt-export",
+      "distributed_sha256": "0d8583fe1bda9c1378e11a2c80481ff2eddfc0dac874294e09ea49cc1b490748",
+      "kind": "verbatim file",
+      "member": "stress/evaluate.py",
+      "path": "stress/evaluate.py",
+      "upstream_sha256": "0d8583fe1bda9c1378e11a2c80481ff2eddfc0dac874294e09ea49cc1b490748"
+    },
+    {
+      "archive": "program-and-receipt-export",
+      "distributed_sha256": "4022b79169199d0c8efb8f81e5533604a5c42c9c3aa6957051907afdd8d72ec6",
+      "kind": "verbatim file",
+      "member": "stress/analyze.py",
+      "path": "stress/analyze.py",
+      "upstream_sha256": "4022b79169199d0c8efb8f81e5533604a5c42c9c3aa6957051907afdd8d72ec6"
+    },
+    {
+      "archive": "program-and-receipt-export",
+      "distributed_sha256": "2f39035932e584e85408e2bd779e69e44d7f1a97f7e0af5433bede52b15123e9",
+      "kind": "exact named function, LF-normalized",
+      "lines": [
+        20,
+        36
+      ],
+      "member": "play60.py",
+      "path": "methods/score_step.py.txt",
+      "symbol": "score_step",
+      "upstream_sha256": "c88b435ef8ede167aa8ba877950ac36e6d0f935dff99b97f522ad3fc610e50b0"
+    },
+    {
+      "archive": "program-and-receipt-export",
+      "distributed_sha256": "59404b9dbdfa9548febaad55c0893e417e8e2c49869a5e3c35a9474d835bf35a",
+      "kind": "exact named function, LF-normalized",
+      "lines": [
+        38,
+        64
+      ],
+      "member": "play60.py",
+      "path": "methods/play.py.txt",
+      "symbol": "play",
+      "upstream_sha256": "c88b435ef8ede167aa8ba877950ac36e6d0f935dff99b97f522ad3fc610e50b0"
+    },
+    {
+      "also_verified_in": "runtime-snapshot-B",
+      "archive": "runtime-snapshot-A",
+      "distributed_sha256": "7b9b6d8914ba13655111585a2e06574f62c3ac144cdb7ee5066a7661437eb0b6",
+      "kind": "exact named function, LF-normalized",
+      "lines": [
+        49,
+        135
+      ],
+      "member": "mea-state2-r2-20261118/run02/project/agent/m8_train.py",
+      "path": "methods/update.py.txt",
+      "symbol": "update",
+      "upstream_sha256": "29bed3c11ac90091b57252317ce532b936b24e2cd1166c62b62ffc62932dbd9f"
+    },
+    {
+      "also_verified_in": "runtime-snapshot-B",
+      "archive": "runtime-snapshot-A",
+      "distributed_sha256": "4491994dc27ef3321678b825172276e5f74831089353e715f22469c88fc0274c",
+      "kind": "exact named function, LF-normalized",
+      "lines": [
+        209,
+        213
+      ],
+      "member": "mea-state2-r2-20261118/run02/project/tools/mea_shuffle_train.py",
+      "path": "methods/training_update.py.txt",
+      "symbol": "training_update",
+      "upstream_sha256": "8e19527bea99c233c71d53c9a7f2ed3364537530a168b54212151bb9004f437d"
+    },
+    {
+      "also_verified_in": "runtime-snapshot-B",
+      "archive": "runtime-snapshot-A",
+      "distributed_sha256": "2518bf5ec0c1b29c477deaeaa528749e0b49e364ef65f9374c9d14ba785de992",
+      "kind": "exact named function, LF-normalized",
+      "lines": [
+        6,
+        18
+      ],
+      "member": "mea-state2-r2-20261118/run02/project/standalone/mea_state2_r2/mea_state2_r2/trajectory.py",
+      "path": "methods/finish.py.txt",
+      "symbol": "finish",
+      "upstream_sha256": "520eca76bfcac0b0a7e79df68a6a7a8380732484e3d511ffa59a9eb52c4e3940"
+    }
+  ]
+}

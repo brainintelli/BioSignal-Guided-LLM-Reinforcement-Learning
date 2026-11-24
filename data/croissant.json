@@ -1,0 +1,2639 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "Organoid recording replay in a survival game",
+  "description": "Paired game outcomes, feature-level acquisition references and reproduction metadata for the offline replay study.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "license": "https://github.com/brainintelli/Organoid-Replay-Arena/blob/main/LICENSE-DATA",
+  "creator": [
+    {
+      "@type": "sc:Organization",
+      "name": "Brainintelli Research Lab",
+      "email": "research@brainintelli.com"
+    }
+  ],
+  "citeAs": "Brainintelli Research Lab. Language Model Exploration and Survival Behavior Under Offline Replay of Organoid Neural Signals. Organoid Replay Arena research data.",
+  "version": "1.0.0",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-actions-file",
+      "name": "actions.csv",
+      "description": "Local data/actions.csv in the public study package.",
+      "contentUrl": "actions.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "289c304fcfd27a8ffaf07c8c3a57248f1ba7e87e1b1361e6c35839d5cd094c62"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-boundary-file",
+      "name": "boundary.csv",
+      "description": "Local data/boundary.csv in the public study package.",
+      "contentUrl": "boundary.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "5c6bf7c7fb2c974aac725cd9870dfa08c51aa0454714b83efce313b3c08277fb"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-chip22554-file",
+      "name": "chip22554.csv",
+      "description": "Local data/chip22554.csv in the public study package.",
+      "contentUrl": "chip22554.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "abcdf32c34dcab7cc9d571d8227365749f3091d3a69413a8d85d5333b6184fe8"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-exploration-file",
+      "name": "exploration.csv",
+      "description": "Local data/exploration.csv in the public study package.",
+      "contentUrl": "exploration.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "0fce730f89143a34dc5d4f489a05ad2e69cf5a4e8e8e1eea8eb27c893fb163c7"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-h5-manifest-file",
+      "name": "h5_manifest.csv",
+      "description": "Local data/h5_manifest.csv in the public study package.",
+      "contentUrl": "h5_manifest.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "2b0bb319494ac51560df9d211171d512a8e2845beebd56d81ecd9c29672ca682"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-heldout-file",
+      "name": "heldout.csv",
+      "description": "Local data/heldout.csv in the public study package.",
+      "contentUrl": "heldout.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "c56f2a2bc30efc09555e32c1aee2b3aa8bda7833f034b8ef1bb2f9eaf43e0524"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-model-budgets-file",
+      "name": "model_budgets.csv",
+      "description": "Local data/model_budgets.csv in the public study package.",
+      "contentUrl": "model_budgets.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "66198029376433c07fac858a98a87618bddbd0c8886e4ec31e2c9522d9a0c60e"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-roi-file",
+      "name": "roi.csv",
+      "description": "Local data/roi.csv in the public study package.",
+      "contentUrl": "roi.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "0d1d6daf538daa01e9282eca00156a239854244c672a312086620a9a0b0f2bbf"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-score-steps-file",
+      "name": "score_steps.csv",
+      "description": "Local data/score_steps.csv in the public study package.",
+      "contentUrl": "score_steps.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "80fa5a29d7bf3263fcb4f4db92f7229b8cdb8af2dabd081dbc8faac7cf8c4c9c"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-stimulation-file",
+      "name": "stimulation.csv",
+      "description": "Local data/stimulation.csv in the public study package.",
+      "contentUrl": "stimulation.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "d652dd8db4b0ebb784289bad8e711a2e3c51281c84d64b8cd040fe36fa4784e6"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-stress-file",
+      "name": "stress.csv",
+      "description": "Local data/stress.csv in the public study package.",
+      "contentUrl": "stress.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "3960b473a5bbd43ed97476a0e7b81a5cfe94572d6f595f343f2b819bb9232e00"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-windows-file",
+      "name": "windows.csv",
+      "description": "Local data/windows.csv in the public study package.",
+      "contentUrl": "windows.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "98dac7589975e760d8fbf1184bd8ee02de9cbd4c81c204e9002afe36a94f347e"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "docs-reproduction-matrix-file",
+      "name": "reproduction_matrix.csv",
+      "description": "Local docs/reproduction_matrix.csv in the public study package.",
+      "contentUrl": "../docs/reproduction_matrix.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "d499ef663e6d1920da5d0b6af8d1233fd82c12564265812f7789ee5705126648"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "figures-figure-manifest-file",
+      "name": "figure_manifest.csv",
+      "description": "Local figures/figure_manifest.csv in the public study package.",
+      "contentUrl": "../figures/figure_manifest.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "bfa2473ad347f50008770e1d3b9062f9ef7772cab67d50d5b9ab61490607f15f"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "results-boundary-contrasts-file",
+      "name": "boundary_contrasts.csv",
+      "description": "Local results/boundary_contrasts.csv in the public study package.",
+      "contentUrl": "../results/boundary_contrasts.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "5278d95e9647dd8bd4d64ceb344a4f6fc1ccd907f2897dd8fd676813abee5ad3"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "results-boundary-groups-file",
+      "name": "boundary_groups.csv",
+      "description": "Local results/boundary_groups.csv in the public study package.",
+      "contentUrl": "../results/boundary_groups.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "c5c891e953bfbbaea172792a7f4e49e87a5a70c3b5aaec16f5d91c55faf9c807"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "results-heldout-file",
+      "name": "heldout.csv",
+      "description": "Local results/heldout.csv in the public study package.",
+      "contentUrl": "../results/heldout.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "f3e1c871a465b18903c5df41808d8839fe169bbc3c5c3d33ed68dbbabb0b9e95"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data-data-dictionary-file",
+      "name": "data_dictionary.csv",
+      "description": "Local data/data_dictionary.csv in the public study package.",
+      "contentUrl": "data_dictionary.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "8ceb35b1fd20d140590887e25d65c505809b590badb543af2cbd0dfc2dbfa0dd"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "metadata-datasheet-file",
+      "name": "datasheet.md",
+      "description": "English datasheet covering acquisition, permitted use and limits.",
+      "contentUrl": "datasheet.md",
+      "encodingFormat": "text/plain",
+      "sha256": "eaffb532f65a0be13f9f95a5aad375b0d53aaccf640e377c8e0efcb302ec067f"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-actions",
+      "name": "data-actions",
+      "description": "Rows of data/actions.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-actions/arm",
+          "name": "arm",
+          "description": "Replay/input group defined for the study in this table.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-actions-file"
+            },
+            "extract": {
+              "column": "arm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-actions/seed_index",
+          "name": "seed_index",
+          "description": "Study-local training seed index. Shared within the relevant paired comparison.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-actions-file"
+            },
+            "extract": {
+              "column": "seed_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-actions/map_index",
+          "name": "map_index",
+          "description": "Study-local index of the game map shared across relevant arms and seeds.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-actions-file"
+            },
+            "extract": {
+              "column": "map_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-actions/verbs",
+          "name": "verbs",
+          "description": "Selected action verbs in time order, separated by vertical bars.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-actions-file"
+            },
+            "extract": {
+              "column": "verbs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-boundary",
+      "name": "data-boundary",
+      "description": "Rows of data/boundary.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-boundary/scene",
+          "name": "scene",
+          "description": "Initial game condition under the adverse-start design.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-boundary-file"
+            },
+            "extract": {
+              "column": "scene"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-boundary/seed_index",
+          "name": "seed_index",
+          "description": "Study-local training seed index. Shared within the relevant paired comparison.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-boundary-file"
+            },
+            "extract": {
+              "column": "seed_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-boundary/map_index",
+          "name": "map_index",
+          "description": "Study-local index of the game map shared across relevant arms and seeds.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-boundary-file"
+            },
+            "extract": {
+              "column": "map_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-boundary/arm",
+          "name": "arm",
+          "description": "Replay/input group defined for the study in this table.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-boundary-file"
+            },
+            "extract": {
+              "column": "arm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-boundary/cut",
+          "name": "cut",
+          "description": "Indicator that the source trajectory crossed the score cutoff.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-boundary-file"
+            },
+            "extract": {
+              "column": "cut"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-boundary/r1_recorded",
+          "name": "r1_recorded",
+          "description": "Archived game score for the episode or its group mean.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-boundary-file"
+            },
+            "extract": {
+              "column": "r1_recorded"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-boundary/r1_native",
+          "name": "r1_native",
+          "description": "Score recomputed at the native cutoff for the episode or its group mean.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-boundary-file"
+            },
+            "extract": {
+              "column": "r1_native"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-chip22554",
+      "name": "data-chip22554",
+      "description": "Rows of data/chip22554.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-chip22554/seed_index",
+          "name": "seed_index",
+          "description": "Study-local training seed index. Shared within the relevant paired comparison.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-chip22554-file"
+            },
+            "extract": {
+              "column": "seed_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-chip22554/map_index",
+          "name": "map_index",
+          "description": "Study-local index of the game map shared across relevant arms and seeds.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-chip22554-file"
+            },
+            "extract": {
+              "column": "map_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-chip22554/arm",
+          "name": "arm",
+          "description": "Replay/input group defined for the study in this table.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-chip22554-file"
+            },
+            "extract": {
+              "column": "arm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-chip22554/cells",
+          "name": "cells",
+          "description": "Newly revealed map cells through the recorded evaluation cutoff.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-chip22554-file"
+            },
+            "extract": {
+              "column": "cells"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-chip22554/r1",
+          "name": "r1",
+          "description": "Recorded game score (R1) for the corresponding episode.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-chip22554-file"
+            },
+            "extract": {
+              "column": "r1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-exploration",
+      "name": "data-exploration",
+      "description": "Rows of data/exploration.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-exploration/seed_index",
+          "name": "seed_index",
+          "description": "Study-local training seed index. Shared within the relevant paired comparison.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-exploration-file"
+            },
+            "extract": {
+              "column": "seed_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-exploration/map_index",
+          "name": "map_index",
+          "description": "Study-local index of the game map shared across relevant arms and seeds.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-exploration-file"
+            },
+            "extract": {
+              "column": "map_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-exploration/all_zero_d6",
+          "name": "all_zero_d6",
+          "description": "Newly revealed cells after the sixth decision in the all-zero group.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-exploration-file"
+            },
+            "extract": {
+              "column": "all_zero_d6"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-exploration/all_zero_t6",
+          "name": "all_zero_t6",
+          "description": "Newly revealed cells at the sixth game tick of the same trajectory in the all-zero group.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-exploration-file"
+            },
+            "extract": {
+              "column": "all_zero_t6"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-exploration/intact_d6",
+          "name": "intact_d6",
+          "description": "Newly revealed cells after the sixth decision in the intact group.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-exploration-file"
+            },
+            "extract": {
+              "column": "intact_d6"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-exploration/intact_t6",
+          "name": "intact_t6",
+          "description": "Newly revealed cells at the sixth game tick of the same trajectory in the intact group.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-exploration-file"
+            },
+            "extract": {
+              "column": "intact_t6"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-exploration/unstimulated_d6",
+          "name": "unstimulated_d6",
+          "description": "Newly revealed cells after the sixth decision in the unstimulated group.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-exploration-file"
+            },
+            "extract": {
+              "column": "unstimulated_d6"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-exploration/unstimulated_t6",
+          "name": "unstimulated_t6",
+          "description": "Newly revealed cells at the sixth game tick of the same trajectory in the unstimulated group.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-exploration-file"
+            },
+            "extract": {
+              "column": "unstimulated_t6"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-h5-manifest",
+      "name": "data-h5-manifest",
+      "description": "Rows of data/h5_manifest.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-h5-manifest/sha256",
+          "name": "sha256",
+          "description": "SHA-256 of the specified file or serialized event sequence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-h5-manifest-file"
+            },
+            "extract": {
+              "column": "sha256"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-h5-manifest/bytes",
+          "name": "bytes",
+          "description": "Length of the original raw recording in bytes.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-h5-manifest-file"
+            },
+            "extract": {
+              "column": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-h5-manifest/chip",
+          "name": "chip",
+          "description": "Acquisition chip label as recorded in the raw-file inventory.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-h5-manifest-file"
+            },
+            "extract": {
+              "column": "chip"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-h5-manifest/kind",
+          "name": "kind",
+          "description": "Original raw recording classification, including structural exceptions and zero-frame entries.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-h5-manifest-file"
+            },
+            "extract": {
+              "column": "kind"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-h5-manifest/stress_record",
+          "name": "stress_record",
+          "description": "Whether the raw recording belongs to the adverse-start source set.",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "data-h5-manifest-file"
+            },
+            "extract": {
+              "column": "stress_record"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-heldout",
+      "name": "data-heldout",
+      "description": "Rows of data/heldout.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/arm",
+          "name": "arm",
+          "description": "Replay/input group defined for the study in this table.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "arm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/seed_index",
+          "name": "seed_index",
+          "description": "Study-local training seed index. Shared within the relevant paired comparison.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "seed_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/map_index",
+          "name": "map_index",
+          "description": "Study-local index of the game map shared across relevant arms and seeds.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "map_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/heldout",
+          "name": "heldout",
+          "description": "Site whose recording file was held out for the relevant training seed.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "heldout"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/tick",
+          "name": "tick",
+          "description": "Evaluation time budget counted in game updates.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "tick"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/cells",
+          "name": "cells",
+          "description": "Newly revealed map cells through the recorded evaluation cutoff.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "cells"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/drink",
+          "name": "drink",
+          "description": "Count of the selected drinking or eating action through the evaluation tick.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "drink"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/eat",
+          "name": "eat",
+          "description": "Count of the selected drinking or eating action through the evaluation tick.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "eat"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/water",
+          "name": "water",
+          "description": "Character's water reserve at the evaluation tick.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "water"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/food",
+          "name": "food",
+          "description": "Character's food reserve at the evaluation tick.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "food"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/health",
+          "name": "health",
+          "description": "Character's health at the evaluation tick.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "health"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/drink_gain",
+          "name": "drink_gain",
+          "description": "Number of drinking actions followed by a net increase in water reserve.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "drink_gain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/eat_gain",
+          "name": "eat_gain",
+          "description": "Number of eating actions followed by a net increase in food reserve.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "eat_gain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-heldout/death",
+          "name": "death",
+          "description": "Cumulative death indicator by the evaluation tick.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-heldout-file"
+            },
+            "extract": {
+              "column": "death"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-model-budgets",
+      "name": "data-model-budgets",
+      "description": "Rows of data/model_budgets.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-model-budgets/arm",
+          "name": "arm",
+          "description": "Replay/input group defined for the study in this table.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-model-budgets-file"
+            },
+            "extract": {
+              "column": "arm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-model-budgets/seed_index",
+          "name": "seed_index",
+          "description": "Study-local training seed index. Shared within the relevant paired comparison.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-model-budgets-file"
+            },
+            "extract": {
+              "column": "seed_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-model-budgets/training_decisions",
+          "name": "training_decisions",
+          "description": "Total game decisions recorded during training for the model.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-model-budgets-file"
+            },
+            "extract": {
+              "column": "training_decisions"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-model-budgets/training_ticks",
+          "name": "training_ticks",
+          "description": "Total game time represented by the training decisions.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-model-budgets-file"
+            },
+            "extract": {
+              "column": "training_ticks"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-model-budgets/actor_steps",
+          "name": "actor_steps",
+          "description": "Recorded number of optimizer updates for the stated network.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-model-budgets-file"
+            },
+            "extract": {
+              "column": "actor_steps"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-model-budgets/critic_steps",
+          "name": "critic_steps",
+          "description": "Recorded number of optimizer updates for the stated network.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-model-budgets-file"
+            },
+            "extract": {
+              "column": "critic_steps"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-model-budgets/batch_decisions",
+          "name": "batch_decisions",
+          "description": "Ordered per-batch contributions to the correspondingly named total for the model.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-model-budgets-file"
+            },
+            "extract": {
+              "column": "batch_decisions"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-model-budgets/batch_ticks",
+          "name": "batch_ticks",
+          "description": "Ordered per-batch contributions to the correspondingly named total for the model.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-model-budgets-file"
+            },
+            "extract": {
+              "column": "batch_ticks"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-model-budgets/batch_actor_steps",
+          "name": "batch_actor_steps",
+          "description": "Ordered per-batch contributions to the correspondingly named total for the model.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-model-budgets-file"
+            },
+            "extract": {
+              "column": "batch_actor_steps"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-model-budgets/batch_critic_steps",
+          "name": "batch_critic_steps",
+          "description": "Ordered per-batch contributions to the correspondingly named total for the model.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-model-budgets-file"
+            },
+            "extract": {
+              "column": "batch_critic_steps"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-model-budgets/kl_early_stop_batches",
+          "name": "kl_early_stop_batches",
+          "description": "Number of recorded training batches ending at the KL early-stop rule.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-model-budgets-file"
+            },
+            "extract": {
+              "column": "kl_early_stop_batches"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-roi",
+      "name": "data-roi",
+      "description": "Rows of data/roi.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-roi/channel",
+          "name": "channel",
+          "description": "Device channel or electrode identifier in the fixed acquisition region of interest.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-roi-file"
+            },
+            "extract": {
+              "column": "channel"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-roi/electrode",
+          "name": "electrode",
+          "description": "Device channel or electrode identifier in the fixed acquisition region of interest.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-roi-file"
+            },
+            "extract": {
+              "column": "electrode"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-score-steps",
+      "name": "data-score-steps",
+      "description": "Rows of data/score_steps.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-score-steps/seed_index",
+          "name": "seed_index",
+          "description": "Study-local training seed index. Shared within the relevant paired comparison.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-score-steps-file"
+            },
+            "extract": {
+              "column": "seed_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-score-steps/map_index",
+          "name": "map_index",
+          "description": "Study-local index of the game map shared across relevant arms and seeds.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-score-steps-file"
+            },
+            "extract": {
+              "column": "map_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-score-steps/arm",
+          "name": "arm",
+          "description": "Replay/input group defined for the study in this table.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-score-steps-file"
+            },
+            "extract": {
+              "column": "arm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-score-steps/start_tick",
+          "name": "start_tick",
+          "description": "Game time immediately before this action.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-score-steps-file"
+            },
+            "extract": {
+              "column": "start_tick"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-score-steps/end_tick",
+          "name": "end_tick",
+          "description": "Game time at the end of the action or at the episode endpoint, as defined by the table.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-score-steps-file"
+            },
+            "extract": {
+              "column": "end_tick"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-score-steps/action",
+          "name": "action",
+          "description": "Action verb selected at this decision.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-score-steps-file"
+            },
+            "extract": {
+              "column": "action"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-score-steps/r1",
+          "name": "r1",
+          "description": "Recorded game-score contribution for this action interval.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-score-steps-file"
+            },
+            "extract": {
+              "column": "r1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-stimulation",
+      "name": "data-stimulation",
+      "description": "Rows of data/stimulation.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-stimulation/day",
+          "name": "day",
+          "description": "Acquisition date label identifying the separate within-day comparison.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-stimulation-file"
+            },
+            "extract": {
+              "column": "day"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stimulation/seed_index",
+          "name": "seed_index",
+          "description": "Study-local training seed index. Shared within the relevant paired comparison.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-stimulation-file"
+            },
+            "extract": {
+              "column": "seed_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stimulation/map_index",
+          "name": "map_index",
+          "description": "Study-local index of the game map shared across relevant arms and seeds.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-stimulation-file"
+            },
+            "extract": {
+              "column": "map_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stimulation/arm",
+          "name": "arm",
+          "description": "Replay/input group defined for the study in this table.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-stimulation-file"
+            },
+            "extract": {
+              "column": "arm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stimulation/cells",
+          "name": "cells",
+          "description": "Newly revealed map cells through the recorded evaluation cutoff.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-stimulation-file"
+            },
+            "extract": {
+              "column": "cells"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stimulation/r1",
+          "name": "r1",
+          "description": "Recorded game score (R1) for the corresponding episode.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-stimulation-file"
+            },
+            "extract": {
+              "column": "r1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-stress",
+      "name": "data-stress",
+      "description": "Rows of data/stress.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-stress/scene",
+          "name": "scene",
+          "description": "Initial game condition under the adverse-start design.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-stress-file"
+            },
+            "extract": {
+              "column": "scene"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stress/seed_index",
+          "name": "seed_index",
+          "description": "Study-local training seed index. Shared within the relevant paired comparison.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-stress-file"
+            },
+            "extract": {
+              "column": "seed_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stress/map_index",
+          "name": "map_index",
+          "description": "Study-local index of the game map shared across relevant arms and seeds.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-stress-file"
+            },
+            "extract": {
+              "column": "map_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stress/arm",
+          "name": "arm",
+          "description": "Replay/input group defined for the study in this table.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-stress-file"
+            },
+            "extract": {
+              "column": "arm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stress/cells",
+          "name": "cells",
+          "description": "Newly revealed map cells through the recorded evaluation cutoff.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data-stress-file"
+            },
+            "extract": {
+              "column": "cells"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stress/survived",
+          "name": "survived",
+          "description": "Indicator of the corresponding outcome at the cutoff: alive, drank, or ate.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-stress-file"
+            },
+            "extract": {
+              "column": "survived"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stress/end_tick",
+          "name": "end_tick",
+          "description": "Game time at the end of the action or at the episode endpoint, as defined by the table.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-stress-file"
+            },
+            "extract": {
+              "column": "end_tick"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stress/drank",
+          "name": "drank",
+          "description": "Indicator of the corresponding outcome at the cutoff: alive, drank, or ate.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-stress-file"
+            },
+            "extract": {
+              "column": "drank"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stress/ate",
+          "name": "ate",
+          "description": "Indicator of the corresponding outcome at the cutoff: alive, drank, or ate.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-stress-file"
+            },
+            "extract": {
+              "column": "ate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stress/drink_wait",
+          "name": "drink_wait",
+          "description": "Restricted waiting time for the relevant resource event. Games without the event by cutoff retain the configured horizon, including earlier deaths.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-stress-file"
+            },
+            "extract": {
+              "column": "drink_wait"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-stress/eat_wait",
+          "name": "eat_wait",
+          "description": "Restricted waiting time for the relevant resource event. Games without the event by cutoff retain the configured horizon, including earlier deaths.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-stress-file"
+            },
+            "extract": {
+              "column": "eat_wait"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-windows",
+      "name": "data-windows",
+      "description": "Rows of data/windows.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-windows/phase",
+          "name": "phase",
+          "description": "Use of the acquisition window in model calibration, training, batch-value calculation, or held-out evaluation.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-windows-file"
+            },
+            "extract": {
+              "column": "phase"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-windows/physical_trial",
+          "name": "physical_trial",
+          "description": "Acquisition trial identifier retained in the diagnostic mapping.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-windows-file"
+            },
+            "extract": {
+              "column": "physical_trial"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-windows/diagnostic_window_id",
+          "name": "diagnostic_window_id",
+          "description": "Signed diagnostic window identifier within the relevant experimental phase.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-windows-file"
+            },
+            "extract": {
+              "column": "diagnostic_window_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-windows/device_first_frame",
+          "name": "device_first_frame",
+          "description": "Device-frame index at the named edge of the half-open acquisition window.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-windows-file"
+            },
+            "extract": {
+              "column": "device_first_frame"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-windows/device_exclusive_end_frame",
+          "name": "device_exclusive_end_frame",
+          "description": "Device-frame index at the named edge of the half-open acquisition window.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data-windows-file"
+            },
+            "extract": {
+              "column": "device_exclusive_end_frame"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-windows/raw_sha256",
+          "name": "raw_sha256",
+          "description": "SHA-256 of the specified file or serialized event sequence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-windows-file"
+            },
+            "extract": {
+              "column": "raw_sha256"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-windows/spike_event_sha256",
+          "name": "spike_event_sha256",
+          "description": "SHA-256 of the specified file or serialized event sequence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-windows-file"
+            },
+            "extract": {
+              "column": "spike_event_sha256"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-windows/feature_vector",
+          "name": "feature_vector",
+          "description": "Unstandardized vector ordered as log rate, active fraction, temporal concentration and spatial entropy.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-windows-file"
+            },
+            "extract": {
+              "column": "feature_vector"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-windows/standardized_vector",
+          "name": "standardized_vector",
+          "description": "Clipped and rounded feature coordinates with the same component order. Calibration reference windows have an empty entry.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-windows-file"
+            },
+            "extract": {
+              "column": "standardized_vector"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "docs-reproduction-matrix",
+      "name": "docs-reproduction-matrix",
+      "description": "Rows of docs/reproduction_matrix.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "docs-reproduction-matrix/claim_id",
+          "name": "claim_id",
+          "description": "Frozen paper-claim identifier or additional reproduction item.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "docs-reproduction-matrix-file"
+            },
+            "extract": {
+              "column": "claim_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "docs-reproduction-matrix/paper_result",
+          "name": "paper_result",
+          "description": "Short English description of the paper result or design item.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "docs-reproduction-matrix-file"
+            },
+            "extract": {
+              "column": "paper_result"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "docs-reproduction-matrix/section",
+          "name": "section",
+          "description": "Frozen paragraph, table, or appendix locator.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "docs-reproduction-matrix-file"
+            },
+            "extract": {
+              "column": "section"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "docs-reproduction-matrix/script",
+          "name": "script",
+          "description": "Repository-relative path to the named deliverable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "docs-reproduction-matrix-file"
+            },
+            "extract": {
+              "column": "script"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "docs-reproduction-matrix/command",
+          "name": "command",
+          "description": "Command issued at the repository root for this item, when executable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "docs-reproduction-matrix-file"
+            },
+            "extract": {
+              "column": "command"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "docs-reproduction-matrix/expected_output",
+          "name": "expected_output",
+          "description": "Named results or evidence returned by the command.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "docs-reproduction-matrix-file"
+            },
+            "extract": {
+              "column": "expected_output"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "docs-reproduction-matrix/deterministic",
+          "name": "deterministic",
+          "description": "Scope of the deterministic reproduction claim or applicability.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "docs-reproduction-matrix-file"
+            },
+            "extract": {
+              "column": "deterministic"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "docs-reproduction-matrix/status",
+          "name": "status",
+          "description": "Release status for this result.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "docs-reproduction-matrix-file"
+            },
+            "extract": {
+              "column": "status"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "docs-reproduction-matrix/scope_or_requirement",
+          "name": "scope_or_requirement",
+          "description": "Material or interpretive condition required for this entry.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "docs-reproduction-matrix-file"
+            },
+            "extract": {
+              "column": "scope_or_requirement"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "figures-figure-manifest",
+      "name": "figures-figure-manifest",
+      "description": "Rows of figures/figure_manifest.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/figure_id",
+          "name": "figure_id",
+          "description": "Identifier assigned in manuscript figure order.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "figure_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/source_data_file",
+          "name": "source_data_file",
+          "description": "Repository-relative path to the named deliverable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "source_data_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/script",
+          "name": "script",
+          "description": "Repository-relative path to the named deliverable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "script"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/seed",
+          "name": "seed",
+          "description": "Drawing seed if applicable or an explicit deterministic-drawing declaration.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "seed"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/git_commit",
+          "name": "git_commit",
+          "description": "Git object that contains the exact figure source and input files.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "git_commit"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/source_section",
+          "name": "source_section",
+          "description": "Frozen paragraph, table, or appendix locator.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "source_section"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/source_key",
+          "name": "source_key",
+          "description": "Path within the frozen figure-input JSON.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "source_key"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/provenance_file",
+          "name": "provenance_file",
+          "description": "Repository-relative path to the named deliverable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "provenance_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/pdf",
+          "name": "pdf",
+          "description": "Repository-relative path to the named deliverable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "pdf"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/svg",
+          "name": "svg",
+          "description": "Repository-relative path to the named deliverable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "svg"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/width_pt",
+          "name": "width_pt",
+          "description": "Figure dimensions or smallest type size in PostScript points.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "width_pt"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/height_pt",
+          "name": "height_pt",
+          "description": "Figure dimensions or smallest type size in PostScript points.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "height_pt"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/minimum_font_pt",
+          "name": "minimum_font_pt",
+          "description": "Figure dimensions or smallest type size in PostScript points.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "minimum_font_pt"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/source_sha256",
+          "name": "source_sha256",
+          "description": "SHA-256 of the specified file or serialized event sequence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "source_sha256"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/pdf_sha256",
+          "name": "pdf_sha256",
+          "description": "SHA-256 of the specified file or serialized event sequence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "pdf_sha256"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "figures-figure-manifest/svg_sha256",
+          "name": "svg_sha256",
+          "description": "SHA-256 of the specified file or serialized event sequence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "figures-figure-manifest-file"
+            },
+            "extract": {
+              "column": "svg_sha256"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "results-boundary-contrasts",
+      "name": "results-boundary-contrasts",
+      "description": "Rows of results/boundary_contrasts.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-contrasts/scene",
+          "name": "scene",
+          "description": "Initial game condition under the adverse-start design.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-contrasts-file"
+            },
+            "extract": {
+              "column": "scene"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-contrasts/n",
+          "name": "n",
+          "description": "Number of episodes or matched seed–map differences underlying this row.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-contrasts-file"
+            },
+            "extract": {
+              "column": "n"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-contrasts/contrast",
+          "name": "contrast",
+          "description": "Direction of the group comparison used in the table.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-contrasts-file"
+            },
+            "extract": {
+              "column": "contrast"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-contrasts/change_in_mean_contrast",
+          "name": "change_in_mean_contrast",
+          "description": "Native-minus-recorded change in the intact-minus-comparator paired mean.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-contrasts-file"
+            },
+            "extract": {
+              "column": "change_in_mean_contrast"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "results-boundary-groups",
+      "name": "results-boundary-groups",
+      "description": "Rows of results/boundary_groups.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-groups/scene",
+          "name": "scene",
+          "description": "Initial game condition under the adverse-start design.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-groups-file"
+            },
+            "extract": {
+              "column": "scene"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-groups/arm",
+          "name": "arm",
+          "description": "Replay/input group defined for the study in this table.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-groups-file"
+            },
+            "extract": {
+              "column": "arm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-groups/n",
+          "name": "n",
+          "description": "Number of episodes or matched seed–map differences underlying this row.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-groups-file"
+            },
+            "extract": {
+              "column": "n"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-groups/cut",
+          "name": "cut",
+          "description": "Number of episodes in the group crossing the cutoff.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-groups-file"
+            },
+            "extract": {
+              "column": "cut"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-groups/above_threshold",
+          "name": "above_threshold",
+          "description": "Count of above-threshold discrepancies, or of the positive or negative discrepancies within that subset.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-groups-file"
+            },
+            "extract": {
+              "column": "above_threshold"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-groups/positive",
+          "name": "positive",
+          "description": "Count of above-threshold discrepancies, or of the positive or negative discrepancies within that subset.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-groups-file"
+            },
+            "extract": {
+              "column": "positive"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-groups/negative",
+          "name": "negative",
+          "description": "Count of above-threshold discrepancies, or of the positive or negative discrepancies within that subset.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-groups-file"
+            },
+            "extract": {
+              "column": "negative"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-groups/mean_recorded",
+          "name": "mean_recorded",
+          "description": "Archived game score for the episode or its group mean.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-groups-file"
+            },
+            "extract": {
+              "column": "mean_recorded"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-groups/mean_native",
+          "name": "mean_native",
+          "description": "Score recomputed at the native cutoff for the episode or its group mean.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-groups-file"
+            },
+            "extract": {
+              "column": "mean_native"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-groups/mean_signed_delta",
+          "name": "mean_signed_delta",
+          "description": "Named summary of native-minus-recorded paired episode scores.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-groups-file"
+            },
+            "extract": {
+              "column": "mean_signed_delta"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-groups/min_signed",
+          "name": "min_signed",
+          "description": "Named summary of native-minus-recorded paired episode scores.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-groups-file"
+            },
+            "extract": {
+              "column": "min_signed"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-boundary-groups/max_signed",
+          "name": "max_signed",
+          "description": "Named summary of native-minus-recorded paired episode scores.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-boundary-groups-file"
+            },
+            "extract": {
+              "column": "max_signed"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "results-heldout",
+      "name": "results-heldout",
+      "description": "Rows of results/heldout.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "results-heldout/tick",
+          "name": "tick",
+          "description": "Evaluation time budget counted in game updates.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "results-heldout-file"
+            },
+            "extract": {
+              "column": "tick"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-heldout/endpoint",
+          "name": "endpoint",
+          "description": "Outcome measured at the given budget; its units are defined by the corresponding column of data/heldout.csv.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "results-heldout-file"
+            },
+            "extract": {
+              "column": "endpoint"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-heldout/pairs_per_comparison",
+          "name": "pairs_per_comparison",
+          "description": "Number of episodes or matched seed–map differences underlying this row.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "results-heldout-file"
+            },
+            "extract": {
+              "column": "pairs_per_comparison"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-heldout/ordered",
+          "name": "ordered",
+          "description": "Arm mean for the named endpoint. Ordered denotes intact and pure denotes the native game-reward-only comparator.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-heldout-file"
+            },
+            "extract": {
+              "column": "ordered"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-heldout/shuffled",
+          "name": "shuffled",
+          "description": "Arm mean for the named endpoint. Ordered denotes intact and pure denotes the native game-reward-only comparator.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-heldout-file"
+            },
+            "extract": {
+              "column": "shuffled"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-heldout/pure",
+          "name": "pure",
+          "description": "Arm mean for the named endpoint. Ordered denotes intact and pure denotes the native game-reward-only comparator.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-heldout-file"
+            },
+            "extract": {
+              "column": "pure"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-heldout/ordered_minus_shuffled_delta",
+          "name": "ordered_minus_shuffled_delta",
+          "description": "Intact minus shuffled: mean paired difference at this endpoint and budget.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-heldout-file"
+            },
+            "extract": {
+              "column": "ordered_minus_shuffled_delta"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-heldout/ordered_minus_shuffled_ci_lo",
+          "name": "ordered_minus_shuffled_ci_lo",
+          "description": "Intact minus shuffled: lower interval endpoint at this endpoint and budget.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-heldout-file"
+            },
+            "extract": {
+              "column": "ordered_minus_shuffled_ci_lo"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-heldout/ordered_minus_shuffled_ci_hi",
+          "name": "ordered_minus_shuffled_ci_hi",
+          "description": "Intact minus shuffled: upper interval endpoint at this endpoint and budget.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-heldout-file"
+            },
+            "extract": {
+              "column": "ordered_minus_shuffled_ci_hi"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-heldout/ordered_minus_pure_delta",
+          "name": "ordered_minus_pure_delta",
+          "description": "Intact minus pure: mean paired difference at this endpoint and budget.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-heldout-file"
+            },
+            "extract": {
+              "column": "ordered_minus_pure_delta"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-heldout/ordered_minus_pure_ci_lo",
+          "name": "ordered_minus_pure_ci_lo",
+          "description": "Intact minus pure: lower interval endpoint at this endpoint and budget.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-heldout-file"
+            },
+            "extract": {
+              "column": "ordered_minus_pure_ci_lo"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "results-heldout/ordered_minus_pure_ci_hi",
+          "name": "ordered_minus_pure_ci_hi",
+          "description": "Intact minus pure: upper interval endpoint at this endpoint and budget.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "results-heldout-file"
+            },
+            "extract": {
+              "column": "ordered_minus_pure_ci_hi"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data-data-dictionary",
+      "name": "data-data-dictionary",
+      "description": "Rows of data/data_dictionary.csv.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data-data-dictionary/file",
+          "name": "file",
+          "description": "Path of the table described, relative to the repository root.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-data-dictionary-file"
+            },
+            "extract": {
+              "column": "file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-data-dictionary/column_name",
+          "name": "column_name",
+          "description": "Description of the named table field, its logical type, units, domain or measured missingness.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-data-dictionary-file"
+            },
+            "extract": {
+              "column": "column_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-data-dictionary/dtype",
+          "name": "dtype",
+          "description": "Description of the named table field, its logical type, units, domain or measured missingness.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-data-dictionary-file"
+            },
+            "extract": {
+              "column": "dtype"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-data-dictionary/unit",
+          "name": "unit",
+          "description": "Description of the named table field, its logical type, units, domain or measured missingness.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-data-dictionary-file"
+            },
+            "extract": {
+              "column": "unit"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-data-dictionary/allowed_values",
+          "name": "allowed_values",
+          "description": "Description of the named table field, its logical type, units, domain or measured missingness.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-data-dictionary-file"
+            },
+            "extract": {
+              "column": "allowed_values"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-data-dictionary/missingness",
+          "name": "missingness",
+          "description": "Description of the named table field, its logical type, units, domain or measured missingness.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-data-dictionary-file"
+            },
+            "extract": {
+              "column": "missingness"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data-data-dictionary/description",
+          "name": "description",
+          "description": "Description of the named table field, its logical type, units, domain or measured missingness.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data-data-dictionary-file"
+            },
+            "extract": {
+              "column": "description"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "documentation",
+      "name": "documentation",
+      "description": "Filename of the datasheet distributed with the data.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "documentation/filename",
+          "name": "filename",
+          "description": "Name of the local data card.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "metadata-datasheet-file"
+            },
+            "extract": {
+              "fileProperty": "filename"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "mea.game_loop.sim.v2",
+  "source": "simulation",
+  "actual_stimulation_enabled": false,
+  "acquisition_enabled": false,
+  "realtime_training": false,
+  "r2_reward_enabled": false,
+  "alpha": 1,
+  "action_source": "state2_probe_not_llm",
+  "map_mode": "infinite_freeze",
+  "navigation_steps": 4,
+  "state_variant": "reserves",
+  "reward_variant": "bottleneck",
+  "gamma_tick": 0.99985,
+  "session_seconds": 7200,
+  "recovery_reserve_seconds": 900,
+  "max_pulses": 25,
+  "max_shams": 12,
+  "stimulation_parameters": {
+    "mode": "voltage",
+    "polarity": "positive_first",
+    "p90_multiplier": 1.2,
+    "phase_us": 200,
+    "inter_phase_us": 0,
+    "time_step_us": 50,
+    "dac_channel": 0,
+    "initial_delay_samples": 100,
+    "onset_interval_min_ms": 10000,
+    "onset_interval_max_ms": 14000,
+    "interval_seed": 20261117
+  },
+  "output_path": {
+    "path_id": "virtual_microvolt_test_path",
+    "dac_lsb_mv": 0.001,
+    "uncertainty_mv": 0.001,
+    "calibration_id": "synthetic_only_not_hardware_calibration",
+    "simulation_only": true
+  }
+}

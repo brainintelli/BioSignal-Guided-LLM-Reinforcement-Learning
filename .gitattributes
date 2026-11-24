@@ -1,0 +1,15 @@
+* text=auto eol=lf
+*.pdf binary
+*.svg -text
+*.json -text
+*.csv -text
+figures/draw.py -text
+figures/verify_sources.py -text
+historical/**/*.py -text whitespace=cr-at-eol
+historical/train.py -text whitespace=cr-at-eol
+historical/methods/*.py.txt -text
+data/upstream/** -text whitespace=cr-at-eol
+manuscript/** -text whitespace=cr-at-eol
+*.mp4 binary
+*.jpg binary
+*.docx binary

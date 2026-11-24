@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="396pt" height="268pt" viewBox="0 0 396 268" role="img" aria-labelledby="chart-title chart-desc">
+  <title id="chart-title">Decomposing the six-decision game score</title>
+  <desc id="chart-desc">Each open dot is one seed-level paired mean. Bold markers give the mean across seeds. Intervals are shown for the total and residual score differences.</desc>
+  <rect x="0" y="0" width="396.0" height="268" fill="#FFFFFF" stroke="none" stroke-width="0.65" />
+  <text x="5" y="13" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="10.6" fill="#172B3C" text-anchor="start">Game-score differences after six decisions</text>
+  <line x1="5" x2="391" y1="19" y2="19" stroke="#C3CBD0" stroke-width="0.7" />
+  <text x="6" y="32" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;AR05.S1.day18.five.pairs&quot;,&quot;display&quot;:&quot;384&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;DES-8seeds&quot;,&quot;display&quot;:&quot;8&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;},{&quot;number_id&quot;:&quot;DES-48maps&quot;,&quot;display&quot;:&quot;48&quot;,&quot;precision&quot;:0,&quot;transform&quot;:&quot;identity&quot;}]">384 paired games per contrast · 8 training seeds × 48 shared maps.</text>
+  <text x="6" y="44" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.8" fill="#172B3C" text-anchor="start">Open points: seed means. Filled diamonds: overall means. Zero is shared across both panels.</text>
+  <text x="6" y="62" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.8" fill="#174C73" text-anchor="start">Intact − all-zero</text>
+  <text x="390" y="62" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8" fill="#445969" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;R1-baseline-share&quot;,&quot;display&quot;:&quot;84.3&quot;,&quot;precision&quot;:1,&quot;transform&quot;:&quot;identity&quot;}]">Timing share 84.3%</text>
+  <line x1="200.0" x2="200.0" y1="65" y2="142" stroke="#445969" stroke-width="0.75" />
+  <text x="6" y="81.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;F18-baseline-masked-r1_sum-level&quot;,&quot;display&quot;:&quot;97.5&quot;,&quot;precision&quot;:1,&quot;transform&quot;:&quot;identity&quot;}]">Total score (97.5% CI)</text>
+  <g data-mark="seed-means" data-arm="baseline" data-component="total">
+    <circle cx="227.09403472295705" cy="73.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="290.52526879461027" cy="73.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="255.90332317513293" cy="73.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="255.9012922432188" cy="69.85" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="217.5783583169347" cy="73.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="223.45989167691658" cy="69.85" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="221.08685005793438" cy="66.2" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="213.70995806953232" cy="73.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+  </g>
+  <g data-mark="score-ci" data-arm="baseline" data-component="total" data-low="F18-baseline-masked-r1_sum-lo" data-high="F18-baseline-masked-r1_sum-hi">
+    <line x1="212.27229104291877" x2="276.34772363130037" y1="79" y2="79" stroke="#174C73" stroke-width="1.25" />
+    <line x1="212.27229104291877" x2="212.27229104291877" y1="76.2" y2="81.8" stroke="#174C73" stroke-width="0.9" />
+    <line x1="276.34772363130037" x2="276.34772363130037" y1="76.2" y2="81.8" stroke="#174C73" stroke-width="0.9" />
+    <polygon points="238.15737213215465,76.1 241.05737213215465,79 238.15737213215465,81.9 235.25737213215464,79" fill="#174C73" stroke="#174C73" stroke-width="0.7" />
+  </g>
+  <text x="390" y="81.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.25" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;R1-baseline-total&quot;,&quot;display&quot;:&quot;+0.004017&quot;,&quot;precision&quot;:6,&quot;transform&quot;:&quot;identity&quot;}]">+0.004017</text>
+  <text x="6" y="106.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.8" fill="#172B3C" text-anchor="start">Timing deduction</text>
+  <g data-mark="seed-means" data-arm="baseline" data-component="clock">
+    <circle cx="172.29879113230504" cy="98.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="134.7020459844017" cy="98.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="146.5740774570513" cy="98.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="146.5761551367588" cy="94.85" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="186.14909873568376" cy="98.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="184.16904171119123" cy="94.85" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="182.19195276876337" cy="98.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="190.10654144402378" cy="98.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+  </g>
+  <polygon points="167.84596304627237,100.95 170.89596304627239,104 167.84596304627237,107.05 164.79596304627236,104" fill="#174C73" stroke="#174C73" stroke-width="0.7" />
+  <text x="390" y="106.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.25" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;R1-baseline-clock&quot;,&quot;display&quot;:&quot;−0.003385&quot;,&quot;precision&quot;:6,&quot;transform&quot;:&quot;negate&quot;}]">−0.003385</text>
+  <text x="6" y="131.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;R18-刺激前自发 − 屏蔽-其余得分差-level&quot;,&quot;display&quot;:&quot;97.5&quot;,&quot;precision&quot;:1,&quot;transform&quot;:&quot;identity&quot;}]">Residual score (97.5% CI)</text>
+  <g data-mark="seed-means" data-arm="baseline" data-component="residual">
+    <circle cx="199.39282585526206" cy="123.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="225.22731477901198" cy="123.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="202.4774006321842" cy="119.85" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="202.47744737997766" cy="116.2" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="203.7274570526185" cy="123.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="207.62893338810784" cy="123.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="203.27880282669776" cy="112.55" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="203.81649951355612" cy="108.9" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+  </g>
+  <g data-mark="score-ci" data-arm="baseline" data-component="residual" data-low="S1.score.baseline.residual_975_lo" data-high="S1.score.baseline.residual_975_hi">
+    <line x1="197.94241472887936" x2="226.05334375749004" y1="129" y2="129" stroke="#174C73" stroke-width="1.25" />
+    <line x1="197.94241472887936" x2="197.94241472887936" y1="126.2" y2="131.8" stroke="#174C73" stroke-width="0.9" />
+    <line x1="226.05334375749004" x2="226.05334375749004" y1="126.2" y2="131.8" stroke="#174C73" stroke-width="0.9" />
+    <polygon points="206.003335178427,126.1 208.903335178427,129 206.003335178427,131.9 203.103335178427,129" fill="#174C73" stroke="#174C73" stroke-width="0.7" />
+  </g>
+  <text x="390" y="131.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.25" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;R1-baseline-residual&quot;,&quot;display&quot;:&quot;+0.000632&quot;,&quot;precision&quot;:6,&quot;transform&quot;:&quot;identity&quot;}]">+0.000632</text>
+  <text x="6" y="161" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.8" fill="#80521E" text-anchor="start">Unstimulated − all-zero</text>
+  <text x="390" y="161" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8" fill="#445969" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;R1-sham-share&quot;,&quot;display&quot;:&quot;95.9&quot;,&quot;precision&quot;:1,&quot;transform&quot;:&quot;identity&quot;}]">Timing share 95.9%</text>
+  <line x1="200.0" x2="200.0" y1="164" y2="241" stroke="#445969" stroke-width="0.75" />
+  <text x="6" y="180.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;F18-sham-masked-r1_sum-level&quot;,&quot;display&quot;:&quot;99.167&quot;,&quot;precision&quot;:3,&quot;transform&quot;:&quot;identity&quot;}]">Total score (99.167% CI)</text>
+  <g data-mark="seed-means" data-arm="sham" data-component="total">
+    <circle cx="223.22621469207553" cy="172.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="271.4646187279619" cy="172.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="271.37663427409575" cy="168.85" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="231.11616367445612" cy="172.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="219.51212327824524" cy="168.85" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="240.80428290074983" cy="172.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="240.25698899585507" cy="168.85" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="211.77619310822183" cy="172.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+  </g>
+  <g data-mark="score-ci" data-arm="sham" data-component="total" data-low="F18-sham-masked-r1_sum-lo" data-high="F18-sham-masked-r1_sum-hi">
+    <line x1="208.22802724139882" x2="279.985743734205" y1="178" y2="178" stroke="#80521E" stroke-width="1.25" />
+    <line x1="208.22802724139882" x2="208.22802724139882" y1="175.2" y2="180.8" stroke="#80521E" stroke-width="0.9" />
+    <line x1="279.985743734205" x2="279.985743734205" y1="175.2" y2="180.8" stroke="#80521E" stroke-width="0.9" />
+    <polygon points="238.69165245645766,175.1 241.59165245645767,178 238.69165245645766,180.9 235.79165245645765,178" fill="#80521E" stroke="#80521E" stroke-width="0.7" />
+  </g>
+  <text x="390" y="180.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.25" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;R1-sham-total&quot;,&quot;display&quot;:&quot;+0.004073&quot;,&quot;precision&quot;:6,&quot;transform&quot;:&quot;identity&quot;}]">+0.004073</text>
+  <text x="6" y="205.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.8" fill="#172B3C" text-anchor="start">Timing deduction</text>
+  <g data-mark="seed-means" data-arm="sham" data-component="clock">
+    <circle cx="176.25564026875668" cy="197.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="126.78775409508549" cy="197.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="130.74460318701256" cy="197.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="172.29968149013757" cy="197.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="184.17082256043003" cy="197.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="162.40503579038463" cy="197.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="158.44848343987715" cy="197.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="192.08481761927754" cy="197.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+  </g>
+  <polygon points="162.8996048063702,199.95 165.94960480637022,203 162.8996048063702,206.05 159.8496048063702,203" fill="#80521E" stroke="#80521E" stroke-width="0.7" />
+  <text x="390" y="205.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.25" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;R1-sham-clock&quot;,&quot;display&quot;:&quot;−0.003905&quot;,&quot;precision&quot;:6,&quot;transform&quot;:&quot;negate&quot;}]">−0.003905</text>
+  <text x="6" y="230.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.8" fill="#172B3C" text-anchor="start" data-registered-values="[{&quot;number_id&quot;:&quot;R18-当轮零输出 − 屏蔽-其余得分差-level&quot;,&quot;display&quot;:&quot;97.5&quot;,&quot;precision&quot;:1,&quot;transform&quot;:&quot;identity&quot;}]">Residual score (97.5% CI)</text>
+  <g data-mark="seed-means" data-arm="sham" data-component="residual">
+    <circle cx="199.48185496083224" cy="222.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="198.25237282304738" cy="218.85" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="202.12123746110834" cy="218.85" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="203.4158451645937" cy="222.5" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="203.68294583867527" cy="215.2" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="203.20931869113446" cy="211.55" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="198.70547243573222" cy="215.2" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+    <circle cx="203.86101072749935" cy="207.9" r="1.45" fill="#FFFFFF" stroke="#546776" stroke-width=".65" />
+  </g>
+  <g data-mark="score-ci" data-arm="sham" data-component="residual" data-low="S1.score.sham.residual_975_lo" data-high="S1.score.sham.residual_975_hi">
+    <line x1="196.36714255158478" x2="210.67402534958342" y1="228" y2="228" stroke="#80521E" stroke-width="1.25" />
+    <line x1="196.36714255158478" x2="196.36714255158478" y1="225.2" y2="230.8" stroke="#80521E" stroke-width="0.9" />
+    <line x1="210.67402534958342" x2="210.67402534958342" y1="225.2" y2="230.8" stroke="#80521E" stroke-width="0.9" />
+    <polygon points="201.59125726282787,225.1 204.49125726282787,228 201.59125726282787,230.9 198.69125726282786,228" fill="#80521E" stroke="#80521E" stroke-width="0.7" />
+  </g>
+  <text x="390" y="230.5" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="bold" font-size="8.25" fill="#172B3C" text-anchor="end" data-registered-values="[{&quot;number_id&quot;:&quot;R1-sham-residual&quot;,&quot;display&quot;:&quot;+0.000168&quot;,&quot;precision&quot;:6,&quot;transform&quot;:&quot;identity&quot;}]">+0.000168</text>
+  <line x1="105.0" x2="105.0" y1="241" y2="243" stroke="#445969" stroke-width="0.65" />
+  <text x="105.0" y="251" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">−0.010</text>
+  <line x1="200.0" x2="200.0" y1="241" y2="243" stroke="#445969" stroke-width="0.65" />
+  <text x="200.0" y="251" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">0.000</text>
+  <line x1="295.0" x2="295.0" y1="241" y2="243" stroke="#445969" stroke-width="0.65" />
+  <text x="295.0" y="251" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.2" fill="#445969" text-anchor="middle">0.010</text>
+  <line x1="105.0" x2="295.0" y1="241" y2="241" stroke="#445969" stroke-width="0.7" />
+  <text x="6" y="263" font-family="Times New Roman, Times New Roman, Times, serif" font-weight="normal" font-size="7.6" fill="#445969" text-anchor="start">R1 points/game. Timing is shown as a deduction. Lines give the archived total and post hoc residual CIs.</text>
+</svg>

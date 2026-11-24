@@ -1,0 +1,17 @@
+{
+  "low_health": {
+    "health": 5,
+    "thirst": 95,
+    "hunger": 95
+  },
+  "thirst": {
+    "health": 25,
+    "thirst": 1.6,
+    "hunger": 95
+  },
+  "hunger": {
+    "health": 25,
+    "thirst": 95,
+    "hunger": 4
+  }
+}
