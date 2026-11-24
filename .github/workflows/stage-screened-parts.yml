@@ -1,0 +1,34 @@
+name: Stage screened research archives
+run-name: Screened archive batch ${{ inputs.slot }}
+on:
+  workflow_dispatch:
+    inputs:
+      asset_names: {description: 'Up to four approved public part names', required: true, type: string}
+      slot: {description: 'One-time batch identifier', required: true, type: string}
+      helper_bytes: {description: 'Verified recipe byte count', required: true, type: string}
+      helper_sha: {description: 'Verified recipe SHA-256', required: true, type: string}
+permissions: {}
+jobs:
+  rebuild:
+    if: >-
+      github.repository == 'brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning' &&
+      github.actor == github.repository_owner && github.triggering_actor == github.repository_owner &&
+      github.ref == 'refs/heads/main' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+          sparse-checkout: .github/relay
+      - name: Verify sources, rebuild and stage audited bytes
+        env:
+          SELECTED: ${{ inputs.asset_names }}
+          SLOT: ${{ inputs.slot }}
+          HELPER_SHA: ${{ inputs.helper_sha }}
+          HELPER_BYTES: ${{ inputs.helper_bytes }}
+          SIGNED_SOURCES: ${{ secrets[format('SCRUBBED_RELAY_{0}', inputs.slot)] }}
+          DESTINATION_TOKEN: ${{ github.token }}
+        run: python3 .github/relay/delta.py
