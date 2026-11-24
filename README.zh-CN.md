@@ -16,13 +16,13 @@ https://github.com/user-attachments/assets/6b501274-535f-4aa3-bf73-9e032d7c6809
 
 ## 下载代码、记录和模型
 
-[原始训练与评估回执](https://github.com/brainintelli/organoid-replay-survival/releases/tag/study-evidence-v1)已可供获邀者下载。63.77 GB 的模型与历史归档暂缓全量分发。论文、游戏、逐局数据和原始 H5 入口现已公开。下方私有分卷链接需要归档 Release 已发布且账号已获邀。
+获邀者现在可以完整下载确认性实验 96 个模型的 checkpoint（含优化器状态），也可以单独下载经过筛查的历史项目源码。模型与历史归档共 63.77 GB，其余包正陆续上传。下载分卷前，请在[私有可下载清单](https://github.com/brainintelli/organoid-replay-survival/blob/main/docs/archive-downloads/available-manifest.json)中确认目标包已传齐。论文、游戏、逐局数据和原始电生理记录索引均已公开。
 
 | 材料 | 获取方式 |
 |---|---|
 | 论文、原始工程、逐局数据和分析 | [论文 PDF](paper.pdf) · [源码导览](docs/original-source.md) · [逐局表](data/exploration.csv) · [复现命令](docs/reproduction-guide.md)。无需登录 GitHub。 |
 | 182 份原始 H5 电生理记录 | [打开夸克分享](https://pan.quark.cn/s/3f2e5122ab68)，输入提取码 **`mFFv`**。下载后按[文件清单和 SHA-256](docs/data-access.md)核验。 |
-| 模型 checkpoint、优化器状态与历史大包 | [私有 GitHub Releases 分卷下载](https://github.com/brainintelli/organoid-replay-survival/releases/tag/model-training-archives-v1) · [选包、重组与 SHA-256 校验说明](docs/archive-downloads.md)。使用获得归档权限的账号登录；未经邀请时 GitHub 会显示 404。 |
+| 模型 checkpoint、优化器状态与历史大包 | [下载已校验的私有分卷](https://github.com/brainintelli/organoid-replay-survival/releases/tag/model-training-archives-v1) · [选包、重组与 SHA-256 校验说明](docs/archive-downloads.md)。请使用获邀的 GitHub 账号登录。 |
 | 原始训练和逐局评估回执 | [下载已校验的回执 ZIP（私有）](https://github.com/brainintelli/organoid-replay-survival/releases/tag/study-evidence-v1)。该包用于从电极读数和已记录的决策重建恶劣开局试验结果。 |
 
 ## 一段电极记录怎样进入一次游戏决策？

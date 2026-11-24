@@ -16,13 +16,13 @@ Watch the character beside the lake and the action log on the right. The display
 
 ## Get the code, recordings and model archives
 
-The [original training receipts](https://github.com/brainintelli/organoid-replay-survival/releases/tag/study-evidence-v1) are available to invited readers. The full 63.77 GB model archive is deferred. The public game, paper, paired outcomes and raw H5 entry are available now. The private volume link below requires a published release and archive access.
+Invited readers can now restore the checkpoints for all 96 models in the confirmatory study, including optimizer states, and the screened historical project source. Other historical packages are being added to the 63.77 GB collection. Check the [private availability manifest](https://github.com/brainintelli/organoid-replay-survival/blob/main/docs/archive-downloads/available-manifest.json) before downloading split files. The paper, game, paired outcomes and raw recording index are public.
 
 | Material | Access |
 |---|---|
 | Paper, game, training source and paired outcomes | [Preprint PDF](paper.pdf) · [Source guide](docs/original-source.md) · [Per-game table](data/exploration.csv) · [Reproduction commands](docs/reproduction-guide.md). No GitHub sign-in required. |
 | 182 raw H5 electrophysiology files | [Open the Quark Drive share](https://pan.quark.cn/s/3f2e5122ab68) and enter **`mFFv`**. Verify your download against the [file list and SHA-256 digests](docs/data-access.md). |
-| Model checkpoints, optimizer states and historical archives | [Download private release volumes](https://github.com/brainintelli/organoid-replay-survival/releases/tag/model-training-archives-v1) · [Select, reassemble and verify an archive](docs/archive-downloads.md). Sign in with a GitHub account invited to the archive repository. GitHub returns 404 to other visitors. |
+| Model checkpoints, optimizer states and historical archives | [Download verified private release volumes](https://github.com/brainintelli/organoid-replay-survival/releases/tag/model-training-archives-v1) · [Select, reassemble and verify a complete archive](docs/archive-downloads.md). Sign in with a GitHub account invited to the archive repository. |
 | Original training and per-game evaluation receipts | [Download the verified receipts ZIP (private)](https://github.com/brainintelli/organoid-replay-survival/releases/tag/study-evidence-v1). Use these receipts to rebuild the adverse-start results from the recordings and archived decisions. |
 
 ## From an electrode recording to a game action

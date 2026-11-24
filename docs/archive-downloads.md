@@ -6,12 +6,14 @@ The paper, game source, paired outcomes and raw MEA download instructions are [a
 
 | Collection / 内容 | Download / 下载 |
 |---|---|
-| Model checkpoints, optimizer states and historical packages / 模型参数、优化器与历史归档 | [Private release with split volumes / 私有分卷下载页](https://github.com/brainintelli/organoid-replay-survival/releases/tag/model-training-archives-v1) |
+| Complete packages available to download / 当前可完整下载的包 | [Availability manifest / 可下载清单](https://github.com/brainintelli/organoid-replay-survival/blob/main/docs/archive-downloads/available-manifest.json) · [Private release volumes / 私有分卷下载页](https://github.com/brainintelli/organoid-replay-survival/releases/tag/model-training-archives-v1) |
 | How to select, verify and reassemble a package / 如何选择、校验并重组一个包 | [Manifest and reconstruction instructions / 清单及重组方法](https://github.com/brainintelli/organoid-replay-survival/blob/main/docs/archive-downloads/README.md) |
 | Original training and per-game receipts / 原始训练和逐局评估回执 | [Private receipts release / 私有回执下载页](https://github.com/brainintelli/organoid-replay-survival/releases/tag/study-evidence-v1) |
 | Original H5 recordings / 原始 H5 | [Public data access and SHA-256 instructions / 获取方式及校验说明](data-access.md) |
 
-The [whole-archive SHA-256 table](archive-checksums.csv) identifies all 11 packages: 244 volumes totaling 63,774,304,201 bytes. The checkpoint and historical parameter archives are byte-identical to the originals. Across the other nine packages, 1,010 member replacements and 165 omissions are recorded. The separate receipts ZIP is excluded from these totals.
+The [whole-archive SHA-256 table](archive-checksums.csv) covers the full local inventory of 11 packages, or 244 volumes totaling 63,774,304,201 bytes. For current online availability, use the private availability manifest above. The checkpoint and historical parameter archives are byte-identical to the originals. Across the other nine packages, 1,010 member replacements and 165 omissions are recorded. The separate receipts ZIP is excluded from these totals.
+
+完整本地清单覆盖 11 个包。线上下载请以私有可下载清单为准。只需要确认性实验模型时，选择 `checkpoints` 的全部 24 卷即可取得 96 个模型的策略适配器、价值网络和优化器状态。只需要历史源码时，选择单卷 `project-source`。
 
 Download every part of the desired package from the same release. Use the supplied manifest to check each part, assemble in its numbered order and verify the whole-file SHA-256 before extraction. The archive manifest distinguishes intact upstream bytes from packages rebuilt to exclude restricted members. The receipts ZIP has SHA-256 `248907bc759199690d475dd8c6ccbac2920f30df21316cb944a6ad7a1fa523f2`.
 
